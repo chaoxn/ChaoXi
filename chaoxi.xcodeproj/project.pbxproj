@@ -1,0 +1,641 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ECC381391BD8863A007A3680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC381371BD8863A007A3680 /* Main.storyboard */; };
+		ECC3813E1BD8863A007A3680 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC3813C1BD8863A007A3680 /* LaunchScreen.xib */; };
+		ECC3814A1BD8863A007A3680 /* chaoxiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381491BD8863A007A3680 /* chaoxiTests.m */; };
+		ECC381811BD8888A007A3680 /* CashTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3815C1BD8888A007A3680 /* CashTextField.m */; };
+		ECC381821BD8888A007A3680 /* NSString+CashString.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3815E1BD8888A007A3680 /* NSString+CashString.m */; };
+		ECC381841BD8888A007A3680 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381651BD8888A007A3680 /* NSString+Category.m */; };
+		ECC381851BD8888A007A3680 /* UIFont+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381681BD8888A007A3680 /* UIFont+Category.m */; };
+		ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3816B1BD8888A007A3680 /* UIImage+Common.m */; };
+		ECC381871BD8888A007A3680 /* UIView+BorderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */; };
+		ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381711BD8888A007A3680 /* UIView+Utils.m */; };
+		ECC381951BD88921007A3680 /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381931BD88921007A3680 /* ListenViewController.m */; };
+		ECC381961BD88921007A3680 /* ListenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC381941BD88921007A3680 /* ListenViewController.xib */; };
+		ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381981BD8898F007A3680 /* AppDelegate.m */; };
+		ECC3819B1BD8898F007A3680 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381991BD8898F007A3680 /* main.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ECC381441BD8863A007A3680 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ECC3811F1BD8863A007A3680 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ECC381261BD8863A007A3680;
+			remoteInfo = chaoxi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ECC381271BD8863A007A3680 /* chaoxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chaoxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC3812B1BD8863A007A3680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC381381BD8863A007A3680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ECC3813D1BD8863A007A3680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		ECC381431BD8863A007A3680 /* chaoxiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chaoxiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ECC381481BD8863A007A3680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC381491BD8863A007A3680 /* chaoxiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chaoxiTests.m; sourceTree = "<group>"; };
+		ECC3815B1BD8888A007A3680 /* CashTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashTextField.h; sourceTree = "<group>"; };
+		ECC3815C1BD8888A007A3680 /* CashTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashTextField.m; sourceTree = "<group>"; };
+		ECC3815D1BD8888A007A3680 /* NSString+CashString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CashString.h"; sourceTree = "<group>"; };
+		ECC3815E1BD8888A007A3680 /* NSString+CashString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CashString.m"; sourceTree = "<group>"; };
+		ECC3815F1BD8888A007A3680 /* CateGoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CateGoryHeader.h; sourceTree = "<group>"; };
+		ECC381641BD8888A007A3680 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
+		ECC381651BD8888A007A3680 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
+		ECC381671BD8888A007A3680 /* UIFont+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Category.h"; sourceTree = "<group>"; };
+		ECC381681BD8888A007A3680 /* UIFont+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Category.m"; sourceTree = "<group>"; };
+		ECC3816A1BD8888A007A3680 /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
+		ECC3816B1BD8888A007A3680 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
+		ECC3816D1BD8888A007A3680 /* UIView+BorderStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderStyle.h"; sourceTree = "<group>"; };
+		ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderStyle.m"; sourceTree = "<group>"; };
+		ECC381701BD8888A007A3680 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
+		ECC381711BD8888A007A3680 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
+		ECC381921BD88921007A3680 /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
+		ECC381931BD88921007A3680 /* ListenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenViewController.m; sourceTree = "<group>"; };
+		ECC381941BD88921007A3680 /* ListenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListenViewController.xib; sourceTree = "<group>"; };
+		ECC381971BD8898F007A3680 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		ECC381981BD8898F007A3680 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		ECC381991BD8898F007A3680 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		ECC3819C1BD88A11007A3680 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ECC381241BD8863A007A3680 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC381401BD8863A007A3680 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ECC3811E1BD8863A007A3680 = {
+			isa = PBXGroup;
+			children = (
+				ECC381291BD8863A007A3680 /* chaoxi */,
+				ECC381461BD8863A007A3680 /* chaoxiTests */,
+				ECC381281BD8863A007A3680 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ECC381281BD8863A007A3680 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381271BD8863A007A3680 /* chaoxi.app */,
+				ECC381431BD8863A007A3680 /* chaoxiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ECC381291BD8863A007A3680 /* chaoxi */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381971BD8898F007A3680 /* AppDelegate.h */,
+				ECC381981BD8898F007A3680 /* AppDelegate.m */,
+				ECC381991BD8898F007A3680 /* main.m */,
+				ECC381771BD8888A007A3680 /* Other */,
+				ECC381761BD8888A007A3680 /* Model */,
+				ECC3817D1BD8888A007A3680 /* View */,
+				ECC3817E1BD8888A007A3680 /* ViewController */,
+				ECC3817B1BD8888A007A3680 /* Resource */,
+				ECC3817C1BD8888A007A3680 /* Vender */,
+				ECC381581BD8888A007A3680 /* Expand */,
+				ECC381371BD8863A007A3680 /* Main.storyboard */,
+				ECC3813C1BD8863A007A3680 /* LaunchScreen.xib */,
+				ECC3812A1BD8863A007A3680 /* Supporting Files */,
+			);
+			path = chaoxi;
+			sourceTree = "<group>";
+		};
+		ECC3812A1BD8863A007A3680 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECC3812B1BD8863A007A3680 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECC381461BD8863A007A3680 /* chaoxiTests */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381491BD8863A007A3680 /* chaoxiTests.m */,
+				ECC381471BD8863A007A3680 /* Supporting Files */,
+			);
+			path = chaoxiTests;
+			sourceTree = "<group>";
+		};
+		ECC381471BD8863A007A3680 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381481BD8863A007A3680 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ECC381581BD8888A007A3680 /* Expand */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381591BD8888A007A3680 /* CateGory */,
+				ECC381721BD8888A007A3680 /* DataBase */,
+				ECC381731BD8888A007A3680 /* Macros */,
+				ECC381741BD8888A007A3680 /* NetWork */,
+			);
+			path = Expand;
+			sourceTree = "<group>";
+		};
+		ECC381591BD8888A007A3680 /* CateGory */ = {
+			isa = PBXGroup;
+			children = (
+				ECC3815F1BD8888A007A3680 /* CateGoryHeader.h */,
+				ECC3815A1BD8888A007A3680 /* CashTextField */,
+				ECC381631BD8888A007A3680 /* NSString+Category */,
+				ECC381661BD8888A007A3680 /* UIFont+Category */,
+				ECC381691BD8888A007A3680 /* UIImage+Common */,
+				ECC3816C1BD8888A007A3680 /* UIView+BorderStyle */,
+				ECC3816F1BD8888A007A3680 /* UIView+Utils */,
+			);
+			path = CateGory;
+			sourceTree = "<group>";
+		};
+		ECC3815A1BD8888A007A3680 /* CashTextField */ = {
+			isa = PBXGroup;
+			children = (
+				ECC3815B1BD8888A007A3680 /* CashTextField.h */,
+				ECC3815C1BD8888A007A3680 /* CashTextField.m */,
+				ECC3815D1BD8888A007A3680 /* NSString+CashString.h */,
+				ECC3815E1BD8888A007A3680 /* NSString+CashString.m */,
+			);
+			path = CashTextField;
+			sourceTree = "<group>";
+		};
+		ECC381631BD8888A007A3680 /* NSString+Category */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381641BD8888A007A3680 /* NSString+Category.h */,
+				ECC381651BD8888A007A3680 /* NSString+Category.m */,
+			);
+			path = "NSString+Category";
+			sourceTree = "<group>";
+		};
+		ECC381661BD8888A007A3680 /* UIFont+Category */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381671BD8888A007A3680 /* UIFont+Category.h */,
+				ECC381681BD8888A007A3680 /* UIFont+Category.m */,
+			);
+			path = "UIFont+Category";
+			sourceTree = "<group>";
+		};
+		ECC381691BD8888A007A3680 /* UIImage+Common */ = {
+			isa = PBXGroup;
+			children = (
+				ECC3816A1BD8888A007A3680 /* UIImage+Common.h */,
+				ECC3816B1BD8888A007A3680 /* UIImage+Common.m */,
+			);
+			path = "UIImage+Common";
+			sourceTree = "<group>";
+		};
+		ECC3816C1BD8888A007A3680 /* UIView+BorderStyle */ = {
+			isa = PBXGroup;
+			children = (
+				ECC3816D1BD8888A007A3680 /* UIView+BorderStyle.h */,
+				ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */,
+			);
+			path = "UIView+BorderStyle";
+			sourceTree = "<group>";
+		};
+		ECC3816F1BD8888A007A3680 /* UIView+Utils */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381701BD8888A007A3680 /* UIView+Utils.h */,
+				ECC381711BD8888A007A3680 /* UIView+Utils.m */,
+			);
+			path = "UIView+Utils";
+			sourceTree = "<group>";
+		};
+		ECC381721BD8888A007A3680 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		ECC381731BD8888A007A3680 /* Macros */ = {
+			isa = PBXGroup;
+			children = (
+				ECC3819C1BD88A11007A3680 /* PrefixHeader.pch */,
+			);
+			path = Macros;
+			sourceTree = "<group>";
+		};
+		ECC381741BD8888A007A3680 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
+		ECC381761BD8888A007A3680 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ECC381771BD8888A007A3680 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		ECC3817B1BD8888A007A3680 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ECC3817C1BD8888A007A3680 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		ECC3817D1BD8888A007A3680 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ECC3817E1BD8888A007A3680 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECC3818C1BD888D9007A3680 /* Listen */,
+				ECC3818D1BD888D9007A3680 /* Poem */,
+				ECC3818E1BD888D9007A3680 /* Read */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ECC3818C1BD888D9007A3680 /* Listen */ = {
+			isa = PBXGroup;
+			children = (
+				ECC381921BD88921007A3680 /* ListenViewController.h */,
+				ECC381931BD88921007A3680 /* ListenViewController.m */,
+				ECC381941BD88921007A3680 /* ListenViewController.xib */,
+			);
+			path = Listen;
+			sourceTree = "<group>";
+		};
+		ECC3818D1BD888D9007A3680 /* Poem */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Poem;
+			sourceTree = "<group>";
+		};
+		ECC3818E1BD888D9007A3680 /* Read */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Read;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ECC381261BD8863A007A3680 /* chaoxi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC3814D1BD8863A007A3680 /* Build configuration list for PBXNativeTarget "chaoxi" */;
+			buildPhases = (
+				ECC381231BD8863A007A3680 /* Sources */,
+				ECC381241BD8863A007A3680 /* Frameworks */,
+				ECC381251BD8863A007A3680 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = chaoxi;
+			productName = chaoxi;
+			productReference = ECC381271BD8863A007A3680 /* chaoxi.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ECC381421BD8863A007A3680 /* chaoxiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECC381501BD8863A007A3680 /* Build configuration list for PBXNativeTarget "chaoxiTests" */;
+			buildPhases = (
+				ECC3813F1BD8863A007A3680 /* Sources */,
+				ECC381401BD8863A007A3680 /* Frameworks */,
+				ECC381411BD8863A007A3680 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ECC381451BD8863A007A3680 /* PBXTargetDependency */,
+			);
+			name = chaoxiTests;
+			productName = chaoxiTests;
+			productReference = ECC381431BD8863A007A3680 /* chaoxiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ECC3811F1BD8863A007A3680 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = chaox;
+				TargetAttributes = {
+					ECC381261BD8863A007A3680 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					ECC381421BD8863A007A3680 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = ECC381261BD8863A007A3680;
+					};
+				};
+			};
+			buildConfigurationList = ECC381221BD8863A007A3680 /* Build configuration list for PBXProject "chaoxi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ECC3811E1BD8863A007A3680;
+			productRefGroup = ECC381281BD8863A007A3680 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ECC381261BD8863A007A3680 /* chaoxi */,
+				ECC381421BD8863A007A3680 /* chaoxiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ECC381251BD8863A007A3680 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC381961BD88921007A3680 /* ListenViewController.xib in Resources */,
+				ECC381391BD8863A007A3680 /* Main.storyboard in Resources */,
+				ECC3813E1BD8863A007A3680 /* LaunchScreen.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC381411BD8863A007A3680 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ECC381231BD8863A007A3680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */,
+				ECC381871BD8888A007A3680 /* UIView+BorderStyle.m in Sources */,
+				ECC381951BD88921007A3680 /* ListenViewController.m in Sources */,
+				ECC381841BD8888A007A3680 /* NSString+Category.m in Sources */,
+				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
+				ECC381821BD8888A007A3680 /* NSString+CashString.m in Sources */,
+				ECC381811BD8888A007A3680 /* CashTextField.m in Sources */,
+				ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */,
+				ECC3819B1BD8898F007A3680 /* main.m in Sources */,
+				ECC381851BD8888A007A3680 /* UIFont+Category.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ECC3813F1BD8863A007A3680 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ECC3814A1BD8863A007A3680 /* chaoxiTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ECC381451BD8863A007A3680 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ECC381261BD8863A007A3680 /* chaoxi */;
+			targetProxy = ECC381441BD8863A007A3680 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ECC381371BD8863A007A3680 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC381381BD8863A007A3680 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ECC3813C1BD8863A007A3680 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ECC3813D1BD8863A007A3680 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ECC3814B1BD8863A007A3680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		ECC3814C1BD8863A007A3680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ECC3814E1BD8863A007A3680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/chaoxi/expand/Macros/PrefixHeader.pch";
+				INFOPLIST_FILE = chaoxi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ECC3814F1BD8863A007A3680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/chaoxi/expand/Macros/PrefixHeader.pch";
+				INFOPLIST_FILE = chaoxi/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ECC381511BD8863A007A3680 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = chaoxiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chaoxi.app/chaoxi";
+			};
+			name = Debug;
+		};
+		ECC381521BD8863A007A3680 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = chaoxiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chaoxi.app/chaoxi";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ECC381221BD8863A007A3680 /* Build configuration list for PBXProject "chaoxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC3814B1BD8863A007A3680 /* Debug */,
+				ECC3814C1BD8863A007A3680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECC3814D1BD8863A007A3680 /* Build configuration list for PBXNativeTarget "chaoxi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC3814E1BD8863A007A3680 /* Debug */,
+				ECC3814F1BD8863A007A3680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ECC381501BD8863A007A3680 /* Build configuration list for PBXNativeTarget "chaoxiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ECC381511BD8863A007A3680 /* Debug */,
+				ECC381521BD8863A007A3680 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ECC3811F1BD8863A007A3680 /* Project object */;
+}
