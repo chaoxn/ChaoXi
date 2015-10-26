@@ -1,0 +1,11 @@
+pod 'REMenu', '~> 1.10'
+pod 'MJRefresh', '~> 2.4.7'
+pod 'AFNetworking', '~> 2.6.0'
+pod 'SDWebImage', '~> 3.7.3'
+pod 'FMDB', '~> 2.5’
+pod 'MJExtension', '~> 2.5.9’
+pod 'MBProgressHUD', '~> 0.9.1’
+pod 'KVNProgress', '~> 2.2.d'
+use_frameworks!
+pod 'ReactiveCocoa'
+pod 'Masonry', '~> 0.6.2'

@@ -1,0 +1,32 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "7AEA106948F2C32E61C91C6691F8D1FA7AF86B9B",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+    "d88ff05d-d599-2d4a-9e40-4331e23ce6b3++8861" : {
+
+    }
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "7AEA106948F2C32E61C91C6691F8D1FA7AF86B9B" : 0,
+    "d88ff05d-d599-2d4a-9e40-4331e23ce6b3++8861" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "FEAB26CD-6AF2-4671-AC1B-FFDED4984A99",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "7AEA106948F2C32E61C91C6691F8D1FA7AF86B9B" : "ChaoXi\/",
+    "d88ff05d-d599-2d4a-9e40-4331e23ce6b3++8861" : "ChaoXi\/chaoxi\/Expand\/CateGory\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "chaoxi",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "chaoxi.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:chaoxn\/ChaoXi.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7AEA106948F2C32E61C91C6691F8D1FA7AF86B9B"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/10.1.10.32\/svn\/mobile",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Subversion",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "d88ff05d-d599-2d4a-9e40-4331e23ce6b3++8861"
+    }
+  ]
+}
