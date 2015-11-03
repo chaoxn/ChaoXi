@@ -9,13 +9,18 @@
 #ifndef chaoxi_PrefixHeader_pch
 #define chaoxi_PrefixHeader_pch
 
-#ifdef DEBUG
-#define DLog(fmt, ...) NSLog((@"\n%s [Line %d] \n" fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
-#else
-#define DLog(...)
-#endif
+#import "AFNetworking.h"
+#import "FMDB.h"
+#import "KVNProgress.h"
+#import "MBProgressHUD.h"
+#import "MJExtension.h"
+#import "MJRefresh.h"
+#import "Masonry.h"
+#import "ReactiveCocoa.h"
+#import "REMenu.h"
+#import "UIImageView+WebCache.h"
 
-#define ScreenWidth ([UIScreen mainScreen].applicationFrame.size.width)
-#define ScreenHeight ([UIScreen mainScreen].applicationFrame.size.height)
+#import "CXHttpManager.h"
+#import "CXMacro.h"
 
 #endif

@@ -6,8 +6,8 @@
 //  Copyright © 2015年 chaox. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface FunnyViewController : UIViewController
+@interface FunnyViewController : BaseViewController
 
 @end

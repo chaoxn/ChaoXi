@@ -7,8 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ECC381391BD8863A007A3680 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC381371BD8863A007A3680 /* Main.storyboard */; };
-		ECC3813E1BD8863A007A3680 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC3813C1BD8863A007A3680 /* LaunchScreen.xib */; };
+		5AEAD03D57A1938CD5033752 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F55B9FC2E6AA861816118FA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC029A531BDF54FE000F304C /* LuoIMagaCell.m */; };
+		EC029A561BDF54FE000F304C /* LuoIMagaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC029A541BDF54FE000F304C /* LuoIMagaCell.xib */; };
+		EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC029A571BDF64FA000F304C /* imagePlist.plist */; };
+		EC0A94571BE20EEF0085BC9B /* CXHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A94561BE20EEF0085BC9B /* CXHttpManager.m */; };
+		EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A945A1BE212020085BC9B /* ViedoModel.m */; };
+		EC0A94681BE226120085BC9B /* CXWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A94671BE226120085BC9B /* CXWelcomeView.m */; };
+		EC0A94701BE350A00085BC9B /* VideoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A946E1BE350A00085BC9B /* VideoDetailController.m */; };
+		EC0A94711BE350A00085BC9B /* VideoDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC0A946F1BE350A00085BC9B /* VideoDetailController.xib */; };
+		EC378EAC1BDDF7EA006FB4F0 /* PoemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EAA1BDDF7EA006FB4F0 /* PoemViewController.m */; };
+		EC378EAD1BDDF7EA006FB4F0 /* PoemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EAB1BDDF7EA006FB4F0 /* PoemViewController.xib */; };
+		EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */; };
+		EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */; };
+		EC378EB81BDDF84D006FB4F0 /* ArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */; };
+		EC378EB91BDDF84D006FB4F0 /* ArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EB71BDDF84D006FB4F0 /* ArtViewController.xib */; };
+		EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */; };
+		EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */; };
+		EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */; };
+		EC378ECA1BDDFAC4006FB4F0 /* NavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EC81BDDFAC4006FB4F0 /* NavigationViewController.xib */; };
+		EC378ECE1BDDFD39006FB4F0 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC378ECD1BDDFD39006FB4F0 /* Impact.ttf */; };
+		EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */; };
+		ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */; };
+		ECC07BA91BDF1AC5003BE70B /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BA71BDF1AC5003BE70B /* BaseViewController.xib */; };
+		ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BB41BDF531E003BE70B /* ListenViewController.m */; };
+		ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BB51BDF531E003BE70B /* ListenViewController.xib */; };
 		ECC3814A1BD8863A007A3680 /* chaoxiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381491BD8863A007A3680 /* chaoxiTests.m */; };
 		ECC381811BD8888A007A3680 /* CashTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3815C1BD8888A007A3680 /* CashTextField.m */; };
 		ECC381821BD8888A007A3680 /* NSString+CashString.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3815E1BD8888A007A3680 /* NSString+CashString.m */; };
@@ -17,8 +40,6 @@
 		ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3816B1BD8888A007A3680 /* UIImage+Common.m */; };
 		ECC381871BD8888A007A3680 /* UIView+BorderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */; };
 		ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381711BD8888A007A3680 /* UIView+Utils.m */; };
-		ECC381951BD88921007A3680 /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381931BD88921007A3680 /* ListenViewController.m */; };
-		ECC381961BD88921007A3680 /* ListenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC381941BD88921007A3680 /* ListenViewController.xib */; };
 		ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381981BD8898F007A3680 /* AppDelegate.m */; };
 		ECC3819B1BD8898F007A3680 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381991BD8898F007A3680 /* main.m */; };
 /* End PBXBuildFile section */
@@ -34,10 +55,48 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F2D210BB5C36AC66834FAF5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		85743A70CF82F191142250A8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8F55B9FC2E6AA861816118FA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC029A521BDF54FE000F304C /* LuoIMagaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuoIMagaCell.h; sourceTree = "<group>"; };
+		EC029A531BDF54FE000F304C /* LuoIMagaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuoIMagaCell.m; sourceTree = "<group>"; };
+		EC029A541BDF54FE000F304C /* LuoIMagaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LuoIMagaCell.xib; sourceTree = "<group>"; };
+		EC029A571BDF64FA000F304C /* imagePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imagePlist.plist; sourceTree = "<group>"; };
+		EC0A94521BE20AAC0085BC9B /* CXMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMacro.h; sourceTree = "<group>"; };
+		EC0A94551BE20EEF0085BC9B /* CXHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHttpManager.h; sourceTree = "<group>"; };
+		EC0A94561BE20EEF0085BC9B /* CXHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHttpManager.m; sourceTree = "<group>"; };
+		EC0A94591BE212020085BC9B /* ViedoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViedoModel.h; sourceTree = "<group>"; };
+		EC0A945A1BE212020085BC9B /* ViedoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViedoModel.m; sourceTree = "<group>"; };
+		EC0A94661BE226120085BC9B /* CXWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXWelcomeView.h; sourceTree = "<group>"; };
+		EC0A94671BE226120085BC9B /* CXWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXWelcomeView.m; sourceTree = "<group>"; };
+		EC0A946D1BE350A00085BC9B /* VideoDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailController.h; sourceTree = "<group>"; };
+		EC0A946E1BE350A00085BC9B /* VideoDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailController.m; sourceTree = "<group>"; };
+		EC0A946F1BE350A00085BC9B /* VideoDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDetailController.xib; sourceTree = "<group>"; };
+		EC378EA91BDDF7EA006FB4F0 /* PoemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemViewController.h; sourceTree = "<group>"; };
+		EC378EAA1BDDF7EA006FB4F0 /* PoemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemViewController.m; sourceTree = "<group>"; };
+		EC378EAB1BDDF7EA006FB4F0 /* PoemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoemViewController.xib; sourceTree = "<group>"; };
+		EC378EAE1BDDF7F6006FB4F0 /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
+		EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
+		EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
+		EC378EB51BDDF84D006FB4F0 /* ArtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtViewController.h; sourceTree = "<group>"; };
+		EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtViewController.m; sourceTree = "<group>"; };
+		EC378EB71BDDF84D006FB4F0 /* ArtViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtViewController.xib; sourceTree = "<group>"; };
+		EC378EBD1BDDF86E006FB4F0 /* FunnyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyViewController.h; sourceTree = "<group>"; };
+		EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyViewController.m; sourceTree = "<group>"; };
+		EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnyViewController.xib; sourceTree = "<group>"; };
+		EC378EC61BDDFAC4006FB4F0 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
+		EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
+		EC378EC81BDDFAC4006FB4F0 /* NavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationViewController.xib; sourceTree = "<group>"; };
+		EC378ECD1BDDFD39006FB4F0 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
+		EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		ECC07BA71BDF1AC5003BE70B /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
+		ECC07BB31BDF531E003BE70B /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
+		ECC07BB41BDF531E003BE70B /* ListenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenViewController.m; sourceTree = "<group>"; };
+		ECC07BB51BDF531E003BE70B /* ListenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListenViewController.xib; sourceTree = "<group>"; };
 		ECC381271BD8863A007A3680 /* chaoxi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = chaoxi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC3812B1BD8863A007A3680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ECC381381BD8863A007A3680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ECC3813D1BD8863A007A3680 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		ECC381431BD8863A007A3680 /* chaoxiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chaoxiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC381481BD8863A007A3680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC381491BD8863A007A3680 /* chaoxiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chaoxiTests.m; sourceTree = "<group>"; };
@@ -56,9 +115,6 @@
 		ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderStyle.m"; sourceTree = "<group>"; };
 		ECC381701BD8888A007A3680 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		ECC381711BD8888A007A3680 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
-		ECC381921BD88921007A3680 /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
-		ECC381931BD88921007A3680 /* ListenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenViewController.m; sourceTree = "<group>"; };
-		ECC381941BD88921007A3680 /* ListenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListenViewController.xib; sourceTree = "<group>"; };
 		ECC381971BD8898F007A3680 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		ECC381981BD8898F007A3680 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ECC381991BD8898F007A3680 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -70,6 +126,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AEAD03D57A1938CD5033752 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,12 +140,163 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2FEAD2BFDC163E86B6485BB3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F55B9FC2E6AA861816118FA /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FC3BE83F6DA850CC8971AE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				85743A70CF82F191142250A8 /* Pods.debug.xcconfig */,
+				3F2D210BB5C36AC66834FAF5 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EC0A94581BE211EA0085BC9B /* ListenModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC0A94591BE212020085BC9B /* ViedoModel.h */,
+				EC0A945A1BE212020085BC9B /* ViedoModel.m */,
+			);
+			path = ListenModel;
+			sourceTree = "<group>";
+		};
+		EC0A94621BE225EA0085BC9B /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				EC0A94661BE226120085BC9B /* CXWelcomeView.h */,
+				EC0A94671BE226120085BC9B /* CXWelcomeView.m */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		EC0A946B1BE3500E0085BC9B /* PlayOnViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = PlayOnViewController;
+			sourceTree = "<group>";
+		};
+		EC0A946C1BE3500E0085BC9B /* ViedoDetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				EC0A946D1BE350A00085BC9B /* VideoDetailController.h */,
+				EC0A946E1BE350A00085BC9B /* VideoDetailController.m */,
+				EC0A946F1BE350A00085BC9B /* VideoDetailController.xib */,
+			);
+			path = ViedoDetailViewController;
+			sourceTree = "<group>";
+		};
+		EC378EB31BDDF82C006FB4F0 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				EC378EB51BDDF84D006FB4F0 /* ArtViewController.h */,
+				EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */,
+				EC378EB71BDDF84D006FB4F0 /* ArtViewController.xib */,
+			);
+			name = Art;
+			path = chaoxi/ViewController/Art;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC378EB41BDDF82C006FB4F0 /* Funny */ = {
+			isa = PBXGroup;
+			children = (
+				EC378EBD1BDDF86E006FB4F0 /* FunnyViewController.h */,
+				EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */,
+				EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */,
+			);
+			name = Funny;
+			path = chaoxi/ViewController/Funny;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC378EC21BDDFA3C006FB4F0 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				EC378EC31BDDFA96006FB4F0 /* Navigation */,
+				EC378EC41BDDFA96006FB4F0 /* Public */,
+				EC378EC51BDDFA96006FB4F0 /* Setting */,
+			);
+			name = Other;
+			path = chaoxi/ViewController/Other;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC378EC31BDDFA96006FB4F0 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				EC378EC61BDDFAC4006FB4F0 /* NavigationViewController.h */,
+				EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */,
+				EC378EC81BDDFAC4006FB4F0 /* NavigationViewController.xib */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		EC378EC41BDDFA96006FB4F0 /* Public */ = {
+			isa = PBXGroup;
+			children = (
+				ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */,
+				ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */,
+				ECC07BA71BDF1AC5003BE70B /* BaseViewController.xib */,
+			);
+			path = Public;
+			sourceTree = "<group>";
+		};
+		EC378EC51BDDFA96006FB4F0 /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		EC378ECB1BDDFC6F006FB4F0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EC0A94581BE211EA0085BC9B /* ListenModel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		EC378ECC1BDDFD39006FB4F0 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				EC378ECD1BDDFD39006FB4F0 /* Impact.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		EC378ECF1BDDFD5E006FB4F0 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		ECC07BB21BDF531E003BE70B /* ListenListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ECC07BB31BDF531E003BE70B /* ListenViewController.h */,
+				ECC07BB41BDF531E003BE70B /* ListenViewController.m */,
+				ECC07BB51BDF531E003BE70B /* ListenViewController.xib */,
+				EC029A521BDF54FE000F304C /* LuoIMagaCell.h */,
+				EC029A531BDF54FE000F304C /* LuoIMagaCell.m */,
+				EC029A541BDF54FE000F304C /* LuoIMagaCell.xib */,
+			);
+			path = ListenListViewController;
+			sourceTree = "<group>";
+		};
 		ECC3811E1BD8863A007A3680 = {
 			isa = PBXGroup;
 			children = (
 				ECC381291BD8863A007A3680 /* chaoxi */,
 				ECC381461BD8863A007A3680 /* chaoxiTests */,
 				ECC381281BD8863A007A3680 /* Products */,
+				7FC3BE83F6DA850CC8971AE6 /* Pods */,
+				2FEAD2BFDC163E86B6485BB3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -107,15 +315,12 @@
 				ECC381971BD8898F007A3680 /* AppDelegate.h */,
 				ECC381981BD8898F007A3680 /* AppDelegate.m */,
 				ECC381991BD8898F007A3680 /* main.m */,
-				ECC381771BD8888A007A3680 /* Other */,
-				ECC381761BD8888A007A3680 /* Model */,
+				EC378ECB1BDDFC6F006FB4F0 /* Model */,
 				ECC3817D1BD8888A007A3680 /* View */,
 				ECC3817E1BD8888A007A3680 /* ViewController */,
 				ECC3817B1BD8888A007A3680 /* Resource */,
 				ECC3817C1BD8888A007A3680 /* Vender */,
 				ECC381581BD8888A007A3680 /* Expand */,
-				ECC381371BD8863A007A3680 /* Main.storyboard */,
-				ECC3813C1BD8863A007A3680 /* LaunchScreen.xib */,
 				ECC3812A1BD8863A007A3680 /* Supporting Files */,
 			);
 			path = chaoxi;
@@ -230,6 +435,7 @@
 		ECC381721BD8888A007A3680 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
+				EC029A571BDF64FA000F304C /* imagePlist.plist */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -238,6 +444,7 @@
 			isa = PBXGroup;
 			children = (
 				ECC3819C1BD88A11007A3680 /* PrefixHeader.pch */,
+				EC0A94521BE20AAC0085BC9B /* CXMacro.h */,
 			);
 			path = Macros;
 			sourceTree = "<group>";
@@ -245,27 +452,17 @@
 		ECC381741BD8888A007A3680 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				EC0A94551BE20EEF0085BC9B /* CXHttpManager.h */,
+				EC0A94561BE20EEF0085BC9B /* CXHttpManager.m */,
 			);
 			path = NetWork;
-			sourceTree = "<group>";
-		};
-		ECC381761BD8888A007A3680 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		ECC381771BD8888A007A3680 /* Other */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Other;
 			sourceTree = "<group>";
 		};
 		ECC3817B1BD8888A007A3680 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				EC378ECF1BDDFD5E006FB4F0 /* Image */,
+				EC378ECC1BDDFD39006FB4F0 /* Font */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -280,6 +477,7 @@
 		ECC3817D1BD8888A007A3680 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				EC0A94621BE225EA0085BC9B /* Welcome */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,9 +485,12 @@
 		ECC3817E1BD8888A007A3680 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				EC378EC21BDDFA3C006FB4F0 /* Other */,
 				ECC3818C1BD888D9007A3680 /* Listen */,
 				ECC3818D1BD888D9007A3680 /* Poem */,
 				ECC3818E1BD888D9007A3680 /* Read */,
+				EC378EB31BDDF82C006FB4F0 /* Art */,
+				EC378EB41BDDF82C006FB4F0 /* Funny */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -297,9 +498,9 @@
 		ECC3818C1BD888D9007A3680 /* Listen */ = {
 			isa = PBXGroup;
 			children = (
-				ECC381921BD88921007A3680 /* ListenViewController.h */,
-				ECC381931BD88921007A3680 /* ListenViewController.m */,
-				ECC381941BD88921007A3680 /* ListenViewController.xib */,
+				ECC07BB21BDF531E003BE70B /* ListenListViewController */,
+				EC0A946C1BE3500E0085BC9B /* ViedoDetailViewController */,
+				EC0A946B1BE3500E0085BC9B /* PlayOnViewController */,
 			);
 			path = Listen;
 			sourceTree = "<group>";
@@ -307,6 +508,9 @@
 		ECC3818D1BD888D9007A3680 /* Poem */ = {
 			isa = PBXGroup;
 			children = (
+				EC378EA91BDDF7EA006FB4F0 /* PoemViewController.h */,
+				EC378EAA1BDDF7EA006FB4F0 /* PoemViewController.m */,
+				EC378EAB1BDDF7EA006FB4F0 /* PoemViewController.xib */,
 			);
 			path = Poem;
 			sourceTree = "<group>";
@@ -314,6 +518,9 @@
 		ECC3818E1BD888D9007A3680 /* Read */ = {
 			isa = PBXGroup;
 			children = (
+				EC378EAE1BDDF7F6006FB4F0 /* ReadViewController.h */,
+				EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */,
+				EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */,
 			);
 			path = Read;
 			sourceTree = "<group>";
@@ -325,9 +532,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ECC3814D1BD8863A007A3680 /* Build configuration list for PBXNativeTarget "chaoxi" */;
 			buildPhases = (
+				77BF2AE83C2C1D900ADFF96A /* Check Pods Manifest.lock */,
 				ECC381231BD8863A007A3680 /* Sources */,
 				ECC381241BD8863A007A3680 /* Frameworks */,
 				ECC381251BD8863A007A3680 /* Resources */,
+				DB17580D7253BA4FEFD83FEC /* Copy Pods Resources */,
+				03A31FDF1C1D2066465B0335 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -362,7 +572,7 @@
 		ECC3811F1BD8863A007A3680 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = chaox;
 				TargetAttributes = {
 					ECC381261BD8863A007A3680 = {
@@ -398,9 +608,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ECC381961BD88921007A3680 /* ListenViewController.xib in Resources */,
-				ECC381391BD8863A007A3680 /* Main.storyboard in Resources */,
-				ECC3813E1BD8863A007A3680 /* LaunchScreen.xib in Resources */,
+				EC0A94711BE350A00085BC9B /* VideoDetailController.xib in Resources */,
+				EC378ECA1BDDFAC4006FB4F0 /* NavigationViewController.xib in Resources */,
+				ECC07BA91BDF1AC5003BE70B /* BaseViewController.xib in Resources */,
+				EC378EB91BDDF84D006FB4F0 /* ArtViewController.xib in Resources */,
+				EC378EAD1BDDF7EA006FB4F0 /* PoemViewController.xib in Resources */,
+				EC378ECE1BDDFD39006FB4F0 /* Impact.ttf in Resources */,
+				EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */,
+				EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */,
+				ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */,
+				EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */,
+				EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */,
+				EC029A561BDF54FE000F304C /* LuoIMagaCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,21 +632,80 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03A31FDF1C1D2066465B0335 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		77BF2AE83C2C1D900ADFF96A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		DB17580D7253BA4FEFD83FEC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		ECC381231BD8863A007A3680 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */,
+				EC0A94701BE350A00085BC9B /* VideoDetailController.m in Sources */,
+				ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */,
+				EC0A94571BE20EEF0085BC9B /* CXHttpManager.m in Sources */,
 				ECC381871BD8888A007A3680 /* UIView+BorderStyle.m in Sources */,
-				ECC381951BD88921007A3680 /* ListenViewController.m in Sources */,
+				EC0A94681BE226120085BC9B /* CXWelcomeView.m in Sources */,
+				EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */,
+				EC378EAC1BDDF7EA006FB4F0 /* PoemViewController.m in Sources */,
+				EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */,
 				ECC381841BD8888A007A3680 /* NSString+Category.m in Sources */,
+				EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */,
 				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
 				ECC381821BD8888A007A3680 /* NSString+CashString.m in Sources */,
 				ECC381811BD8888A007A3680 /* CashTextField.m in Sources */,
+				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
 				ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */,
 				ECC3819B1BD8898F007A3680 /* main.m in Sources */,
+				EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */,
+				EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */,
 				ECC381851BD8888A007A3680 /* UIFont+Category.m in Sources */,
+				EC378EB81BDDF84D006FB4F0 /* ArtViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,25 +726,6 @@
 			targetProxy = ECC381441BD8863A007A3680 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		ECC381371BD8863A007A3680 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECC381381BD8863A007A3680 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		ECC3813C1BD8863A007A3680 /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				ECC3813D1BD8863A007A3680 /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		ECC3814B1BD8863A007A3680 /* Debug */ = {
@@ -490,6 +749,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -551,25 +811,31 @@
 		};
 		ECC3814E1BD8863A007A3680 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 85743A70CF82F191142250A8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/chaoxi/expand/Macros/PrefixHeader.pch";
 				INFOPLIST_FILE = chaoxi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "chaox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
 		};
 		ECC3814F1BD8863A007A3680 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F2D210BB5C36AC66834FAF5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/chaoxi/expand/Macros/PrefixHeader.pch";
 				INFOPLIST_FILE = chaoxi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "chaox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;
 		};
@@ -587,6 +853,7 @@
 				);
 				INFOPLIST_FILE = chaoxiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "chaox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chaoxi.app/chaoxi";
 			};
@@ -602,6 +869,7 @@
 				);
 				INFOPLIST_FILE = chaoxiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "chaox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/chaoxi.app/chaoxi";
 			};
@@ -626,6 +894,7 @@
 				ECC3814F1BD8863A007A3680 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ECC381501BD8863A007A3680 /* Build configuration list for PBXNativeTarget "chaoxiTests" */ = {
 			isa = XCConfigurationList;
@@ -634,6 +903,7 @@
 				ECC381521BD8863A007A3680 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

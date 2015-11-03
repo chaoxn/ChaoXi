@@ -38,13 +38,13 @@
     
     if (self.navigationBar && !self.appearsBehindNavigationBar) {
         CGRect frame = self.frame;
-        frame.origin.y = self.navigationBar.frame.origin.y + (UIDeviceOrientationIsPortrait(orientation) ? 44.0 : landscapeOffset);
+        frame.origin.y = self.navigationBar.frame.origin.y + (UIDeviceOrientationIsPortrait((UIDeviceOrientation)orientation) ? 44.0 : landscapeOffset);
         self.frame = frame;
     }
     
     if (self.appearsBehindNavigationBar) {
         CGRect frame = self.frame;
-        frame.origin.y = (UIDeviceOrientationIsPortrait(orientation) ? 44.0 : landscapeOffset) - 44;
+        frame.origin.y = (UIDeviceOrientationIsPortrait((UIDeviceOrientation)orientation) ? 44.0 : landscapeOffset) - 44;
         self.frame = frame;
     }
 }

@@ -7,34 +7,34 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>0D62F48C-0D34-4772-BC2E-8D234DBB7008</string>
 	<key>IDESourceControlProjectName</key>
-	<string>chaoxi</string>
+	<string>project</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>0C038BB88A66201F81CF27BA111991861ADA76A7</key>
-		<string>github.com:chaoxn/Chaox.git</string>
+		<key>7AEA106948F2C32E61C91C6691F8D1FA7AF86B9B</key>
+		<string>github.com:chaoxn/ChaoXi.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>chaoxi/chaoxi.xcodeproj</string>
+	<string>chaoxi.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>0C038BB88A66201F81CF27BA111991861ADA76A7</key>
-		<string>../../..</string>
+		<key>7AEA106948F2C32E61C91C6691F8D1FA7AF86B9B</key>
+		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>github.com:chaoxn/Chaox.git</string>
+	<string>github.com:chaoxn/ChaoXi.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>0C038BB88A66201F81CF27BA111991861ADA76A7</string>
+	<string>7AEA106948F2C32E61C91C6691F8D1FA7AF86B9B</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>0C038BB88A66201F81CF27BA111991861ADA76A7</string>
+			<string>7AEA106948F2C32E61C91C6691F8D1FA7AF86B9B</string>
 			<key>IDESourceControlWCCName</key>
-			<string>Chaox</string>
+			<string>ChaoXi</string>
 		</dict>
 	</array>
 </dict>

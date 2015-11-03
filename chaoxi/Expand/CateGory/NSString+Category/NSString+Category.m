@@ -61,7 +61,7 @@
     @autoreleasepool {
         
         NSString *formatStr = @"%0.";
-        formatStr = [formatStr stringByAppendingFormat:@"%ldf", length];
+        formatStr = [formatStr stringByAppendingFormat:@"%ldf", (unsigned long)length];
         formatStr = [NSString stringWithFormat:formatStr, cash];
         
         NSMutableString *numToStr = [[NSMutableString alloc]initWithFormat:@"%@",formatStr];

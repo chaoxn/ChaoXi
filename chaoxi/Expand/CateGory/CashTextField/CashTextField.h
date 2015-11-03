@@ -1,6 +1,6 @@
 /********************************************************************
  文件名称 : CashTextField.h 文件
- 作   者 : WuQiaoqiao
+ 作   者 : ChaoX
  创建时间 : 2014/10/24
  文件描述 : 现金输入框类
  *********************************************************************/
@@ -29,7 +29,7 @@ typedef double CashValue;
 
 
 /**
- *  @author qiaoqiao.wu, 15-06-10 14:06:13
+ *  @author ChaoX, 15-06-10 14:06:13
  *
  *  获取金额double数值(小数后两位)
  *
@@ -38,7 +38,7 @@ typedef double CashValue;
 - (double)cashOfDouble;
 
 /**
- *  @author qiaoqiao.wu, 15-06-10 14:06:47
+ *  @author ChaoX, 15-06-10 14:06:47
  *
  *  获取金额NSString数值(没有逗号隔开)
  *
@@ -47,7 +47,7 @@ typedef double CashValue;
 - (NSString *)cashOfNSString;
 
 /**
- *  @author qiaoqiao.wu, 15-06-10 14:06:55
+ *  @author ChaoX, 15-06-10 14:06:55
  *
  *  获取金额NSString数值(逗号隔开)
  *
@@ -56,7 +56,7 @@ typedef double CashValue;
 - (NSString *)cashOfAccountantNSString;
 
 /**
- *  @author qiaoqiao.wu, 15-06-10 14:06:02
+ *  @author ChaoX, 15-06-10 14:06:02
  *
  *  获取中文大写金额
  *
