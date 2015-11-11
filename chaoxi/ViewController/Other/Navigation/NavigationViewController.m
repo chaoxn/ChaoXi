@@ -7,11 +7,12 @@
 
 #import "NavigationViewController.h"
 #import "ListenViewController.h"
-#import "PoemViewController.h"
+#import "PoeViewController.h"
 #import "ReadViewController.h"
 #import "ArtViewController.h"
 #import "FunnyViewController.h"
 #import "CXWelcomeView.h"
+#import "CXAlterButton.h"
 
 @interface NavigationViewController ()
 
@@ -47,7 +48,7 @@
                                                    image:nil
                                         highlightedImage:nil
                                                   action:^(REMenuItem *item) {
-                                                      PoemViewController *controller = [[PoemViewController alloc] init];
+                                                      PoeViewController *controller = [[PoeViewController alloc] init];
                                                       [weakSelf setViewControllers:@[controller] animated:NO];
                                                   }];
     
@@ -60,7 +61,6 @@
                                                    }];
     // 高亮小标
     //    movie.badge = @"12";
-    
     REMenuItem *art = [[REMenuItem alloc] initWithTitle:@"Read"
                                                    image:nil
                                         highlightedImage:nil

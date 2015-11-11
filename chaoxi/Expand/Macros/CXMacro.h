@@ -10,7 +10,6 @@
 #define CXMacro_h
 
 #define Prefix CX
-
 /** 字体*/
 #define CXFont(x) [UIFont systemFontOfSize:x]
 #define CXBoldFont(x) [UIFont boldSystemFontOfSize:x]
@@ -69,5 +68,4 @@
 #define CXTempDir NSTemporaryDirectory()
 
 
-
-#endif /* SXEasyMacro_h */
+#endif 

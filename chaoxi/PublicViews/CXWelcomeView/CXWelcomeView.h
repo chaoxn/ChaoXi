@@ -10,4 +10,6 @@
 
 @interface CXWelcomeView : UIView
 
+@property (nonatomic, assign) NSInteger pageCount;
+
 @end

@@ -20,6 +20,8 @@
 #import "REMenu.h"
 #import "UIImageView+WebCache.h"
 
+#import "RACAFNetworking.h"
+#import "CXViewModelClass.h" 
 #import "CXHttpManager.h"
 #import "CXMacro.h"
 

@@ -7,17 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5AEAD03D57A1938CD5033752 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F55B9FC2E6AA861816118FA /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		5AEAD03D57A1938CD5033752 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F55B9FC2E6AA861816118FA /* Pods.framework */; };
 		EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC029A531BDF54FE000F304C /* LuoIMagaCell.m */; };
 		EC029A561BDF54FE000F304C /* LuoIMagaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC029A541BDF54FE000F304C /* LuoIMagaCell.xib */; };
 		EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC029A571BDF64FA000F304C /* imagePlist.plist */; };
 		EC0A94571BE20EEF0085BC9B /* CXHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A94561BE20EEF0085BC9B /* CXHttpManager.m */; };
 		EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A945A1BE212020085BC9B /* ViedoModel.m */; };
-		EC0A94681BE226120085BC9B /* CXWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A94671BE226120085BC9B /* CXWelcomeView.m */; };
 		EC0A94701BE350A00085BC9B /* VideoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A946E1BE350A00085BC9B /* VideoDetailController.m */; };
 		EC0A94711BE350A00085BC9B /* VideoDetailController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC0A946F1BE350A00085BC9B /* VideoDetailController.xib */; };
-		EC378EAC1BDDF7EA006FB4F0 /* PoemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EAA1BDDF7EA006FB4F0 /* PoemViewController.m */; };
-		EC378EAD1BDDF7EA006FB4F0 /* PoemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EAB1BDDF7EA006FB4F0 /* PoemViewController.xib */; };
+		EC1726831BF2F27F00A973EB /* PoeViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC17267D1BF2F27F00A973EB /* PoeViewModel.m */; };
+		EC1726841BF2F27F00A973EB /* CXViewModelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726801BF2F27F00A973EB /* CXViewModelClass.m */; };
+		EC1726871BF300BA00A973EB /* ListenListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726861BF300BA00A973EB /* ListenListViewModel.m */; };
+		EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726891BF3023200A973EB /* PoeViewController.m */; };
+		EC17268C1BF3023200A973EB /* PoeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC17268A1BF3023200A973EB /* PoeViewController.xib */; };
+		EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */; };
+		EC1726B81BF3033F00A973EB /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1726AE1BF3033F00A973EB /* AboutUsViewController.xib */; };
+		EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */; };
+		EC1726BA1BF3033F00A973EB /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1726B21BF3033F00A973EB /* ClearCacheViewController.xib */; };
+		EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726B51BF3033F00A973EB /* SaveViewController.m */; };
+		EC1726BC1BF3033F00A973EB /* SaveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1726B61BF3033F00A973EB /* SaveViewController.xib */; };
+		EC1726C01BF3039E00A973EB /* Poem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726BF1BF3039E00A973EB /* Poem.m */; };
+		EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726C41BF30A4600A973EB /* CXAlterButton.m */; };
+		EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726C61BF30A4600A973EB /* CXAlterItemButton.m */; };
+		EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726C91BF30A4600A973EB /* CXWelcomeView.m */; };
+		EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726D01BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m */; };
+		EC1726D91BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726D21BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m */; };
+		EC1726DA1BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726D41BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m */; };
+		EC1726DB1BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726D71BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m */; };
 		EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */; };
 		EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */; };
 		EC378EB81BDDF84D006FB4F0 /* ArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */; };
@@ -26,7 +42,6 @@
 		EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */; };
 		EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */; };
 		EC378ECA1BDDFAC4006FB4F0 /* NavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EC81BDDFAC4006FB4F0 /* NavigationViewController.xib */; };
-		EC378ECE1BDDFD39006FB4F0 /* Impact.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EC378ECD1BDDFD39006FB4F0 /* Impact.ttf */; };
 		EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */; };
 		ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */; };
 		ECC07BA91BDF1AC5003BE70B /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BA71BDF1AC5003BE70B /* BaseViewController.xib */; };
@@ -67,14 +82,44 @@
 		EC0A94561BE20EEF0085BC9B /* CXHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHttpManager.m; sourceTree = "<group>"; };
 		EC0A94591BE212020085BC9B /* ViedoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViedoModel.h; sourceTree = "<group>"; };
 		EC0A945A1BE212020085BC9B /* ViedoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViedoModel.m; sourceTree = "<group>"; };
-		EC0A94661BE226120085BC9B /* CXWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXWelcomeView.h; sourceTree = "<group>"; };
-		EC0A94671BE226120085BC9B /* CXWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXWelcomeView.m; sourceTree = "<group>"; };
 		EC0A946D1BE350A00085BC9B /* VideoDetailController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoDetailController.h; sourceTree = "<group>"; };
 		EC0A946E1BE350A00085BC9B /* VideoDetailController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoDetailController.m; sourceTree = "<group>"; };
 		EC0A946F1BE350A00085BC9B /* VideoDetailController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VideoDetailController.xib; sourceTree = "<group>"; };
-		EC378EA91BDDF7EA006FB4F0 /* PoemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemViewController.h; sourceTree = "<group>"; };
-		EC378EAA1BDDF7EA006FB4F0 /* PoemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemViewController.m; sourceTree = "<group>"; };
-		EC378EAB1BDDF7EA006FB4F0 /* PoemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoemViewController.xib; sourceTree = "<group>"; };
+		EC17267C1BF2F27F00A973EB /* PoeViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoeViewModel.h; sourceTree = "<group>"; };
+		EC17267D1BF2F27F00A973EB /* PoeViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoeViewModel.m; sourceTree = "<group>"; };
+		EC17267F1BF2F27F00A973EB /* CXViewModelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXViewModelClass.h; sourceTree = "<group>"; };
+		EC1726801BF2F27F00A973EB /* CXViewModelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXViewModelClass.m; sourceTree = "<group>"; };
+		EC1726851BF300BA00A973EB /* ListenListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenListViewModel.h; sourceTree = "<group>"; };
+		EC1726861BF300BA00A973EB /* ListenListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenListViewModel.m; sourceTree = "<group>"; };
+		EC1726881BF3023200A973EB /* PoeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoeViewController.h; sourceTree = "<group>"; };
+		EC1726891BF3023200A973EB /* PoeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoeViewController.m; sourceTree = "<group>"; };
+		EC17268A1BF3023200A973EB /* PoeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoeViewController.xib; sourceTree = "<group>"; };
+		EC1726AC1BF3033F00A973EB /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		EC1726AE1BF3033F00A973EB /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
+		EC1726B01BF3033F00A973EB /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
+		EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
+		EC1726B21BF3033F00A973EB /* ClearCacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClearCacheViewController.xib; sourceTree = "<group>"; };
+		EC1726B41BF3033F00A973EB /* SaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveViewController.h; sourceTree = "<group>"; };
+		EC1726B51BF3033F00A973EB /* SaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveViewController.m; sourceTree = "<group>"; };
+		EC1726B61BF3033F00A973EB /* SaveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveViewController.xib; sourceTree = "<group>"; };
+		EC1726BE1BF3039E00A973EB /* Poem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poem.h; sourceTree = "<group>"; };
+		EC1726BF1BF3039E00A973EB /* Poem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poem.m; sourceTree = "<group>"; };
+		EC1726C31BF30A4600A973EB /* CXAlterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlterButton.h; sourceTree = "<group>"; };
+		EC1726C41BF30A4600A973EB /* CXAlterButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlterButton.m; sourceTree = "<group>"; };
+		EC1726C51BF30A4600A973EB /* CXAlterItemButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlterItemButton.h; sourceTree = "<group>"; };
+		EC1726C61BF30A4600A973EB /* CXAlterItemButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAlterItemButton.m; sourceTree = "<group>"; };
+		EC1726C81BF30A4600A973EB /* CXWelcomeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXWelcomeView.h; sourceTree = "<group>"; };
+		EC1726C91BF30A4600A973EB /* CXWelcomeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXWelcomeView.m; sourceTree = "<group>"; };
+		EC1726CF1BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPRequestOperationManager+RACSupport.h"; sourceTree = "<group>"; };
+		EC1726D01BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPRequestOperationManager+RACSupport.m"; sourceTree = "<group>"; };
+		EC1726D11BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+RACSupport.h"; sourceTree = "<group>"; };
+		EC1726D21BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+RACSupport.m"; sourceTree = "<group>"; };
+		EC1726D31BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFURLConnectionOperation+RACSupport.h"; sourceTree = "<group>"; };
+		EC1726D41BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFURLConnectionOperation+RACSupport.m"; sourceTree = "<group>"; };
+		EC1726D51BF30A8F00A973EB /* RACAFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RACAFNetworking.h; sourceTree = "<group>"; };
+		EC1726D61BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSubscriber+AFProgressCallbacks.h"; sourceTree = "<group>"; };
+		EC1726D71BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSubscriber+AFProgressCallbacks.m"; sourceTree = "<group>"; };
 		EC378EAE1BDDF7F6006FB4F0 /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
 		EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
 		EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
@@ -87,7 +132,6 @@
 		EC378EC61BDDFAC4006FB4F0 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		EC378EC81BDDFAC4006FB4F0 /* NavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationViewController.xib; sourceTree = "<group>"; };
-		EC378ECD1BDDFD39006FB4F0 /* Impact.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Impact.ttf; sourceTree = "<group>"; };
 		EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
 		ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
@@ -166,15 +210,6 @@
 			path = ListenModel;
 			sourceTree = "<group>";
 		};
-		EC0A94621BE225EA0085BC9B /* Welcome */ = {
-			isa = PBXGroup;
-			children = (
-				EC0A94661BE226120085BC9B /* CXWelcomeView.h */,
-				EC0A94671BE226120085BC9B /* CXWelcomeView.m */,
-			);
-			path = Welcome;
-			sourceTree = "<group>";
-		};
 		EC0A946B1BE3500E0085BC9B /* PlayOnViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +225,148 @@
 				EC0A946F1BE350A00085BC9B /* VideoDetailController.xib */,
 			);
 			path = ViedoDetailViewController;
+			sourceTree = "<group>";
+		};
+		EC1726751BF2F27F00A973EB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726761BF2F27F00A973EB /* ListenViewModel */,
+				EC17267B1BF2F27F00A973EB /* PoeViewModel */,
+				EC17267E1BF2F27F00A973EB /* PublicViewModel */,
+			);
+			name = ViewModel;
+			path = chaoxi/ViewModel;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC1726761BF2F27F00A973EB /* ListenViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726851BF300BA00A973EB /* ListenListViewModel.h */,
+				EC1726861BF300BA00A973EB /* ListenListViewModel.m */,
+			);
+			path = ListenViewModel;
+			sourceTree = "<group>";
+		};
+		EC17267B1BF2F27F00A973EB /* PoeViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC17267C1BF2F27F00A973EB /* PoeViewModel.h */,
+				EC17267D1BF2F27F00A973EB /* PoeViewModel.m */,
+			);
+			path = PoeViewModel;
+			sourceTree = "<group>";
+		};
+		EC17267E1BF2F27F00A973EB /* PublicViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC17267F1BF2F27F00A973EB /* CXViewModelClass.h */,
+				EC1726801BF2F27F00A973EB /* CXViewModelClass.m */,
+			);
+			path = PublicViewModel;
+			sourceTree = "<group>";
+		};
+		EC1726AA1BF3033F00A973EB /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726AB1BF3033F00A973EB /* AboutUs */,
+				EC1726AF1BF3033F00A973EB /* ClearCache */,
+				EC1726B31BF3033F00A973EB /* Save */,
+			);
+			path = Setting;
+			sourceTree = "<group>";
+		};
+		EC1726AB1BF3033F00A973EB /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726AC1BF3033F00A973EB /* AboutUsViewController.h */,
+				EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */,
+				EC1726AE1BF3033F00A973EB /* AboutUsViewController.xib */,
+			);
+			path = AboutUs;
+			sourceTree = "<group>";
+		};
+		EC1726AF1BF3033F00A973EB /* ClearCache */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726B01BF3033F00A973EB /* ClearCacheViewController.h */,
+				EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */,
+				EC1726B21BF3033F00A973EB /* ClearCacheViewController.xib */,
+			);
+			path = ClearCache;
+			sourceTree = "<group>";
+		};
+		EC1726B31BF3033F00A973EB /* Save */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726B41BF3033F00A973EB /* SaveViewController.h */,
+				EC1726B51BF3033F00A973EB /* SaveViewController.m */,
+				EC1726B61BF3033F00A973EB /* SaveViewController.xib */,
+			);
+			path = Save;
+			sourceTree = "<group>";
+		};
+		EC1726BD1BF3039E00A973EB /* PoemModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726BE1BF3039E00A973EB /* Poem.h */,
+				EC1726BF1BF3039E00A973EB /* Poem.m */,
+			);
+			path = PoemModel;
+			sourceTree = "<group>";
+		};
+		EC1726C11BF30A4600A973EB /* PublicViews */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726C21BF30A4600A973EB /* CXAlterButton */,
+				EC1726C71BF30A4600A973EB /* CXWelcomeView */,
+			);
+			name = PublicViews;
+			path = chaoxi/PublicViews;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC1726C21BF30A4600A973EB /* CXAlterButton */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726C31BF30A4600A973EB /* CXAlterButton.h */,
+				EC1726C41BF30A4600A973EB /* CXAlterButton.m */,
+				EC1726C51BF30A4600A973EB /* CXAlterItemButton.h */,
+				EC1726C61BF30A4600A973EB /* CXAlterItemButton.m */,
+			);
+			path = CXAlterButton;
+			sourceTree = "<group>";
+		};
+		EC1726C71BF30A4600A973EB /* CXWelcomeView */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726C81BF30A4600A973EB /* CXWelcomeView.h */,
+				EC1726C91BF30A4600A973EB /* CXWelcomeView.m */,
+			);
+			path = CXWelcomeView;
+			sourceTree = "<group>";
+		};
+		EC1726CD1BF30A8F00A973EB /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726CE1BF30A8F00A973EB /* RACAFNetworking */,
+			);
+			name = Vender;
+			path = chaoxi/Vender;
+			sourceTree = SOURCE_ROOT;
+		};
+		EC1726CE1BF30A8F00A973EB /* RACAFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				EC1726CF1BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.h */,
+				EC1726D01BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m */,
+				EC1726D11BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.h */,
+				EC1726D21BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m */,
+				EC1726D31BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.h */,
+				EC1726D41BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m */,
+				EC1726D51BF30A8F00A973EB /* RACAFNetworking.h */,
+				EC1726D61BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.h */,
+				EC1726D71BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m */,
+			);
+			path = RACAFNetworking;
 			sourceTree = "<group>";
 		};
 		EC378EB31BDDF82C006FB4F0 /* Art */ = {
@@ -217,9 +394,9 @@
 		EC378EC21BDDFA3C006FB4F0 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				EC1726AA1BF3033F00A973EB /* Setting */,
 				EC378EC31BDDFA96006FB4F0 /* Navigation */,
 				EC378EC41BDDFA96006FB4F0 /* Public */,
-				EC378EC51BDDFA96006FB4F0 /* Setting */,
 			);
 			name = Other;
 			path = chaoxi/ViewController/Other;
@@ -245,16 +422,10 @@
 			path = Public;
 			sourceTree = "<group>";
 		};
-		EC378EC51BDDFA96006FB4F0 /* Setting */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Setting;
-			sourceTree = "<group>";
-		};
 		EC378ECB1BDDFC6F006FB4F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC1726BD1BF3039E00A973EB /* PoemModel */,
 				EC0A94581BE211EA0085BC9B /* ListenModel */,
 			);
 			path = Model;
@@ -263,7 +434,6 @@
 		EC378ECC1BDDFD39006FB4F0 /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				EC378ECD1BDDFD39006FB4F0 /* Impact.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -316,10 +486,11 @@
 				ECC381981BD8898F007A3680 /* AppDelegate.m */,
 				ECC381991BD8898F007A3680 /* main.m */,
 				EC378ECB1BDDFC6F006FB4F0 /* Model */,
-				ECC3817D1BD8888A007A3680 /* View */,
 				ECC3817E1BD8888A007A3680 /* ViewController */,
+				EC1726751BF2F27F00A973EB /* ViewModel */,
+				EC1726C11BF30A4600A973EB /* PublicViews */,
 				ECC3817B1BD8888A007A3680 /* Resource */,
-				ECC3817C1BD8888A007A3680 /* Vender */,
+				EC1726CD1BF30A8F00A973EB /* Vender */,
 				ECC381581BD8888A007A3680 /* Expand */,
 				ECC3812A1BD8863A007A3680 /* Supporting Files */,
 			);
@@ -467,21 +638,6 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		ECC3817C1BD8888A007A3680 /* Vender */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Vender;
-			sourceTree = "<group>";
-		};
-		ECC3817D1BD8888A007A3680 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EC0A94621BE225EA0085BC9B /* Welcome */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		ECC3817E1BD8888A007A3680 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -508,9 +664,9 @@
 		ECC3818D1BD888D9007A3680 /* Poem */ = {
 			isa = PBXGroup;
 			children = (
-				EC378EA91BDDF7EA006FB4F0 /* PoemViewController.h */,
-				EC378EAA1BDDF7EA006FB4F0 /* PoemViewController.m */,
-				EC378EAB1BDDF7EA006FB4F0 /* PoemViewController.xib */,
+				EC1726881BF3023200A973EB /* PoeViewController.h */,
+				EC1726891BF3023200A973EB /* PoeViewController.m */,
+				EC17268A1BF3023200A973EB /* PoeViewController.xib */,
 			);
 			path = Poem;
 			sourceTree = "<group>";
@@ -609,17 +765,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC0A94711BE350A00085BC9B /* VideoDetailController.xib in Resources */,
+				EC1726BA1BF3033F00A973EB /* ClearCacheViewController.xib in Resources */,
 				EC378ECA1BDDFAC4006FB4F0 /* NavigationViewController.xib in Resources */,
 				ECC07BA91BDF1AC5003BE70B /* BaseViewController.xib in Resources */,
 				EC378EB91BDDF84D006FB4F0 /* ArtViewController.xib in Resources */,
-				EC378EAD1BDDF7EA006FB4F0 /* PoemViewController.xib in Resources */,
-				EC378ECE1BDDFD39006FB4F0 /* Impact.ttf in Resources */,
 				EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */,
 				EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */,
 				ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */,
 				EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */,
+				EC1726B81BF3033F00A973EB /* AboutUsViewController.xib in Resources */,
+				EC17268C1BF3023200A973EB /* PoeViewController.xib in Resources */,
 				EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */,
 				EC029A561BDF54FE000F304C /* LuoIMagaCell.xib in Resources */,
+				EC1726BC1BF3033F00A973EB /* SaveViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -685,27 +843,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC1726D91BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m in Sources */,
+				EC1726C01BF3039E00A973EB /* Poem.m in Sources */,
 				ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */,
 				EC0A94701BE350A00085BC9B /* VideoDetailController.m in Sources */,
 				ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */,
 				EC0A94571BE20EEF0085BC9B /* CXHttpManager.m in Sources */,
 				ECC381871BD8888A007A3680 /* UIView+BorderStyle.m in Sources */,
-				EC0A94681BE226120085BC9B /* CXWelcomeView.m in Sources */,
+				EC1726DB1BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m in Sources */,
 				EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */,
-				EC378EAC1BDDF7EA006FB4F0 /* PoemViewController.m in Sources */,
 				EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */,
 				ECC381841BD8888A007A3680 /* NSString+Category.m in Sources */,
 				EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */,
 				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
+				EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */,
 				ECC381821BD8888A007A3680 /* NSString+CashString.m in Sources */,
+				EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */,
+				EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */,
 				ECC381811BD8888A007A3680 /* CashTextField.m in Sources */,
 				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
+				EC1726831BF2F27F00A973EB /* PoeViewModel.m in Sources */,
+				EC1726871BF300BA00A973EB /* ListenListViewModel.m in Sources */,
+				EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */,
 				ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */,
+				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
+				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
+				EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */,
 				ECC3819B1BD8898F007A3680 /* main.m in Sources */,
+				EC1726DA1BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m in Sources */,
 				EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */,
 				EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */,
+				EC1726841BF2F27F00A973EB /* CXViewModelClass.m in Sources */,
 				ECC381851BD8888A007A3680 /* UIFont+Category.m in Sources */,
 				EC378EB81BDDF84D006FB4F0 /* ArtViewController.m in Sources */,
+				EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

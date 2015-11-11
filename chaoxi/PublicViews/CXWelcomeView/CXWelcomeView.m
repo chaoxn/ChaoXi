@@ -77,8 +77,8 @@
         
         UIImageView *imageview = [[UIImageView alloc] initWithFrame:self.frame];
         imageview.backgroundColor = [UIColor greenColor];
-        //        imageview.contentMode = UIViewContentModeScaleAspectFit;
-        imageview.image = [UIImage imageNamed:[NSString stringWithFormat:@"welcome%ld",i]];
+//           imageview.contentMode = UIViewContentModeScaleAspectFit;
+        imageview.image = [UIImage imageNamed:[NSString stringWithFormat:@"welcome%zd",i]];
         [view addSubview:imageview];
         
         view.tag = i;

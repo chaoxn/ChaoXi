@@ -10,4 +10,6 @@
 
 @interface CXRequestManager : NSObject
 
++(NSString *)picParameterFormModel:(id)model;
+
 @end

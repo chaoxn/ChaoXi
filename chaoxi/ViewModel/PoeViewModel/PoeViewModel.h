@@ -6,8 +6,14 @@
 //  Copyright © 2015年 chaox. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "CXViewModelClass.h"
 
-@interface PoeViewModel : NSObject
+@interface PoeViewModel : CXViewModelClass
+
+@property (nonatomic, strong, readonly) RACCommand *requestCommand;
+
+@property (nonatomic, strong) NSString *receiveIndex;
+
+@property (nonatomic, strong) RACSubject *delegateSignal;
 
 @end

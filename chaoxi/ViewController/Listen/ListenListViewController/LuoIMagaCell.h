@@ -21,9 +21,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *saveCountLabel;
 
-@property (nonatomic, strong) NSMutableArray *imgArr;
+@property (nonatomic, strong) NSArray *imgArr;
 
 @property (weak, nonatomic) IBOutlet UILabel *volLable;
+
 @property (nonatomic, strong) ViedoModel *model;
 
 @end

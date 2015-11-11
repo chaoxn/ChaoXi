@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "CXHttpManager.h"
 
 @interface CXViewModelClass : NSObject
+
+@property (strong, nonatomic) ReturnValueBlock returnBlock;
+@property (strong, nonatomic) ErrorCodeBlock errorBlock;
+@property (strong, nonatomic) FailureBlock failureBlock;
+
+-(void) netWorkStateWithNetConnectBlock: (NetWorkBlock) netConnectBlock WithURlStr: (NSString *) strURl;
+
+-(void) setBlockWithReturnBlock: (ReturnValueBlock) returnBlock
+                 WithErrorBlock: (ErrorCodeBlock) errorBlock
+               WithFailureBlock: (FailureBlock) failureBlock;
 
 @end

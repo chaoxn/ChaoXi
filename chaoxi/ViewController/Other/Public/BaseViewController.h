@@ -10,4 +10,9 @@
 
 @interface BaseViewController : UIViewController
 
+@property (nonatomic) KVNProgressConfiguration *basicConfiguration;
+@property (nonatomic) KVNProgressConfiguration *customConfiguration;
+
+- (void)showProgress:(NSString *)str;
+
 @end
