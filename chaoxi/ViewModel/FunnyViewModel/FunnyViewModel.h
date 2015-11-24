@@ -6,8 +6,12 @@
 //  Copyright © 2015年 chaox. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "CXViewModelClass.h"
 
-@interface FunnyViewModel : NSObject
+@interface FunnyViewModel : CXViewModelClass
+
+@property (nonatomic, strong, readonly) RACCommand *requestCommand;
+
+@property (nonatomic, strong) RACSubject *delegateSignal;
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "NavigationViewController.h"
 
 @interface BaseViewController : UIViewController
 
@@ -14,5 +15,7 @@
 @property (nonatomic) KVNProgressConfiguration *customConfiguration;
 
 - (void)showProgress:(NSString *)str;
+
+- (KVNProgressConfiguration *)customKVNProgressUIConfiguration;
 
 @end

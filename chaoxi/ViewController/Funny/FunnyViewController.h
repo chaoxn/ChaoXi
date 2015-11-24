@@ -7,7 +7,9 @@
 //
 
 #import "BaseViewController.h"
+#import "CXSliderViewCell.h"
+#import "CXSliderViewLayout.h"
 
-@interface FunnyViewController : BaseViewController
+@interface FunnyViewController : BaseViewController< UICollectionViewDataSource, UICollectionViewDelegate>
 
 @end

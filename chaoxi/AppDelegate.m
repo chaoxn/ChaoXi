@@ -9,7 +9,8 @@
 #import "AppDelegate.h"
 #import "ListenViewController.h"
 #import "NavigationViewController.h"
-
+#import "ArtViewController.h"
+#import "ViewController.h"
 
 @interface AppDelegate ()
 
@@ -21,7 +22,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
 
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.rootViewController = [[NavigationViewController alloc]initWithRootViewController:[[ListenViewController alloc]init]];
+    self.window.rootViewController = [[NavigationViewController alloc]initWithRootViewController:[[ArtViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

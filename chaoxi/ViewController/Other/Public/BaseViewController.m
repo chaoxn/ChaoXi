@@ -53,6 +53,7 @@
     UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 250, 44)];
     view.backgroundColor = [UIColor clearColor];
     
+    
     [view addSubview:button];
 
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:view];

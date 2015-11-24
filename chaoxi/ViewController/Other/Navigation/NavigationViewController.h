@@ -10,7 +10,7 @@
 
 @interface NavigationViewController : UINavigationController
 
-@property (strong, readonly, nonatomic) REMenu *menu;
+@property (nonatomic, strong) REMenu *menu;
 
 - (void)toggleMenu;
 

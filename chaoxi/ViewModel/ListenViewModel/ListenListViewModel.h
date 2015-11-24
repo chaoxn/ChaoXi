@@ -15,8 +15,6 @@
 
 @property (nonatomic, copy) NSArray *modelArr;
 
-@property (nonatomic, strong, readonly) RACCommand *requestCommand;
-
 - (void)first;
 
 - (void)next;

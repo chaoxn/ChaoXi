@@ -137,8 +137,6 @@
 }
 
 #pragma mark- buttonClicked
-
-// FIXMI:- 展开needFix 
 - (void)centerButtonOpen
 {    
     [CATransaction begin];
@@ -302,7 +300,6 @@
 
 - (void)itemButtonClicked:(CXAlterItemButton *)itemButton
 {
-    
     if ([self.delegate respondsToSelector:@selector(AlterButton:clickItemButtonAtIndex:)]) {
         
         CXAlterItemButton *selectedButton = self.items[itemButton.index];
@@ -312,17 +309,6 @@
                              selectedButton.transform = CGAffineTransformMakeScale(3, 3);
                              selectedButton.alpha = 0.0f;
                          }];
-
-//        for (int i = 0; i < self.items.count; i++) {
-//            if (i == selectedButton.index) {
-//                continue;
-//            }
-//            CXAlterItemButton *unselectedButton = self.items[i];
-//            [UIView animateWithDuration:0.0618f * 2
-//                             animations:^{
-//                                 unselectedButton.transform = CGAffineTransformMakeScale(0, 0);
-//                             }];
-//        }
         
         [self.delegate AlterButton:self clickItemButtonAtIndex:itemButton.index];
         

@@ -25,14 +25,17 @@
 
 - (UILabel *)contentLabel
 {
-    _contentLabel = ({
-        UILabel *label = [[UILabel alloc]init];
-        label.numberOfLines = 0;
-        label.textColor = CXRGBColor(101, 98, 98);
-        label.textAlignment = NSTextAlignmentCenter;
-        label.font = CXFont(13);
-        label;
-    });
+    if (_contentLabel == nil) {
+        
+        _contentLabel = ({
+            UILabel *label = [[UILabel alloc]init];
+            label.numberOfLines = 0;
+            label.textColor = CXRGBColor(101, 98, 98);
+            label.textAlignment = NSTextAlignmentCenter;
+            label.font = CXFont(13);
+            label;
+        });
+    }
     return _contentLabel;
 }
 

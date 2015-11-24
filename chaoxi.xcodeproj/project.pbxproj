@@ -37,14 +37,20 @@
 		EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */; };
 		EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */; };
 		EC378EB81BDDF84D006FB4F0 /* ArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */; };
-		EC378EB91BDDF84D006FB4F0 /* ArtViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EB71BDDF84D006FB4F0 /* ArtViewController.xib */; };
 		EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */; };
 		EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */; };
 		EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */; };
-		EC378ECA1BDDFAC4006FB4F0 /* NavigationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EC81BDDFAC4006FB4F0 /* NavigationViewController.xib */; };
 		EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */; };
+		EC6A7B741BFB085F00789E41 /* CXSliderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B711BFB085F00789E41 /* CXSliderViewCell.m */; };
+		EC6A7B751BFB085F00789E41 /* CXSliderViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B731BFB085F00789E41 /* CXSliderViewLayout.m */; };
+		EC6A7B781BFB10A400789E41 /* FunnyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B771BFB10A400789E41 /* FunnyViewModel.m */; };
+		EC7D9EBA1BFB294B0092D887 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D9EB81BFB294B0092D887 /* WebViewController.m */; };
+		EC7D9EBB1BFB294B0092D887 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC7D9EB91BFB294B0092D887 /* WebViewController.xib */; };
+		EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */; };
+		EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82440D1C03FD7F0082219E /* CXDropMenuView.m */; };
+		EC8244131C0405E70082219E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8244111C0405E70082219E /* ViewController.m */; };
+		EC8244171C04496B0082219E /* ArtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8244161C04496B0082219E /* ArtCell.m */; };
 		ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */; };
-		ECC07BA91BDF1AC5003BE70B /* BaseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BA71BDF1AC5003BE70B /* BaseViewController.xib */; };
 		ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BB41BDF531E003BE70B /* ListenViewController.m */; };
 		ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BB51BDF531E003BE70B /* ListenViewController.xib */; };
 		ECC3814A1BD8863A007A3680 /* chaoxiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381491BD8863A007A3680 /* chaoxiTests.m */; };
@@ -125,17 +131,31 @@
 		EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
 		EC378EB51BDDF84D006FB4F0 /* ArtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtViewController.h; sourceTree = "<group>"; };
 		EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtViewController.m; sourceTree = "<group>"; };
-		EC378EB71BDDF84D006FB4F0 /* ArtViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ArtViewController.xib; sourceTree = "<group>"; };
 		EC378EBD1BDDF86E006FB4F0 /* FunnyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyViewController.h; sourceTree = "<group>"; };
 		EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyViewController.m; sourceTree = "<group>"; };
 		EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnyViewController.xib; sourceTree = "<group>"; };
 		EC378EC61BDDFAC4006FB4F0 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
-		EC378EC81BDDFAC4006FB4F0 /* NavigationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NavigationViewController.xib; sourceTree = "<group>"; };
 		EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		EC6A7B701BFB085F00789E41 /* CXSliderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSliderViewCell.h; sourceTree = "<group>"; };
+		EC6A7B711BFB085F00789E41 /* CXSliderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSliderViewCell.m; sourceTree = "<group>"; };
+		EC6A7B721BFB085F00789E41 /* CXSliderViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSliderViewLayout.h; sourceTree = "<group>"; };
+		EC6A7B731BFB085F00789E41 /* CXSliderViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSliderViewLayout.m; sourceTree = "<group>"; };
+		EC6A7B761BFB10A400789E41 /* FunnyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyViewModel.h; sourceTree = "<group>"; };
+		EC6A7B771BFB10A400789E41 /* FunnyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyViewModel.m; sourceTree = "<group>"; };
+		EC7D9EB71BFB294B0092D887 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		EC7D9EB81BFB294B0092D887 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		EC7D9EB91BFB294B0092D887 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		EC82440A1C03FD7F0082219E /* CXDropMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDropMenuItemView.h; sourceTree = "<group>"; };
+		EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDropMenuItemView.m; sourceTree = "<group>"; };
+		EC82440C1C03FD7F0082219E /* CXDropMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDropMenuView.h; sourceTree = "<group>"; };
+		EC82440D1C03FD7F0082219E /* CXDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDropMenuView.m; sourceTree = "<group>"; };
+		EC8244101C0405E70082219E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EC8244111C0405E70082219E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EC8244151C04496B0082219E /* ArtCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtCell.h; sourceTree = "<group>"; };
+		EC8244161C04496B0082219E /* ArtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtCell.m; sourceTree = "<group>"; };
 		ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
-		ECC07BA71BDF1AC5003BE70B /* BaseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BaseViewController.xib; sourceTree = "<group>"; };
 		ECC07BB31BDF531E003BE70B /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
 		ECC07BB41BDF531E003BE70B /* ListenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenViewController.m; sourceTree = "<group>"; };
 		ECC07BB51BDF531E003BE70B /* ListenViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListenViewController.xib; sourceTree = "<group>"; };
@@ -230,6 +250,9 @@
 		EC1726751BF2F27F00A973EB /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EC6A7B621BFAD5FF00789E41 /* ArtViewModel */,
+				EC6A7B631BFAD5FF00789E41 /* FunnyViewModel */,
+				EC6A7AD61BF9AB3B00789E41 /* ReadViewModel */,
 				EC1726761BF2F27F00A973EB /* ListenViewModel */,
 				EC17267B1BF2F27F00A973EB /* PoeViewModel */,
 				EC17267E1BF2F27F00A973EB /* PublicViewModel */,
@@ -317,6 +340,8 @@
 		EC1726C11BF30A4600A973EB /* PublicViews */ = {
 			isa = PBXGroup;
 			children = (
+				EC8244091C03FD7F0082219E /* CXDropMenuView */,
+				EC6A7B6F1BFB085F00789E41 /* CXSliderView */,
 				EC1726C21BF30A4600A973EB /* CXAlterButton */,
 				EC1726C71BF30A4600A973EB /* CXWelcomeView */,
 			);
@@ -356,13 +381,13 @@
 		EC1726CE1BF30A8F00A973EB /* RACAFNetworking */ = {
 			isa = PBXGroup;
 			children = (
+				EC1726D51BF30A8F00A973EB /* RACAFNetworking.h */,
 				EC1726CF1BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.h */,
 				EC1726D01BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m */,
 				EC1726D11BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.h */,
 				EC1726D21BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m */,
 				EC1726D31BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.h */,
 				EC1726D41BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m */,
-				EC1726D51BF30A8F00A973EB /* RACAFNetworking.h */,
 				EC1726D61BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.h */,
 				EC1726D71BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m */,
 			);
@@ -374,7 +399,8 @@
 			children = (
 				EC378EB51BDDF84D006FB4F0 /* ArtViewController.h */,
 				EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */,
-				EC378EB71BDDF84D006FB4F0 /* ArtViewController.xib */,
+				EC8244151C04496B0082219E /* ArtCell.h */,
+				EC8244161C04496B0082219E /* ArtCell.m */,
 			);
 			name = Art;
 			path = chaoxi/ViewController/Art;
@@ -386,6 +412,9 @@
 				EC378EBD1BDDF86E006FB4F0 /* FunnyViewController.h */,
 				EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */,
 				EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */,
+				EC7D9EB71BFB294B0092D887 /* WebViewController.h */,
+				EC7D9EB81BFB294B0092D887 /* WebViewController.m */,
+				EC7D9EB91BFB294B0092D887 /* WebViewController.xib */,
 			);
 			name = Funny;
 			path = chaoxi/ViewController/Funny;
@@ -407,7 +436,8 @@
 			children = (
 				EC378EC61BDDFAC4006FB4F0 /* NavigationViewController.h */,
 				EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */,
-				EC378EC81BDDFAC4006FB4F0 /* NavigationViewController.xib */,
+				EC8244101C0405E70082219E /* ViewController.h */,
+				EC8244111C0405E70082219E /* ViewController.m */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -417,7 +447,6 @@
 			children = (
 				ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */,
 				ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */,
-				ECC07BA71BDF1AC5003BE70B /* BaseViewController.xib */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -444,6 +473,51 @@
 				EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		EC6A7AD61BF9AB3B00789E41 /* ReadViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ReadViewModel;
+			sourceTree = "<group>";
+		};
+		EC6A7B621BFAD5FF00789E41 /* ArtViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ArtViewModel;
+			sourceTree = "<group>";
+		};
+		EC6A7B631BFAD5FF00789E41 /* FunnyViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC6A7B761BFB10A400789E41 /* FunnyViewModel.h */,
+				EC6A7B771BFB10A400789E41 /* FunnyViewModel.m */,
+			);
+			path = FunnyViewModel;
+			sourceTree = "<group>";
+		};
+		EC6A7B6F1BFB085F00789E41 /* CXSliderView */ = {
+			isa = PBXGroup;
+			children = (
+				EC6A7B701BFB085F00789E41 /* CXSliderViewCell.h */,
+				EC6A7B711BFB085F00789E41 /* CXSliderViewCell.m */,
+				EC6A7B721BFB085F00789E41 /* CXSliderViewLayout.h */,
+				EC6A7B731BFB085F00789E41 /* CXSliderViewLayout.m */,
+			);
+			path = CXSliderView;
+			sourceTree = "<group>";
+		};
+		EC8244091C03FD7F0082219E /* CXDropMenuView */ = {
+			isa = PBXGroup;
+			children = (
+				EC82440A1C03FD7F0082219E /* CXDropMenuItemView.h */,
+				EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */,
+				EC82440C1C03FD7F0082219E /* CXDropMenuView.h */,
+				EC82440D1C03FD7F0082219E /* CXDropMenuView.m */,
+			);
+			path = CXDropMenuView;
 			sourceTree = "<group>";
 		};
 		ECC07BB21BDF531E003BE70B /* ListenListViewController */ = {
@@ -766,9 +840,7 @@
 			files = (
 				EC0A94711BE350A00085BC9B /* VideoDetailController.xib in Resources */,
 				EC1726BA1BF3033F00A973EB /* ClearCacheViewController.xib in Resources */,
-				EC378ECA1BDDFAC4006FB4F0 /* NavigationViewController.xib in Resources */,
-				ECC07BA91BDF1AC5003BE70B /* BaseViewController.xib in Resources */,
-				EC378EB91BDDF84D006FB4F0 /* ArtViewController.xib in Resources */,
+				EC7D9EBB1BFB294B0092D887 /* WebViewController.xib in Resources */,
 				EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */,
 				EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */,
 				ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */,
@@ -843,6 +915,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC8244131C0405E70082219E /* ViewController.m in Sources */,
+				EC6A7B751BFB085F00789E41 /* CXSliderViewLayout.m in Sources */,
 				EC1726D91BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m in Sources */,
 				EC1726C01BF3039E00A973EB /* Poem.m in Sources */,
 				ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */,
@@ -854,6 +928,7 @@
 				EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */,
 				EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */,
 				ECC381841BD8888A007A3680 /* NSString+Category.m in Sources */,
+				EC6A7B781BFB10A400789E41 /* FunnyViewModel.m in Sources */,
 				EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */,
 				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
 				EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */,
@@ -861,20 +936,25 @@
 				EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */,
 				EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */,
 				ECC381811BD8888A007A3680 /* CashTextField.m in Sources */,
+				EC6A7B741BFB085F00789E41 /* CXSliderViewCell.m in Sources */,
+				EC7D9EBA1BFB294B0092D887 /* WebViewController.m in Sources */,
 				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
 				EC1726831BF2F27F00A973EB /* PoeViewModel.m in Sources */,
 				EC1726871BF300BA00A973EB /* ListenListViewModel.m in Sources */,
 				EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */,
 				ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */,
+				EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */,
 				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
 				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
 				EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */,
 				ECC3819B1BD8898F007A3680 /* main.m in Sources */,
 				EC1726DA1BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m in Sources */,
 				EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */,
+				EC8244171C04496B0082219E /* ArtCell.m in Sources */,
 				EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */,
 				EC1726841BF2F27F00A973EB /* CXViewModelClass.m in Sources */,
 				ECC381851BD8888A007A3680 /* UIFont+Category.m in Sources */,
+				EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */,
 				EC378EB81BDDF84D006FB4F0 /* ArtViewController.m in Sources */,
 				EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */,
 			);

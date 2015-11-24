@@ -10,4 +10,10 @@
 
 @interface ArtCell : UICollectionViewCell
 
+@property (nonatomic, strong) UIImageView *mainImageView;
+
+@property (nonatomic, strong) UILabel *titleLabel;
+
+@property (nonatomic, strong) UILabel *decLabel;
+
 @end

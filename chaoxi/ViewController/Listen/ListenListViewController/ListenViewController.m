@@ -15,7 +15,6 @@
 @interface ListenViewController ()<UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) NSMutableArray *imgArr;
-//@property (nonatomic, strong) NSArray *videoModelArr;
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, strong) ListenListViewModel *listenViewModel;
 
@@ -32,7 +31,10 @@
     
     return _listenViewModel;
 }
-
+/**
+ *  数据的请求处理与刷新全部放在视图模型中, 由视图模型的信号自动检测数组的变化动态刷新视图
+ *  视图控制器只保留一个刷新命令
+ */
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,11 +44,11 @@
         [self updateView];
     }];
     
-    _tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         [self.listenViewModel first];
     }];
     
-    _tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+    self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self.listenViewModel next];
     }];
 }
@@ -55,7 +57,6 @@
 {
     [self.tableView.header endRefreshing];
     [self.tableView.footer endRefreshing];
-    
     [self.tableView reloadData];
 }
 
@@ -81,11 +82,8 @@
         
         cell = [[LuoIMagaCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indeinitfier];
     }
-    
     cell.model = self.listenViewModel.modelArr[indexPath.row];
     cell.tag = indexPath.row;
-    cell.volLable.text = [NSString stringWithFormat:@"vol.%ld",(long)indexPath.row+1];
-    
     return cell;
 }
 

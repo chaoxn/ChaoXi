@@ -13,9 +13,9 @@
 @interface ListenListViewModel()
 
 @property (nonatomic, strong) AFHTTPRequestOperationManager *httpClient;
+
 @property (nonatomic, strong) NSNumber *page;
 @property (nonatomic, copy) NSDictionary *parameter;
-@property (nonatomic, copy) NSString *urlPath;
 
 @end
 
@@ -32,15 +32,15 @@
 
 - (void)initBind
 {
-    
-    self.httpClient = [AFHTTPRequestOperationManager manager];
-    self.httpClient.requestSerializer = [AFJSONRequestSerializer serializer];
-    self.httpClient.responseSerializer = [AFJSONResponseSerializer serializer];
+//    self.httpClient = [AFHTTPRequestOperationManager manager];
+//    self.httpClient.requestSerializer = [AFJSONRequestSerializer serializer];
+//    self.httpClient.responseSerializer = [AFJSONResponseSerializer serializer];
     
     self.page = @9;
     
     @weakify(self);
     
+// 绑定接口请求参数与页数, 通过页数的变化激活此信号
     [RACObserve(self, page) subscribeNext:^(NSNumber *page) {
         
          @strongify(self);
@@ -55,6 +55,8 @@
         self.parameter = parameter;
     }];
     
+    // 绑定参数与网络请求 通过上面参数的激活继续激活网络请求,  RACAFNetworking的方式暂时没有掌握仍然使用封装好的AFN
+    
     [RACObserve(self, parameter) subscribeNext:^( NSDictionary *parameter) {
         @strongify(self);
         
@@ -63,6 +65,10 @@
 //        }];
         
         NSMutableArray *listens = [NSMutableArray arrayWithCapacity:88];
+        
+        /**
+         *  分两种情况: 如果是变为0,说明是重置数据;如果是大于0,说明是要加载更多数据;不处理向上翻页的情况.
+         */
         
         if ([self.page isEqualToNumber:@9] != YES) {
             
@@ -84,7 +90,6 @@
         }];
     
     }];
-    
 }
 
 - (void)first

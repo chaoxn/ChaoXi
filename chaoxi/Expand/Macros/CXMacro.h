@@ -27,8 +27,8 @@
 #endif
 
 /** 获取硬件信息*/
-#define ScreenWidth ([UIScreen mainScreen].applicationFrame.size.width)
-#define ScreenHeight ([UIScreen mainScreen].applicationFrame.size.height)
+#define ScreenWidth ([UIScreen mainScreen].bounds.size.width)
+#define ScreenHeight ([UIScreen mainScreen].bounds.size.height)
 
 #define zoomRate ([[UIScreen mainScreen] bounds].size.width / 375.0f)
 
