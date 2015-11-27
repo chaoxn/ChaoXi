@@ -36,7 +36,6 @@
 		EC1726DB1BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726D71BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m */; };
 		EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */; };
 		EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */; };
-		EC378EB81BDDF84D006FB4F0 /* ArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */; };
 		EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */; };
 		EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */; };
 		EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */; };
@@ -46,10 +45,18 @@
 		EC6A7B781BFB10A400789E41 /* FunnyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B771BFB10A400789E41 /* FunnyViewModel.m */; };
 		EC7D9EBA1BFB294B0092D887 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7D9EB81BFB294B0092D887 /* WebViewController.m */; };
 		EC7D9EBB1BFB294B0092D887 /* WebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC7D9EB91BFB294B0092D887 /* WebViewController.xib */; };
+		EC7E6E361C05AE3C0062518A /* MuseumListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E351C05AE3C0062518A /* MuseumListViewModel.m */; };
+		EC7E6E3A1C05B1B80062518A /* MuseumModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E391C05B1B80062518A /* MuseumModel.m */; };
+		EC7E6E511C05B4CA0062518A /* ArtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E4A1C05B4CA0062518A /* ArtCell.m */; };
+		EC7E6E521C05B4CA0062518A /* ArtHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E4C1C05B4CA0062518A /* ArtHeaderView.m */; };
+		EC7E6E531C05B4CA0062518A /* ArtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E4E1C05B4CA0062518A /* ArtViewController.m */; };
+		EC7E6E651C06D1120062518A /* MuseumShowViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E641C06D1120062518A /* MuseumShowViewController.m */; };
+		EC7E6E681C06D12B0062518A /* MuseumShowCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E671C06D12B0062518A /* MuseumShowCell.m */; };
+		EC7E6E741C06F0D50062518A /* MuseumShowViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E731C06F0D50062518A /* MuseumShowViewModel.m */; };
+		EC7E6E771C06F1130062518A /* MuseumShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E761C06F1130062518A /* MuseumShowModel.m */; };
 		EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */; };
 		EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82440D1C03FD7F0082219E /* CXDropMenuView.m */; };
 		EC8244131C0405E70082219E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8244111C0405E70082219E /* ViewController.m */; };
-		EC8244171C04496B0082219E /* ArtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8244161C04496B0082219E /* ArtCell.m */; };
 		ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */; };
 		ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BB41BDF531E003BE70B /* ListenViewController.m */; };
 		ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BB51BDF531E003BE70B /* ListenViewController.xib */; };
@@ -129,8 +136,6 @@
 		EC378EAE1BDDF7F6006FB4F0 /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
 		EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
 		EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
-		EC378EB51BDDF84D006FB4F0 /* ArtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtViewController.h; sourceTree = "<group>"; };
-		EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtViewController.m; sourceTree = "<group>"; };
 		EC378EBD1BDDF86E006FB4F0 /* FunnyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnyViewController.h; sourceTree = "<group>"; };
 		EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnyViewController.m; sourceTree = "<group>"; };
 		EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnyViewController.xib; sourceTree = "<group>"; };
@@ -146,14 +151,30 @@
 		EC7D9EB71BFB294B0092D887 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		EC7D9EB81BFB294B0092D887 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		EC7D9EB91BFB294B0092D887 /* WebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebViewController.xib; sourceTree = "<group>"; };
+		EC7E6E341C05AE3C0062518A /* MuseumListViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuseumListViewModel.h; sourceTree = "<group>"; };
+		EC7E6E351C05AE3C0062518A /* MuseumListViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuseumListViewModel.m; sourceTree = "<group>"; };
+		EC7E6E381C05B1B80062518A /* MuseumModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuseumModel.h; sourceTree = "<group>"; };
+		EC7E6E391C05B1B80062518A /* MuseumModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuseumModel.m; sourceTree = "<group>"; };
+		EC7E6E491C05B4CA0062518A /* ArtCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtCell.h; sourceTree = "<group>"; };
+		EC7E6E4A1C05B4CA0062518A /* ArtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtCell.m; sourceTree = "<group>"; };
+		EC7E6E4B1C05B4CA0062518A /* ArtHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtHeaderView.h; sourceTree = "<group>"; };
+		EC7E6E4C1C05B4CA0062518A /* ArtHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtHeaderView.m; sourceTree = "<group>"; };
+		EC7E6E4D1C05B4CA0062518A /* ArtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtViewController.h; sourceTree = "<group>"; };
+		EC7E6E4E1C05B4CA0062518A /* ArtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtViewController.m; sourceTree = "<group>"; };
+		EC7E6E631C06D1120062518A /* MuseumShowViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuseumShowViewController.h; sourceTree = "<group>"; };
+		EC7E6E641C06D1120062518A /* MuseumShowViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuseumShowViewController.m; sourceTree = "<group>"; };
+		EC7E6E661C06D12B0062518A /* MuseumShowCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuseumShowCell.h; sourceTree = "<group>"; };
+		EC7E6E671C06D12B0062518A /* MuseumShowCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuseumShowCell.m; sourceTree = "<group>"; };
+		EC7E6E721C06F0D50062518A /* MuseumShowViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuseumShowViewModel.h; sourceTree = "<group>"; };
+		EC7E6E731C06F0D50062518A /* MuseumShowViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuseumShowViewModel.m; sourceTree = "<group>"; };
+		EC7E6E751C06F1130062518A /* MuseumShowModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuseumShowModel.h; sourceTree = "<group>"; };
+		EC7E6E761C06F1130062518A /* MuseumShowModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuseumShowModel.m; sourceTree = "<group>"; };
 		EC82440A1C03FD7F0082219E /* CXDropMenuItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDropMenuItemView.h; sourceTree = "<group>"; };
 		EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDropMenuItemView.m; sourceTree = "<group>"; };
 		EC82440C1C03FD7F0082219E /* CXDropMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDropMenuView.h; sourceTree = "<group>"; };
 		EC82440D1C03FD7F0082219E /* CXDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDropMenuView.m; sourceTree = "<group>"; };
 		EC8244101C0405E70082219E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EC8244111C0405E70082219E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		EC8244151C04496B0082219E /* ArtCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtCell.h; sourceTree = "<group>"; };
-		EC8244161C04496B0082219E /* ArtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtCell.m; sourceTree = "<group>"; };
 		ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		ECC07BB31BDF531E003BE70B /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
@@ -394,18 +415,6 @@
 			path = RACAFNetworking;
 			sourceTree = "<group>";
 		};
-		EC378EB31BDDF82C006FB4F0 /* Art */ = {
-			isa = PBXGroup;
-			children = (
-				EC378EB51BDDF84D006FB4F0 /* ArtViewController.h */,
-				EC378EB61BDDF84D006FB4F0 /* ArtViewController.m */,
-				EC8244151C04496B0082219E /* ArtCell.h */,
-				EC8244161C04496B0082219E /* ArtCell.m */,
-			);
-			name = Art;
-			path = chaoxi/ViewController/Art;
-			sourceTree = SOURCE_ROOT;
-		};
 		EC378EB41BDDF82C006FB4F0 /* Funny */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +463,7 @@
 		EC378ECB1BDDFC6F006FB4F0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				EC7E6E371C05B1710062518A /* ArtModel */,
 				EC1726BD1BF3039E00A973EB /* PoemModel */,
 				EC0A94581BE211EA0085BC9B /* ListenModel */,
 			);
@@ -485,6 +495,10 @@
 		EC6A7B621BFAD5FF00789E41 /* ArtViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				EC7E6E341C05AE3C0062518A /* MuseumListViewModel.h */,
+				EC7E6E351C05AE3C0062518A /* MuseumListViewModel.m */,
+				EC7E6E721C06F0D50062518A /* MuseumShowViewModel.h */,
+				EC7E6E731C06F0D50062518A /* MuseumShowViewModel.m */,
 			);
 			path = ArtViewModel;
 			sourceTree = "<group>";
@@ -509,13 +523,65 @@
 			path = CXSliderView;
 			sourceTree = "<group>";
 		};
+		EC7E6E371C05B1710062518A /* ArtModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC7E6E381C05B1B80062518A /* MuseumModel.h */,
+				EC7E6E391C05B1B80062518A /* MuseumModel.m */,
+				EC7E6E751C06F1130062518A /* MuseumShowModel.h */,
+				EC7E6E761C06F1130062518A /* MuseumShowModel.m */,
+			);
+			path = ArtModel;
+			sourceTree = "<group>";
+		};
+		EC7E6E471C05B4CA0062518A /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				EC7E6E481C05B4CA0062518A /* MuseumList */,
+				EC7E6E4F1C05B4CA0062518A /* MuseumShow */,
+				EC7E6E501C05B4CA0062518A /* ShowList */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
+		EC7E6E481C05B4CA0062518A /* MuseumList */ = {
+			isa = PBXGroup;
+			children = (
+				EC7E6E4D1C05B4CA0062518A /* ArtViewController.h */,
+				EC7E6E4E1C05B4CA0062518A /* ArtViewController.m */,
+				EC7E6E491C05B4CA0062518A /* ArtCell.h */,
+				EC7E6E4A1C05B4CA0062518A /* ArtCell.m */,
+				EC7E6E4B1C05B4CA0062518A /* ArtHeaderView.h */,
+				EC7E6E4C1C05B4CA0062518A /* ArtHeaderView.m */,
+			);
+			path = MuseumList;
+			sourceTree = "<group>";
+		};
+		EC7E6E4F1C05B4CA0062518A /* MuseumShow */ = {
+			isa = PBXGroup;
+			children = (
+				EC7E6E631C06D1120062518A /* MuseumShowViewController.h */,
+				EC7E6E641C06D1120062518A /* MuseumShowViewController.m */,
+				EC7E6E661C06D12B0062518A /* MuseumShowCell.h */,
+				EC7E6E671C06D12B0062518A /* MuseumShowCell.m */,
+			);
+			path = MuseumShow;
+			sourceTree = "<group>";
+		};
+		EC7E6E501C05B4CA0062518A /* ShowList */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ShowList;
+			sourceTree = "<group>";
+		};
 		EC8244091C03FD7F0082219E /* CXDropMenuView */ = {
 			isa = PBXGroup;
 			children = (
-				EC82440A1C03FD7F0082219E /* CXDropMenuItemView.h */,
-				EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */,
 				EC82440C1C03FD7F0082219E /* CXDropMenuView.h */,
 				EC82440D1C03FD7F0082219E /* CXDropMenuView.m */,
+				EC82440A1C03FD7F0082219E /* CXDropMenuItemView.h */,
+				EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */,
 			);
 			path = CXDropMenuView;
 			sourceTree = "<group>";
@@ -715,12 +781,12 @@
 		ECC3817E1BD8888A007A3680 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				EC378EC21BDDFA3C006FB4F0 /* Other */,
+				EC7E6E471C05B4CA0062518A /* Art */,
+				EC378EB41BDDF82C006FB4F0 /* Funny */,
 				ECC3818C1BD888D9007A3680 /* Listen */,
 				ECC3818D1BD888D9007A3680 /* Poem */,
 				ECC3818E1BD888D9007A3680 /* Read */,
-				EC378EB31BDDF82C006FB4F0 /* Art */,
-				EC378EB41BDDF82C006FB4F0 /* Funny */,
+				EC378EC21BDDFA3C006FB4F0 /* Other */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -918,7 +984,10 @@
 				EC8244131C0405E70082219E /* ViewController.m in Sources */,
 				EC6A7B751BFB085F00789E41 /* CXSliderViewLayout.m in Sources */,
 				EC1726D91BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m in Sources */,
+				EC7E6E531C05B4CA0062518A /* ArtViewController.m in Sources */,
+				EC7E6E681C06D12B0062518A /* MuseumShowCell.m in Sources */,
 				EC1726C01BF3039E00A973EB /* Poem.m in Sources */,
+				EC7E6E771C06F1130062518A /* MuseumShowModel.m in Sources */,
 				ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */,
 				EC0A94701BE350A00085BC9B /* VideoDetailController.m in Sources */,
 				ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */,
@@ -932,7 +1001,10 @@
 				EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */,
 				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
 				EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */,
+				EC7E6E521C05B4CA0062518A /* ArtHeaderView.m in Sources */,
+				EC7E6E511C05B4CA0062518A /* ArtCell.m in Sources */,
 				ECC381821BD8888A007A3680 /* NSString+CashString.m in Sources */,
+				EC7E6E651C06D1120062518A /* MuseumShowViewController.m in Sources */,
 				EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */,
 				EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */,
 				ECC381811BD8888A007A3680 /* CashTextField.m in Sources */,
@@ -945,17 +1017,18 @@
 				ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */,
 				EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */,
 				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
+				EC7E6E3A1C05B1B80062518A /* MuseumModel.m in Sources */,
 				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
+				EC7E6E361C05AE3C0062518A /* MuseumListViewModel.m in Sources */,
 				EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */,
 				ECC3819B1BD8898F007A3680 /* main.m in Sources */,
 				EC1726DA1BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m in Sources */,
+				EC7E6E741C06F0D50062518A /* MuseumShowViewModel.m in Sources */,
 				EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */,
-				EC8244171C04496B0082219E /* ArtCell.m in Sources */,
 				EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */,
 				EC1726841BF2F27F00A973EB /* CXViewModelClass.m in Sources */,
 				ECC381851BD8888A007A3680 /* UIFont+Category.m in Sources */,
 				EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */,
-				EC378EB81BDDF84D006FB4F0 /* ArtViewController.m in Sources */,
 				EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

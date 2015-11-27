@@ -14,6 +14,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>GPUImage.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>KVNProgress.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -67,12 +72,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>23CF27B2BA6AC7125EFFEDA8C5AA819F</key>
+		<key>06D8031F0ECD1298A7B7A88050D65622</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>27F15FF1033E91019679B09C4C720EEB</key>
+		<key>23CF27B2BA6AC7125EFFEDA8C5AA819F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +87,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4E41D3AF1AC03ADCC57411D865A4E340</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>578E8BD8BFBE060527EF23A007757A2F</key>
+		<key>59D8F1E4BD01222B2C068B87429A889B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +97,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>A7122A69278E0081D8126649520FFC13</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>A9A83F63385AA43314397B8DD375464B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D46FF0D14A9C52148E6C9549F0B752C5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,12 +117,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>EDDB924C8A7B0849AAD64F27BC91D854</key>
+		<key>EA0DD8ED489933744D70DD4A9719ED01</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FEAFD06FC755F9EC26DD6B8EB5907F25</key>
+		<key>EDDB924C8A7B0849AAD64F27BC91D854</key>
 		<dict>
 			<key>primary</key>
 			<true/>

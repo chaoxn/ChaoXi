@@ -23,29 +23,6 @@
 
 @implementation PoeViewController
 
-- (UILabel *)contentLabel
-{
-    if (_contentLabel == nil) {
-        
-        _contentLabel = ({
-            UILabel *label = [[UILabel alloc]init];
-            label.numberOfLines = 0;
-            label.textColor = CXRGBColor(101, 98, 98);
-            label.textAlignment = NSTextAlignmentCenter;
-            label.font = CXFont(13);
-            label;
-        });
-    }
-    return _contentLabel;
-}
-
-- (PoeViewModel *)viewModel
-{
-    if (_viewModel == nil) {
-        _viewModel = [[PoeViewModel alloc]init];
-    }
-    return _viewModel;
-}
 
 - (void)viewDidLoad
 {
@@ -208,8 +185,33 @@
     [KVNProgress setConfiguration:self.basicConfiguration];
 }
 
+- (UILabel *)contentLabel
+{
+    if (!_contentLabel) {
+        
+        _contentLabel = ({
+            UILabel *label = [[UILabel alloc]init];
+            label.numberOfLines = 0;
+            label.textColor = CXRGBColor(101, 98, 98);
+            label.textAlignment = NSTextAlignmentCenter;
+            label.font = CXFont(13);
+            label;
+        });
+    }
+    return _contentLabel;
+}
+
+- (PoeViewModel *)viewModel
+{
+    if (!_viewModel) {
+        _viewModel = [[PoeViewModel alloc]init];
+    }
+    return _viewModel;
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-
 }
+
+
 @end

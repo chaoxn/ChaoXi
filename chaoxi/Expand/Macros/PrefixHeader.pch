@@ -19,6 +19,7 @@
 #import "ReactiveCocoa.h"
 #import "REMenu.h"
 #import "UIImageView+WebCache.h"
+#import "GPUImage.h"
 
 #import "RACAFNetworking.h"
 #import "CXViewModelClass.h" 

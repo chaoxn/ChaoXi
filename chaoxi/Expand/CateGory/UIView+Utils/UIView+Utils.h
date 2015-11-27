@@ -44,5 +44,7 @@
  *更新View 的单个约束.
  */
 - (void)updateConstraint:(NSLayoutAttribute )attribute constantValue:(CGFloat )value;
+
 - (UIImage *)screenshot;
+
 @end

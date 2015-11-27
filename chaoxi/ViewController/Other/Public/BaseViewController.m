@@ -19,7 +19,8 @@
 
 @implementation BaseViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
 
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"潮汐" style:UIBarButtonItemStylePlain target:self.navigationController action:@selector(toggleMenu)];
@@ -29,11 +30,16 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-     self.navigationController.hidesBarsOnSwipe = YES;
+    self.navigationController.hidesBarsOnSwipe = YES;
+    for (UIView *view in self.navigationController.navigationBar.subviews) {
+        if ([view isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")]) {
+            view.backgroundColor = [UIColor whiteColor];
+        }
+    }
 }
 
--(void)addWindow{
-    
+-(void)addWindow
+{
     CXAlterButton *button = [[CXAlterButton alloc]initWithImage:[UIImage imageNamed:@"jian"]];
     
     CXAlterItemButton *item1 = [[CXAlterItemButton alloc]initWithImage:[UIImage imageNamed:@"item1"]];
@@ -121,7 +127,5 @@
     
     return configuration;
 }
-
-
 
 @end
