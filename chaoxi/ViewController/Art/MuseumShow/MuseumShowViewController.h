@@ -6,8 +6,10 @@
 //  Copyright © 2015年 chaox. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import <UIKit/UIKit.h>
 
-@interface MuseumShowViewController : BaseViewController
+@interface MuseumShowViewController : UIViewController
+
+@property (nonatomic, strong) NSString *musuemId;
 
 @end

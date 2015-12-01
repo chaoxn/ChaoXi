@@ -15,6 +15,8 @@
 
 @property (nonatomic, strong) RACSubject *delegateSignal;
 
-@property (nonatomic, strong) NSMutableArray *modelArr;
+@property (nonatomic, strong) RACSignal *requestSignal;
+
+@property (nonatomic, strong) NSArray *modelArr;
 
 @end

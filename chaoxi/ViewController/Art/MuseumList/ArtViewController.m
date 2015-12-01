@@ -80,29 +80,34 @@
     }];
 }
 
+// 无需代理传modelArr
 - (void)bindModel
 {
     [self.viewModel.requestCommand execute:nil];
     
     @weakify(self);
-    [self.viewModel.delegateSignal subscribeNext:^(id modelArr) {
-       
+    [[[RACObserve(self.viewModel, modelArr) deliverOn:[RACScheduler mainThreadScheduler]] filter:^BOOL(NSArray *modelArr) {
+        
+        return modelArr.count>0;
+    }] subscribeNext:^(id x) {
+        
         @strongify(self);
-        self.modelArr = modelArr;
         [self.collectionView reloadData];
         [KVNProgress dismiss];
     }];
     
-    [RACObserve(self, page) subscribeNext:^(NSNumber *x) {
+    
+    [[RACObserve(self, page) filter:^BOOL(id value) {
+        
+       @strongify(self);
+        return self.viewModel.modelArr.count > 0 && self.stop;
+    }]subscribeNext:^(NSNumber *x) {
         
         @strongify(self);
-        if (self.modelArr.count > 0 && self.stop) {
-            MuseumModel *model = [self.modelArr objectAtIndex:[x integerValue]];
-            [self.backGroundImageView sd_setImageWithURL:model.coverUrl[@"url"]];
-            
-            
-        }
+        MuseumModel *model = [self.viewModel.modelArr objectAtIndex:[x integerValue]];
+        [self.backGroundImageView sd_setImageWithURL:model.coverUrl[@"url"]];
     }];
+
 }
 
 #pragma mark- collectionView delegate
@@ -114,20 +119,20 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return self.modelArr.count;
+    return self.viewModel.modelArr.count;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     ArtCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ARTCELL" forIndexPath:indexPath];
-    cell.model = self.modelArr[indexPath.item];
+    cell.model = self.viewModel.modelArr[indexPath.item];
     
     return cell;
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    if (indexPath.item == self.modelArr.count-1) {
+    if (indexPath.item == self.viewModel.modelArr.count-1) {
         
         return CGSizeMake(ScreenWidth, ScreenHeight);
     }else{
@@ -139,9 +144,9 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MuseumShowViewController *msVC = [[MuseumShowViewController alloc]init];
-    [self presentViewController:msVC animated:YES completion:^{
-        
-    }];
+    MuseumModel *model = self.viewModel.modelArr[indexPath.row];
+    msVC.musuemId = model.objectId;
+    [self.navigationController pushViewController:msVC animated:YES];
 }
 
 /*

@@ -14,8 +14,11 @@
 {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         
+        [self.basicImageView addSubview:self.visualEffectView];
+        [self.visualEffectView addSubview:self.titleLabel];
+        [self.visualEffectView addSubview:self.nameLabel];
         [self.contentView addSubview:self.basicImageView];
-        [self.basicImageView addSubview:self.maskImageView];
+        
         
         @weakify(self)
         [self.basicImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -24,29 +27,54 @@
             make.edges.equalTo(self.contentView);
         }];
         
-        [self.maskImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        [self.visualEffectView mas_makeConstraints:^(MASConstraintMaker *make) {
            
             @strongify(self)
             make.leading.equalTo(self.basicImageView);
             make.centerY.equalTo(self.basicImageView);
-            make.size.mas_equalTo(CGSizeMake(150, 100));
+            make.size.mas_equalTo(CGSizeMake(200, 100));
         }];
         
-     
+        [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+           
+            @strongify(self)
+            make.leading.equalTo(self.visualEffectView).offset(10);
+            make.centerY.equalTo(self.visualEffectView).offset(15);
+            make.size.mas_equalTo(CGSizeMake(200, 20));
+        }];
+        
+        [self.nameLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+            
+            @strongify(self)
+            make.leading.equalTo(self.titleLabel);
+            make.top.equalTo(self.visualEffectView).offset(30);
+            make.size.equalTo(self.titleLabel);
+        }];
+        
         [RACObserve(self, model) subscribeNext:^(MuseumModel *model) {
            
             @strongify(self)
-            UIImageView *temp= [[UIImageView alloc]initWithFrame:self.maskImageView.bounds];
             [self.basicImageView sd_setImageWithURL:model.coverUrl[@"url"]];
+            self.nameLabel.text = model.nameBase;
+            self.titleLabel.text = model.gallery[@"nameBase"];
             
-//            GPUImageGaussianSelectiveBlurFilter *blurFilter = [[GPUImageGaussianSelectiveBlurFilter alloc]init];
+//            // 滤镜
+//            GPUImageGaussianBlurFilter *blurFilter = [[GPUImageGaussianBlurFilter alloc]init];
+//            blurFilter.blurRadiusInPixels = 2.0;
+//            
+//            [blurFilter forceProcessingAtSize:self.maskImageView.frame.size];
+//            
+//            // 输入源
+//            GPUImagePicture *picture = [[GPUImagePicture alloc]initWithImage:self.basicImageView.image];
+//            
+//            
+//            [picture addTarget:blurFilter];
+//            [picture processImage];
+//            
+//            UIImage *new = [blurFilter imageFromCurrentFramebuffer];
+//            
+//            self.maskImageView.image = new;
             
-            GPUImageGaussianBlurFilter *blurFilter = [[GPUImageGaussianBlurFilter alloc]init];
-            blurFilter.blurRadiusInPixels = 2.0;
-            blurFilter.blurRadiusAsFractionOfImageWidth = 150;
-            blurFilter.blurRadiusAsFractionOfImageHeight = 90;
-            UIImage *blurredImage = [blurFilter imageByFilteringImage:temp.image];
-            self.maskImageView.image = blurredImage;
         }];
         
     }
@@ -87,6 +115,32 @@
         });
     }
     return _maskImageView;
+}
+
+- (UILabel *)titleLabel
+{
+    if (!_titleLabel) {
+        _titleLabel = ({
+            UILabel *label = [[UILabel alloc]init];
+            label.font = CXFont(13);
+            label.textColor = [UIColor whiteColor];
+            label;
+        });
+    }
+    return _titleLabel;
+}
+
+- (UILabel *)nameLabel
+{
+    if (!_nameLabel) {
+        _nameLabel = ({
+            UILabel *label = [[UILabel alloc]init];
+            label.font = CXFont(18);
+            label.textColor = [UIColor whiteColor];
+            label;
+        });
+    }
+    return _nameLabel;
 }
 
 #pragma mark -

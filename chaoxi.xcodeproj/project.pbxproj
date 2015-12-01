@@ -57,14 +57,16 @@
 		EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */; };
 		EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82440D1C03FD7F0082219E /* CXDropMenuView.m */; };
 		EC8244131C0405E70082219E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8244111C0405E70082219E /* ViewController.m */; };
+		EC9642051C0C364000D16E39 /* ShowDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9642041C0C364000D16E39 /* ShowDetailViewModel.m */; };
+		EC9642091C0C45F400D16E39 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9642081C0C45F400D16E39 /* UINavigationBar+Awesome.m */; };
+		EC96420C1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m in Sources */ = {isa = PBXBuildFile; fileRef = EC96420B1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m */; };
+		EC9642101C0C93A500D16E39 /* ShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC96420E1C0C93A500D16E39 /* ShowDetailViewController.m */; };
+		EC9642111C0C93A500D16E39 /* ShowDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC96420F1C0C93A500D16E39 /* ShowDetailViewController.xib */; };
 		ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */; };
 		ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BB41BDF531E003BE70B /* ListenViewController.m */; };
 		ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BB51BDF531E003BE70B /* ListenViewController.xib */; };
 		ECC3814A1BD8863A007A3680 /* chaoxiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381491BD8863A007A3680 /* chaoxiTests.m */; };
-		ECC381811BD8888A007A3680 /* CashTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3815C1BD8888A007A3680 /* CashTextField.m */; };
-		ECC381821BD8888A007A3680 /* NSString+CashString.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3815E1BD8888A007A3680 /* NSString+CashString.m */; };
 		ECC381841BD8888A007A3680 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381651BD8888A007A3680 /* NSString+Category.m */; };
-		ECC381851BD8888A007A3680 /* UIFont+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381681BD8888A007A3680 /* UIFont+Category.m */; };
 		ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3816B1BD8888A007A3680 /* UIImage+Common.m */; };
 		ECC381871BD8888A007A3680 /* UIView+BorderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */; };
 		ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381711BD8888A007A3680 /* UIView+Utils.m */; };
@@ -175,6 +177,15 @@
 		EC82440D1C03FD7F0082219E /* CXDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDropMenuView.m; sourceTree = "<group>"; };
 		EC8244101C0405E70082219E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		EC8244111C0405E70082219E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EC9642031C0C364000D16E39 /* ShowDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDetailViewModel.h; sourceTree = "<group>"; };
+		EC9642041C0C364000D16E39 /* ShowDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDetailViewModel.m; sourceTree = "<group>"; };
+		EC9642071C0C45F400D16E39 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
+		EC9642081C0C45F400D16E39 /* UINavigationBar+Awesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Awesome.m"; sourceTree = "<group>"; };
+		EC96420A1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+HideAppear.h"; sourceTree = "<group>"; };
+		EC96420B1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+HideAppear.m"; sourceTree = "<group>"; };
+		EC96420D1C0C93A500D16E39 /* ShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDetailViewController.h; sourceTree = "<group>"; };
+		EC96420E1C0C93A500D16E39 /* ShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDetailViewController.m; sourceTree = "<group>"; };
+		EC96420F1C0C93A500D16E39 /* ShowDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailViewController.xib; sourceTree = "<group>"; };
 		ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		ECC07BB31BDF531E003BE70B /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
@@ -185,15 +196,9 @@
 		ECC381431BD8863A007A3680 /* chaoxiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = chaoxiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECC381481BD8863A007A3680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC381491BD8863A007A3680 /* chaoxiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chaoxiTests.m; sourceTree = "<group>"; };
-		ECC3815B1BD8888A007A3680 /* CashTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CashTextField.h; sourceTree = "<group>"; };
-		ECC3815C1BD8888A007A3680 /* CashTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CashTextField.m; sourceTree = "<group>"; };
-		ECC3815D1BD8888A007A3680 /* NSString+CashString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+CashString.h"; sourceTree = "<group>"; };
-		ECC3815E1BD8888A007A3680 /* NSString+CashString.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+CashString.m"; sourceTree = "<group>"; };
 		ECC3815F1BD8888A007A3680 /* CateGoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CateGoryHeader.h; sourceTree = "<group>"; };
 		ECC381641BD8888A007A3680 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
 		ECC381651BD8888A007A3680 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
-		ECC381671BD8888A007A3680 /* UIFont+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Category.h"; sourceTree = "<group>"; };
-		ECC381681BD8888A007A3680 /* UIFont+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Category.m"; sourceTree = "<group>"; };
 		ECC3816A1BD8888A007A3680 /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
 		ECC3816B1BD8888A007A3680 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
 		ECC3816D1BD8888A007A3680 /* UIView+BorderStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderStyle.h"; sourceTree = "<group>"; };
@@ -499,6 +504,8 @@
 				EC7E6E351C05AE3C0062518A /* MuseumListViewModel.m */,
 				EC7E6E721C06F0D50062518A /* MuseumShowViewModel.h */,
 				EC7E6E731C06F0D50062518A /* MuseumShowViewModel.m */,
+				EC9642031C0C364000D16E39 /* ShowDetailViewModel.h */,
+				EC9642041C0C364000D16E39 /* ShowDetailViewModel.m */,
 			);
 			path = ArtViewModel;
 			sourceTree = "<group>";
@@ -571,6 +578,9 @@
 		EC7E6E501C05B4CA0062518A /* ShowList */ = {
 			isa = PBXGroup;
 			children = (
+				EC96420D1C0C93A500D16E39 /* ShowDetailViewController.h */,
+				EC96420E1C0C93A500D16E39 /* ShowDetailViewController.m */,
+				EC96420F1C0C93A500D16E39 /* ShowDetailViewController.xib */,
 			);
 			path = ShowList;
 			sourceTree = "<group>";
@@ -584,6 +594,17 @@
 				EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */,
 			);
 			path = CXDropMenuView;
+			sourceTree = "<group>";
+		};
+		EC9642061C0C45F400D16E39 /* UINavigationBar+Awesome */ = {
+			isa = PBXGroup;
+			children = (
+				EC9642071C0C45F400D16E39 /* UINavigationBar+Awesome.h */,
+				EC9642081C0C45F400D16E39 /* UINavigationBar+Awesome.m */,
+				EC96420A1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.h */,
+				EC96420B1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m */,
+			);
+			path = "UINavigationBar+Awesome";
 			sourceTree = "<group>";
 		};
 		ECC07BB21BDF531E003BE70B /* ListenListViewController */ = {
@@ -677,25 +698,13 @@
 			isa = PBXGroup;
 			children = (
 				ECC3815F1BD8888A007A3680 /* CateGoryHeader.h */,
-				ECC3815A1BD8888A007A3680 /* CashTextField */,
+				EC9642061C0C45F400D16E39 /* UINavigationBar+Awesome */,
 				ECC381631BD8888A007A3680 /* NSString+Category */,
-				ECC381661BD8888A007A3680 /* UIFont+Category */,
 				ECC381691BD8888A007A3680 /* UIImage+Common */,
 				ECC3816C1BD8888A007A3680 /* UIView+BorderStyle */,
 				ECC3816F1BD8888A007A3680 /* UIView+Utils */,
 			);
 			path = CateGory;
-			sourceTree = "<group>";
-		};
-		ECC3815A1BD8888A007A3680 /* CashTextField */ = {
-			isa = PBXGroup;
-			children = (
-				ECC3815B1BD8888A007A3680 /* CashTextField.h */,
-				ECC3815C1BD8888A007A3680 /* CashTextField.m */,
-				ECC3815D1BD8888A007A3680 /* NSString+CashString.h */,
-				ECC3815E1BD8888A007A3680 /* NSString+CashString.m */,
-			);
-			path = CashTextField;
 			sourceTree = "<group>";
 		};
 		ECC381631BD8888A007A3680 /* NSString+Category */ = {
@@ -705,15 +714,6 @@
 				ECC381651BD8888A007A3680 /* NSString+Category.m */,
 			);
 			path = "NSString+Category";
-			sourceTree = "<group>";
-		};
-		ECC381661BD8888A007A3680 /* UIFont+Category */ = {
-			isa = PBXGroup;
-			children = (
-				ECC381671BD8888A007A3680 /* UIFont+Category.h */,
-				ECC381681BD8888A007A3680 /* UIFont+Category.m */,
-			);
-			path = "UIFont+Category";
 			sourceTree = "<group>";
 		};
 		ECC381691BD8888A007A3680 /* UIImage+Common */ = {
@@ -912,6 +912,7 @@
 				ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */,
 				EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */,
 				EC1726B81BF3033F00A973EB /* AboutUsViewController.xib in Resources */,
+				EC9642111C0C93A500D16E39 /* ShowDetailViewController.xib in Resources */,
 				EC17268C1BF3023200A973EB /* PoeViewController.xib in Resources */,
 				EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */,
 				EC029A561BDF54FE000F304C /* LuoIMagaCell.xib in Resources */,
@@ -981,11 +982,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC9642101C0C93A500D16E39 /* ShowDetailViewController.m in Sources */,
 				EC8244131C0405E70082219E /* ViewController.m in Sources */,
 				EC6A7B751BFB085F00789E41 /* CXSliderViewLayout.m in Sources */,
 				EC1726D91BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m in Sources */,
 				EC7E6E531C05B4CA0062518A /* ArtViewController.m in Sources */,
 				EC7E6E681C06D12B0062518A /* MuseumShowCell.m in Sources */,
+				EC96420C1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m in Sources */,
 				EC1726C01BF3039E00A973EB /* Poem.m in Sources */,
 				EC7E6E771C06F1130062518A /* MuseumShowModel.m in Sources */,
 				ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */,
@@ -1003,11 +1006,9 @@
 				EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */,
 				EC7E6E521C05B4CA0062518A /* ArtHeaderView.m in Sources */,
 				EC7E6E511C05B4CA0062518A /* ArtCell.m in Sources */,
-				ECC381821BD8888A007A3680 /* NSString+CashString.m in Sources */,
 				EC7E6E651C06D1120062518A /* MuseumShowViewController.m in Sources */,
 				EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */,
 				EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */,
-				ECC381811BD8888A007A3680 /* CashTextField.m in Sources */,
 				EC6A7B741BFB085F00789E41 /* CXSliderViewCell.m in Sources */,
 				EC7D9EBA1BFB294B0092D887 /* WebViewController.m in Sources */,
 				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
@@ -1019,6 +1020,8 @@
 				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
 				EC7E6E3A1C05B1B80062518A /* MuseumModel.m in Sources */,
 				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
+				EC9642091C0C45F400D16E39 /* UINavigationBar+Awesome.m in Sources */,
+				EC9642051C0C364000D16E39 /* ShowDetailViewModel.m in Sources */,
 				EC7E6E361C05AE3C0062518A /* MuseumListViewModel.m in Sources */,
 				EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */,
 				ECC3819B1BD8898F007A3680 /* main.m in Sources */,
@@ -1027,7 +1030,6 @@
 				EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */,
 				EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */,
 				EC1726841BF2F27F00A973EB /* CXViewModelClass.m in Sources */,
-				ECC381851BD8888A007A3680 /* UIFont+Category.m in Sources */,
 				EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */,
 				EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */,
 			);

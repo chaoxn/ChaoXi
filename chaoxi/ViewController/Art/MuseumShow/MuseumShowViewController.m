@@ -9,6 +9,7 @@
 #import "MuseumShowViewController.h"
 #import "MuseumShowCell.h"
 #import "MuseumShowViewModel.h"
+#import "ShowDetailViewController.h"
 
 @interface MuseumShowViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -33,27 +34,36 @@
     [super viewDidLoad];
 
     [self.view addSubview:self.tableView];
-    [self.view addSubview:self.coverView];
-    [self.coverView addSubview:self.returnButton];
+//    [self.view addSubview:self.coverView];
+//    [self.coverView addSubview:self.returnButton];
     
+//    [self showProgress:CX];
     [self layoutSubViews];
     [self bindViewModel];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [self showProgress:CX];
+//    [self showProgress:CX];
 }
 
 - (void)layoutSubViews
 {
     @weakify(self)
-    [self.coverView mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        @strongify(self)
-        make.left.top.and.right.equalTo(self.view);
-        make.height.mas_equalTo(40);
-    }];
+//    [self.coverView mas_makeConstraints:^(MASConstraintMaker *make) {
+//        
+//        @strongify(self)
+//        make.left.top.and.right.equalTo(self.view);
+//        make.height.mas_equalTo(40);
+//    }];
+    
+//    [self.returnButton mas_makeConstraints:^(MASConstraintMaker *make) {
+//
+//        @strongify(self)
+//        make.top.equalTo(self.coverView).offset(10);
+//        make.left.equalTo(self.coverView).offset(20);
+//        make.width.and.height.mas_equalTo(24);
+//    }];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -61,13 +71,6 @@
         make.edges.equalTo(self.view);
     }];
     
-    [self.returnButton mas_makeConstraints:^(MASConstraintMaker *make) {
-        
-        @strongify(self)
-        make.top.equalTo(self.coverView).offset(10);
-        make.left.equalTo(self.coverView).offset(20);
-        make.width.and.height.mas_equalTo(24);
-    }];
 }
 
 - (void)bindViewModel
@@ -87,7 +90,7 @@
        
         self.modelArray = array;
         [self.tableView reloadData];
-        [KVNProgress dismiss];
+//        [KVNProgress dismiss];
     }];
     
 }
@@ -121,6 +124,14 @@
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return ScreenHeight/3;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    MuseumModel *model = self.modelArray[indexPath.row];
+    ShowDetailViewController *sdVC = [[ShowDetailViewController alloc]init];
+    sdVC.detailID = model.objectId;
+    [self.navigationController pushViewController:sdVC animated:YES];
 }
 
 #pragma mark- setter & getter
@@ -169,6 +180,7 @@
 {
     if (!_showViewModel) {
         _showViewModel = [[MuseumShowViewModel alloc]init];
+        _showViewModel.museumId = self.musuemId;
     }
     return _showViewModel;
 }

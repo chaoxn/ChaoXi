@@ -25,31 +25,20 @@
 {
     _requestCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
        
-        RACSignal *requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-           
-            [CXHttpManager NetRequestGETWithURL:URL Parameter:nil ReturnValeuBlock:^(id returnValue) {
-                
-                [subscriber sendNext : returnValue];
-                [subscriber sendCompleted];
-            } ErrorCodeBlock:^(id errorCode) {
-                
-                [subscriber sendError:errorCode];
-            } FailureBlock:^{
-                
-            }];
-            
-            return nil;
-        }];
-        
-        return [requestSignal map:^id(NSDictionary *value) {
+        RACSignal *signal = [self requestSignal];
+    
+        return [signal map:^id(NSDictionary *value) {
             
             NSArray *reultArr = [MuseumModel objectArrayWithKeyValuesArray:[value objectForKey:@"results"]];
+            
+            self.modelArr = reultArr;
             
             return reultArr;
         }];
         
     }];
     
+    // 取出command信号中的数据
     @weakify(self)
     [_requestCommand.executionSignals.switchToLatest subscribeNext:^(id model) {
         
@@ -60,6 +49,29 @@
         }
     }];
     
+}
+
+- (RACSignal *)requestSignal
+{
+    return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+        
+        [CXHttpManager NetRequestGETWithURL:URL Parameter:nil ReturnValeuBlock:^(id returnValue) {
+            
+            [subscriber sendNext : returnValue];
+            [subscriber sendCompleted];
+        } ErrorCodeBlock:^(id errorCode) {
+            
+            [subscriber sendError:errorCode];
+        } FailureBlock:^{
+            
+        }];
+        
+        RACDisposable *dispose = [RACDisposable disposableWithBlock:^{
+            NSLog(@"clean up");
+        }];
+        return dispose;
+        
+    }];
 }
 
 @end
