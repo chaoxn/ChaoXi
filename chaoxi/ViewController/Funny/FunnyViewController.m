@@ -24,7 +24,7 @@
 {
     [super viewDidLoad];
     
-    [self showProgress:@"春风十里不如你"];
+    [CXProgress showWithType:CXProgressTypeFullTurn];
     [self.view addSubview:self.collectionView];
     
     self.viewModel.delegateSignal = [RACSubject subject];
@@ -32,7 +32,7 @@
         
         self.dataArray = dicArr;
         [self.collectionView reloadData];
-        [KVNProgress dismiss];
+        [CXProgress dismiss];
     }];
     
     [self.viewModel.requestCommand execute:nil];

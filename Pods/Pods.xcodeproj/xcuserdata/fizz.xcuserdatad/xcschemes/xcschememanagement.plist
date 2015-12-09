@@ -2,64 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>SchemeUserState</key>
-	<dict>
-		<key>AFNetworking.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>FMDB.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>KVNProgress.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MBProgressHUD.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MJExtension.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MJRefresh.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Masonry.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>Pods.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>REMenu.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>ReactiveCocoa.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>SDWebImage.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0186EE20AB4D310515B8041966DB7AEB</key>
@@ -77,22 +19,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>27F15FF1033E91019679B09C4C720EEB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>4878C70B21CA37D7CB8A476BF986741B</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4E41D3AF1AC03ADCC57411D865A4E340</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>578E8BD8BFBE060527EF23A007757A2F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -133,11 +60,6 @@
 			<true/>
 		</dict>
 		<key>EDDB924C8A7B0849AAD64F27BC91D854</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>FEAFD06FC755F9EC26DD6B8EB5907F25</key>
 		<dict>
 			<key>primary</key>
 			<true/>

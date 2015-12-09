@@ -32,6 +32,9 @@
 
 #define zoomRate ([[UIScreen mainScreen] bounds].size.width / 375.0f)
 
+#define WidthRate ([[UIScreen mainScreen] bounds].size.width / 375.0f)
+#define HeightRate ([[UIScreen mainScreen] bounds].size.height / 667.0f)
+
 #define CXCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
 #define CXCurrentSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
 
@@ -67,5 +70,6 @@
 #define CXDocumentDir [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject]
 #define CXTempDir NSTemporaryDirectory()
 
+#define CX @"春风十里不如你"
 
 #endif 

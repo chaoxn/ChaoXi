@@ -25,6 +25,7 @@ PODS:
   - FMDB/common (2.5)
   - FMDB/standard (2.5):
     - FMDB/common
+  - GPUImage (0.1.7)
   - KVNProgress (2.2.1)
   - Masonry (0.6.2)
   - MBProgressHUD (0.9.1)
@@ -45,6 +46,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
   - FMDB (~> 2.5)
+  - GPUImage (~> 0.1.7)
   - KVNProgress (~> 2.2.d)
   - Masonry (~> 0.6.2)
   - MBProgressHUD (~> 0.9.1)
@@ -57,6 +59,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
+  GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   KVNProgress: 7001d2d16a2755cee5599e8e485befe056f2197b
   Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad

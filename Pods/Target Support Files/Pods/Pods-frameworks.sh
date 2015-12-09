@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/AFNetworking.framework"
   install_framework "Pods/FMDB.framework"
+  install_framework "Pods/GPUImage.framework"
   install_framework "Pods/KVNProgress.framework"
   install_framework "Pods/MBProgressHUD.framework"
   install_framework "Pods/MJExtension.framework"
@@ -98,6 +99,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/AFNetworking.framework"
   install_framework "Pods/FMDB.framework"
+  install_framework "Pods/GPUImage.framework"
   install_framework "Pods/KVNProgress.framework"
   install_framework "Pods/MBProgressHUD.framework"
   install_framework "Pods/MJExtension.framework"

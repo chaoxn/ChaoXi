@@ -12,6 +12,7 @@
 #import "ArtViewController.h"
 #import "ViewController.h"
 
+#import "ShowDetailViewController.h"
 @interface AppDelegate ()
 
 @end
