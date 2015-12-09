@@ -62,6 +62,7 @@
 		EC96420C1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m in Sources */ = {isa = PBXBuildFile; fileRef = EC96420B1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m */; };
 		EC9642101C0C93A500D16E39 /* ShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC96420E1C0C93A500D16E39 /* ShowDetailViewController.m */; };
 		EC9642111C0C93A500D16E39 /* ShowDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC96420F1C0C93A500D16E39 /* ShowDetailViewController.xib */; };
+		ECBC75171C15211300234000 /* CXProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBC75161C15211300234000 /* CXProgress.m */; };
 		ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */; };
 		ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BB41BDF531E003BE70B /* ListenViewController.m */; };
 		ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BB51BDF531E003BE70B /* ListenViewController.xib */; };
@@ -72,6 +73,7 @@
 		ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381711BD8888A007A3680 /* UIView+Utils.m */; };
 		ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381981BD8898F007A3680 /* AppDelegate.m */; };
 		ECC3819B1BD8898F007A3680 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381991BD8898F007A3680 /* main.m */; };
+		ECEC6FAB1C17C45E00A5251D /* CXImageShow.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC6FAA1C17C45E00A5251D /* CXImageShow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -186,6 +188,8 @@
 		EC96420D1C0C93A500D16E39 /* ShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDetailViewController.h; sourceTree = "<group>"; };
 		EC96420E1C0C93A500D16E39 /* ShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDetailViewController.m; sourceTree = "<group>"; };
 		EC96420F1C0C93A500D16E39 /* ShowDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailViewController.xib; sourceTree = "<group>"; };
+		ECBC75151C15211300234000 /* CXProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgress.h; sourceTree = "<group>"; };
+		ECBC75161C15211300234000 /* CXProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXProgress.m; sourceTree = "<group>"; };
 		ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
 		ECC07BB31BDF531E003BE70B /* ListenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenViewController.h; sourceTree = "<group>"; };
@@ -209,6 +213,8 @@
 		ECC381981BD8898F007A3680 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		ECC381991BD8898F007A3680 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		ECC3819C1BD88A11007A3680 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		ECEC6FA91C17C45E00A5251D /* CXImageShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXImageShow.h; sourceTree = "<group>"; };
+		ECEC6FAA1C17C45E00A5251D /* CXImageShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXImageShow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -366,6 +372,8 @@
 		EC1726C11BF30A4600A973EB /* PublicViews */ = {
 			isa = PBXGroup;
 			children = (
+				ECEC6FA81C17C43E00A5251D /* CXImageShow */,
+				ECBC75141C15211300234000 /* CXProgress */,
 				EC8244091C03FD7F0082219E /* CXDropMenuView */,
 				EC6A7B6F1BFB085F00789E41 /* CXSliderView */,
 				EC1726C21BF30A4600A973EB /* CXAlterButton */,
@@ -607,6 +615,15 @@
 			path = "UINavigationBar+Awesome";
 			sourceTree = "<group>";
 		};
+		ECBC75141C15211300234000 /* CXProgress */ = {
+			isa = PBXGroup;
+			children = (
+				ECBC75151C15211300234000 /* CXProgress.h */,
+				ECBC75161C15211300234000 /* CXProgress.m */,
+			);
+			path = CXProgress;
+			sourceTree = "<group>";
+		};
 		ECC07BB21BDF531E003BE70B /* ListenListViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -821,6 +838,15 @@
 			path = Read;
 			sourceTree = "<group>";
 		};
+		ECEC6FA81C17C43E00A5251D /* CXImageShow */ = {
+			isa = PBXGroup;
+			children = (
+				ECEC6FA91C17C45E00A5251D /* CXImageShow.h */,
+				ECEC6FAA1C17C45E00A5251D /* CXImageShow.m */,
+			);
+			path = CXImageShow;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -985,6 +1011,7 @@
 				EC9642101C0C93A500D16E39 /* ShowDetailViewController.m in Sources */,
 				EC8244131C0405E70082219E /* ViewController.m in Sources */,
 				EC6A7B751BFB085F00789E41 /* CXSliderViewLayout.m in Sources */,
+				ECEC6FAB1C17C45E00A5251D /* CXImageShow.m in Sources */,
 				EC1726D91BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m in Sources */,
 				EC7E6E531C05B4CA0062518A /* ArtViewController.m in Sources */,
 				EC7E6E681C06D12B0062518A /* MuseumShowCell.m in Sources */,
@@ -1014,6 +1041,7 @@
 				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
 				EC1726831BF2F27F00A973EB /* PoeViewModel.m in Sources */,
 				EC1726871BF300BA00A973EB /* ListenListViewModel.m in Sources */,
+				ECBC75171C15211300234000 /* CXProgress.m in Sources */,
 				EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */,
 				ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */,
 				EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */,

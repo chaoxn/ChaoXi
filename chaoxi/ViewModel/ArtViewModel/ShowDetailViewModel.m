@@ -8,7 +8,7 @@
 
 #import "ShowDetailViewModel.h"
 
-#define URL @"http://dev.knowhere.avosapps.com/Api/exhibition/55755cbbe4b0f22726a8d9df?sessionToken=(null)"
+#define URL @"http://dev.knowhere.avosapps.com/Api/exhibition/5653f73700b0c0606f6cb839?sessionToken=(null)"
 
 @implementation ShowDetailViewModel
 
@@ -23,10 +23,10 @@
 
 - (void)bindModel
 {
-    
     [[RACObserve(self, detailID) map:^id(NSString *value) {
         
         return [NSString stringWithFormat:@"http://dev.knowhere.avosapps.com/Api/exhibition/%@?sessionToken=(null)", value];
+        
     }] subscribeNext:^(NSString  *x) {
         
         self.urlStr = x;

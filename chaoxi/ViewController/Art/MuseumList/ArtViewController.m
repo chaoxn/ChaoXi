@@ -42,7 +42,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self showProgress:CX];
+    [CXProgress showWithType:CXProgressTypeBasicCatch];
     
     [self.backGroundImageView addSubview:self.visualEffectView];
     [self.view addSubview:self.backGroundImageView];
@@ -55,13 +55,9 @@
 // TODO:- navi 优化
 //- (void)viewWillAppear:(BOOL)animated
 //{
-//    for (UIView *view in self.navigationController.navigationBar.subviews) {
-//        if ([view isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")]) {
-//            view.backgroundColor = [UIColor whiteColor];
-//            view.alpha = 1;
-//        }
-//    }
+//    self.navigationController.navigationBarHidden = YES;
 //}
+
 #pragma mark- event response
 
 - (void)layoutSubviews
@@ -93,7 +89,7 @@
         
         @strongify(self);
         [self.collectionView reloadData];
-        [KVNProgress dismiss];
+        [CXProgress dismiss];
     }];
     
     

@@ -31,11 +31,15 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.hidesBarsOnSwipe = YES;
-    for (UIView *view in self.navigationController.navigationBar.subviews) {
-        if ([view isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")]) {
-            view.backgroundColor = [UIColor whiteColor];
-        }
-    }
+
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
+//    for (UIView *view in self.navigationController.navigationBar.subviews) {
+//        if ([view isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")]) {
+//            view.backgroundColor = [UIColor whiteColor];
+//        }
+//    }
 }
 
 -(void)addWindow

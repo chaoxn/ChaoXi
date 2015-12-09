@@ -44,4 +44,18 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *informationLabel;
 
+@property (weak, nonatomic) IBOutlet UIView *imageContentView;
+
+@property (weak, nonatomic) IBOutlet UIView *videoContentView;
+
+@property (weak, nonatomic) IBOutlet UIView *videoView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *firstImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *secendImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *thirdImageView;
+
+@property (weak, nonatomic) IBOutlet UIImageView *forthImageView;
+
 @end

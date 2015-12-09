@@ -25,5 +25,6 @@
 #import "CXViewModelClass.h" 
 #import "CXHttpManager.h"
 #import "CXMacro.h"
+#import "CXProgress.h"
 
 #endif

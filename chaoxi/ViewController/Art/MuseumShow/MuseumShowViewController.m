@@ -34,36 +34,45 @@
     [super viewDidLoad];
 
     [self.view addSubview:self.tableView];
-//    [self.view addSubview:self.coverView];
-//    [self.coverView addSubview:self.returnButton];
+    [self.view addSubview:self.coverView];
+    [self.coverView addSubview:self.returnButton];
     
-//    [self showProgress:CX];
+    [CXProgress showWithType:CXProgressTypeFullCatch];
     [self layoutSubViews];
     [self bindViewModel];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-//    [self showProgress:CX];
+    self.navigationController.hidesBarsOnSwipe = NO;
+    self.navigationController.navigationBar.hidden = YES;
 }
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    self.navigationController.hidesBarsOnSwipe = YES;
+    self.navigationController.navigationBar.hidden = NO;
+}
+
+#pragma mark- event
 
 - (void)layoutSubViews
 {
     @weakify(self)
-//    [self.coverView mas_makeConstraints:^(MASConstraintMaker *make) {
-//        
-//        @strongify(self)
-//        make.left.top.and.right.equalTo(self.view);
-//        make.height.mas_equalTo(40);
-//    }];
+    [self.coverView mas_makeConstraints:^(MASConstraintMaker *make) {
+        
+        @strongify(self)
+        make.left.top.and.right.equalTo(self.view);
+        make.height.mas_equalTo(40);
+    }];
     
-//    [self.returnButton mas_makeConstraints:^(MASConstraintMaker *make) {
-//
-//        @strongify(self)
-//        make.top.equalTo(self.coverView).offset(10);
-//        make.left.equalTo(self.coverView).offset(20);
-//        make.width.and.height.mas_equalTo(24);
-//    }];
+    [self.returnButton mas_makeConstraints:^(MASConstraintMaker *make) {
+
+        @strongify(self)
+        make.top.equalTo(self.coverView).offset(20);
+        make.left.equalTo(self.coverView).offset(20);
+        make.width.and.height.mas_equalTo(18);
+    }];
     
     [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
         
@@ -79,7 +88,7 @@
     [[self.returnButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         
         @strongify(self)
-        [self dismissViewControllerAnimated:YES completion:nil];
+        [self.navigationController popViewControllerAnimated:YES];
     }];
     
     self.showViewModel.delegateSignal = [RACSubject subject];
@@ -90,9 +99,8 @@
        
         self.modelArray = array;
         [self.tableView reloadData];
-//        [KVNProgress dismiss];
+        [CXProgress dismiss];
     }];
-    
 }
 
 #pragma mark- tableView delegate
@@ -143,7 +151,7 @@
             UITableView *tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
             tableView.delegate = self;
             tableView.dataSource  = self;
-            tableView.backgroundColor = [UIColor blackColor];
+//            tableView.backgroundColor = [UIColor whiteColor];
             tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
             tableView;
         });

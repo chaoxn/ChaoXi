@@ -30,6 +30,7 @@
     
     [self initModel];
     [self initViewModel];
+    [CXProgress showWithType:CXProgressTypeBasicTurn];
     [self.scrollView addSubview:self.contentLabel];
     [self.saveButton setBackgroundImage:[UIImage imageNamed:@"bushoucang"] forState:UIControlStateNormal];
     [self.saveButton setBackgroundImage:[UIImage imageNamed:@"shouchang"] forState:UIControlStateSelected];
@@ -58,7 +59,7 @@
 
 - (IBAction)refreshAction:(UIButton *)sender
 {
-    [self showProgress:@"春风十里不如你"];
+    [CXProgress showWithType:CXProgressTypeFullTurn];
     
     _contentLabel.text = nil;
     [self transitionWithType:@"fade" WithSubtype:kCATransitionFromLeft ForView:self.view];
@@ -78,7 +79,7 @@
     [self.viewModel.delegateSignal subscribeNext:^(id model) {
         
         self.model = model;
-        [KVNProgress dismiss];
+        [CXProgress dismiss];
     }];
     
     [self.viewModel.requestCommand execute:nil];
@@ -163,11 +164,11 @@
     }
 }
 
-- (void) transitionWithType:(NSString *) type WithSubtype:(NSString *) subtype ForView : (UIView *) view
+- (void) transitionWithType:(NSString *) type WithSubtype:(NSString *) subtype ForView:(UIView *) view
 {
     CATransition *animation = [CATransition animation];
     
-    animation.duration = 1;
+    animation.duration = 0.2;
     
     animation.type = type;
     if (subtype != nil) {
