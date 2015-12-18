@@ -7,7 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+#import "CXAlterButton.h"
 
-@interface CXIntercepter : NSObject
+@interface CXIntercepter : NSObject <CXAlterButtonDelegate, UINavigationControllerDelegate>
 
 @end

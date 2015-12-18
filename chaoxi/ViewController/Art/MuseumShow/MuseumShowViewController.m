@@ -79,7 +79,6 @@
         @strongify(self)
         make.edges.equalTo(self.view);
     }];
-    
 }
 
 - (void)bindViewModel
@@ -88,7 +87,7 @@
     [[self.returnButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         
         @strongify(self)
-        [self.navigationController popViewControllerAnimated:YES];
+        [self dismissViewControllerAnimated:YES completion:nil];
     }];
     
     self.showViewModel.delegateSignal = [RACSubject subject];
@@ -97,6 +96,7 @@
     
     [self.showViewModel.delegateSignal subscribeNext:^(id array) {
        
+        @strongify(self)
         self.modelArray = array;
         [self.tableView reloadData];
         [CXProgress dismiss];
@@ -151,7 +151,6 @@
             UITableView *tableView = [[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStylePlain];
             tableView.delegate = self;
             tableView.dataSource  = self;
-//            tableView.backgroundColor = [UIColor whiteColor];
             tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
             tableView;
         });
@@ -201,7 +200,7 @@
     return _modelArray;
 }
 
-#pragma mark - 
+#pragma mark
 
 - (void)didReceiveMemoryWarning
 {

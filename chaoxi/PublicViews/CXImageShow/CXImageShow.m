@@ -21,6 +21,16 @@
 
 @implementation CXImageShow
 
++ (CXImageShow *)share
+{
+    static dispatch_once_t once = 0;
+    static CXImageShow *cxImageShow;
+    
+    dispatch_once(&once, ^{cxImageShow = [[CXImageShow alloc]init];});
+    
+    return cxImageShow;
+}
+
 - (id)init
 {
     if (self = [super init]) {
@@ -32,16 +42,6 @@
         [self addGestureRecognizer:tap];
     }
     return self;
-}
-
-+ (CXImageShow *)share
-{
-    static dispatch_once_t once = 0;
-    static CXImageShow *cxImageShow;
-    
-    dispatch_once(&once, ^{cxImageShow = [[CXImageShow alloc]init];});
-    
-    return cxImageShow;
 }
 
 +(void)showImage :(NSArray *)imageArr index:(NSInteger )index

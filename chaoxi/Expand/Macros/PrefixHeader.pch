@@ -12,7 +12,6 @@
 #import "AFNetworking.h"
 #import "FMDB.h"
 #import "KVNProgress.h"
-#import "MBProgressHUD.h"
 #import "MJExtension.h"
 #import "MJRefresh.h"
 #import "Masonry.h"
@@ -20,6 +19,8 @@
 #import "REMenu.h"
 #import "UIImageView+WebCache.h"
 #import "GPUImage.h"
+#import "Aspects.h"
+#import "POP/POP.h"
 
 #import "RACAFNetworking.h"
 #import "CXViewModelClass.h" 

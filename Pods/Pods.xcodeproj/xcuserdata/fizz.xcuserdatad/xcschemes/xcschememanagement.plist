@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Aspects.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>FMDB.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -20,11 +25,6 @@
 			<false/>
 		</dict>
 		<key>KVNProgress.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
-		<key>MBProgressHUD.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -64,15 +64,15 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>pop.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>0186EE20AB4D310515B8041966DB7AEB</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>06D8031F0ECD1298A7B7A88050D65622</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,12 +82,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4878C70B21CA37D7CB8A476BF986741B</key>
+		<key>28C18ACF97AF65447D8D8FEC6707AA6B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>59D8F1E4BD01222B2C068B87429A889B</key>
+		<key>4878C70B21CA37D7CB8A476BF986741B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -97,7 +97,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A7122A69278E0081D8126649520FFC13</key>
+		<key>6B54D272514576B5D89CC243D867B2ED</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>72DD734597BC591F8EF3094672DECFB2</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -107,12 +112,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D46FF0D14A9C52148E6C9549F0B752C5</key>
+		<key>BEE270758609C0723406894C17F0521F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E61CE3B6DFA1FE6B3E296965C76C0E10</key>
+		<key>C766897D56D8A815526A1B61D99EA0CA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D344A2E7BC5451EC99449E81B1E8DF66</key>
 		<dict>
 			<key>primary</key>
 			<true/>

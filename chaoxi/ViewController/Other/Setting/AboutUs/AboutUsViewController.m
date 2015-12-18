@@ -17,16 +17,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor cyanColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.hidesBarsOnSwipe = NO;
+    self.navigationController.navigationBarHidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    self.navigationController.hidesBarsOnSwipe = YES;
+    self.navigationController.navigationBarHidden = NO;
 }
 
 - (void)didReceiveMemoryWarning

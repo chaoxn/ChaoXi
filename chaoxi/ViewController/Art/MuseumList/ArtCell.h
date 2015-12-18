@@ -19,4 +19,6 @@
 
 @property (nonatomic, strong) MuseumModel *model;
 
+@property (nonatomic, strong) UIButton *detailButton;
+
 @end

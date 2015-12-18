@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MuseumModel.h"
 
 @interface MuseumDetailViewController : UIViewController
+
+@property (nonatomic, strong) MuseumModel *model;
 
 @end

@@ -6,8 +6,14 @@
 //  Copyright © 2015年 chaox. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface CXPushTransition : NSObject
+@interface CXPushTransition : NSObject<UIViewControllerAnimatedTransitioning>
+
+@property (nonatomic, strong) UIViewController *pushVC;
+
+@property (nonatomic, strong) UIViewController *popVC;
+
+@property (nonatomic, assign) int index;
 
 @end

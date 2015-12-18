@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface MuseumShowViewController : BaseViewController
+@interface MuseumShowViewController : UIViewController
 
 @property (nonatomic, strong) NSString *musuemId;
 
