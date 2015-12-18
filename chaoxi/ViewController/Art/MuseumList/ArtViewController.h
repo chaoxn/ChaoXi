@@ -10,4 +10,6 @@
 
 @interface ArtViewController : BaseViewController
 
+@property (nonatomic, strong) UIButton *button;
+
 @end

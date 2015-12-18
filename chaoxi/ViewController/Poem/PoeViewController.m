@@ -30,7 +30,7 @@
     
     [self initModel];
     [self initViewModel];
-    [CXProgress showWithType:CXProgressTypeBasicTurn];
+    [CXProgress showWithType:CXProgressTypeFullTurn];
     [self.scrollView addSubview:self.contentLabel];
     [self.saveButton setBackgroundImage:[UIImage imageNamed:@"bushoucang"] forState:UIControlStateNormal];
     [self.saveButton setBackgroundImage:[UIImage imageNamed:@"shouchang"] forState:UIControlStateSelected];
@@ -59,7 +59,7 @@
 
 - (IBAction)refreshAction:(UIButton *)sender
 {
-    [CXProgress showWithType:CXProgressTypeFullTurn];
+//    [CXProgress showWithType:CXProgressTypeFullTurn];
     
     _contentLabel.text = nil;
     [self transitionWithType:@"fade" WithSubtype:kCATransitionFromLeft ForView:self.view];
@@ -103,7 +103,6 @@
         _scrollView.contentSize = CGSizeMake(0, actualSize.height + 100);
         _contentLabel.frame = CGRectMake(0, 10, ScreenWidth ,actualSize.height);
         _contentLabel.text = str;
-      
     }];
 }
 

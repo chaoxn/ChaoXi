@@ -6,12 +6,9 @@
  *********************************************************************/
 
 #import <UIKit/UIKit.h>
-#import "REMenu.h"
 
-@interface NavigationViewController : UINavigationController
+@interface NavigationViewController : UINavigationController<UIViewControllerTransitioningDelegate>
 
-@property (nonatomic, strong) REMenu *menu;
-
-- (void)toggleMenu;
+- (void)presenting;
 
 @end

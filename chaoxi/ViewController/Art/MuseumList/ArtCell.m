@@ -23,6 +23,7 @@
         [self.contentView addSubview:self.titleLabel];
         [self.contentView addSubview:self.decLabel];
         [self.contentView addSubview:self.mainImageView];
+        [self.mainImageView addSubview:self.detailButton];
         
         @weakify(self);
         [self.mainImageView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -49,13 +50,13 @@
             make.width.and.height.equalTo(self.titleLabel);
         }];
         
-        
-//        RAC(self.titleLabel, text) = RACObserve(self.model, nameBase);
-//        
-//        RAC(self.decLabel, text) = [RACObserve(self.model, exCount) map:^id(NSNumber *value) {
-//            
-//            return [NSString stringWithFormat:@"共有%@个展览", value];
-//        }];
+        [self.detailButton mas_makeConstraints:^(MASConstraintMaker *make) {
+           
+            @strongify(self);
+            make.top.equalTo(self.mainImageView).with.offset(10);
+            make.right.equalTo(self.mainImageView).with.offset(-10);
+            make.size.mas_equalTo(CGSizeMake(30, 30));
+        }];
         
         [RACObserve(self, model) subscribeNext:^(MuseumModel *model) {
             
@@ -82,6 +83,7 @@
             imageView.layer.shadowColor = [UIColor blackColor].CGColor;
             imageView.layer.shadowOffset = CGSizeMake(4, -4);
             imageView.layer.shadowOpacity = 0.7;
+            imageView.userInteractionEnabled = YES;
        //     imageView.layer.shadowPath = self.path.CGPath;
             imageView;
         });
@@ -113,6 +115,19 @@
         });
     }
     return _path;
+}
+
+- (UIButton *)detailButton
+{
+    if (!_detailButton) {
+        _detailButton = ({
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            [button setBackgroundImage:[UIImage imageNamed:@"detail"] forState:UIControlStateNormal];
+//            [button addTarget:self action:@selector(click) forControlEvents:UIControlEventTouchUpInside];
+            button;
+        });
+    }
+    return _detailButton;
 }
 
 - (UILabel *)titleLabel

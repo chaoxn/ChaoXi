@@ -23,9 +23,7 @@
 		EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */; };
 		EC1726B81BF3033F00A973EB /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1726AE1BF3033F00A973EB /* AboutUsViewController.xib */; };
 		EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */; };
-		EC1726BA1BF3033F00A973EB /* ClearCacheViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1726B21BF3033F00A973EB /* ClearCacheViewController.xib */; };
 		EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726B51BF3033F00A973EB /* SaveViewController.m */; };
-		EC1726BC1BF3033F00A973EB /* SaveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1726B61BF3033F00A973EB /* SaveViewController.xib */; };
 		EC1726C01BF3039E00A973EB /* Poem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726BF1BF3039E00A973EB /* Poem.m */; };
 		EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726C41BF30A4600A973EB /* CXAlterButton.m */; };
 		EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726C61BF30A4600A973EB /* CXAlterItemButton.m */; };
@@ -40,6 +38,9 @@
 		EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EBF1BDDF86E006FB4F0 /* FunnyViewController.xib */; };
 		EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */; };
 		EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */; };
+		EC5B45191C196B4700DBD54C /* CXPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B45181C196B4700DBD54C /* CXPushTransition.m */; };
+		EC5B451C1C198C2D00DBD54C /* CXPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B451B1C198C2D00DBD54C /* CXPopTransition.m */; };
+		EC5B45281C1AB6F800DBD54C /* CXIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B45271C1AB6F800DBD54C /* CXIntercepter.m */; };
 		EC6A7B741BFB085F00789E41 /* CXSliderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B711BFB085F00789E41 /* CXSliderViewCell.m */; };
 		EC6A7B751BFB085F00789E41 /* CXSliderViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B731BFB085F00789E41 /* CXSliderViewLayout.m */; };
 		EC6A7B781BFB10A400789E41 /* FunnyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B771BFB10A400789E41 /* FunnyViewModel.m */; };
@@ -56,24 +57,26 @@
 		EC7E6E771C06F1130062518A /* MuseumShowModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC7E6E761C06F1130062518A /* MuseumShowModel.m */; };
 		EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */; };
 		EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC82440D1C03FD7F0082219E /* CXDropMenuView.m */; };
-		EC8244131C0405E70082219E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC8244111C0405E70082219E /* ViewController.m */; };
 		EC9642051C0C364000D16E39 /* ShowDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9642041C0C364000D16E39 /* ShowDetailViewModel.m */; };
 		EC9642091C0C45F400D16E39 /* UINavigationBar+Awesome.m in Sources */ = {isa = PBXBuildFile; fileRef = EC9642081C0C45F400D16E39 /* UINavigationBar+Awesome.m */; };
 		EC96420C1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m in Sources */ = {isa = PBXBuildFile; fileRef = EC96420B1C0C4F4D00D16E39 /* UINavigationBar+HideAppear.m */; };
 		EC9642101C0C93A500D16E39 /* ShowDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC96420E1C0C93A500D16E39 /* ShowDetailViewController.m */; };
 		EC9642111C0C93A500D16E39 /* ShowDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC96420F1C0C93A500D16E39 /* ShowDetailViewController.xib */; };
+		ECA1D8D21C22827900DC35F9 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA1D8D11C22827900DC35F9 /* ModalViewController.m */; };
+		ECA1D8D51C228F2000DC35F9 /* ModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA1D8D41C228F2000DC35F9 /* ModalView.m */; };
 		ECBC75171C15211300234000 /* CXProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBC75161C15211300234000 /* CXProgress.m */; };
 		ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */; };
 		ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BB41BDF531E003BE70B /* ListenViewController.m */; };
 		ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECC07BB51BDF531E003BE70B /* ListenViewController.xib */; };
 		ECC3814A1BD8863A007A3680 /* chaoxiTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381491BD8863A007A3680 /* chaoxiTests.m */; };
-		ECC381841BD8888A007A3680 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381651BD8888A007A3680 /* NSString+Category.m */; };
 		ECC381861BD8888A007A3680 /* UIImage+Common.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3816B1BD8888A007A3680 /* UIImage+Common.m */; };
-		ECC381871BD8888A007A3680 /* UIView+BorderStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */; };
 		ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381711BD8888A007A3680 /* UIView+Utils.m */; };
 		ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381981BD8898F007A3680 /* AppDelegate.m */; };
 		ECC3819B1BD8898F007A3680 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC381991BD8898F007A3680 /* main.m */; };
 		ECEC6FAB1C17C45E00A5251D /* CXImageShow.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC6FAA1C17C45E00A5251D /* CXImageShow.m */; };
+		ECFBA0EA1C23A6B100761349 /* CXPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFBA0E91C23A6B100761349 /* CXPresentTransition.m */; };
+		ECFBA0ED1C23A6C800761349 /* CXDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFBA0EC1C23A6C800761349 /* CXDismissTransition.m */; };
+		ECFBA0F01C23AAF500761349 /* MuseumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFBA0EF1C23AAF500761349 /* MuseumDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -116,10 +119,8 @@
 		EC1726AE1BF3033F00A973EB /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 		EC1726B01BF3033F00A973EB /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
 		EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
-		EC1726B21BF3033F00A973EB /* ClearCacheViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ClearCacheViewController.xib; sourceTree = "<group>"; };
 		EC1726B41BF3033F00A973EB /* SaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveViewController.h; sourceTree = "<group>"; };
 		EC1726B51BF3033F00A973EB /* SaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveViewController.m; sourceTree = "<group>"; };
-		EC1726B61BF3033F00A973EB /* SaveViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveViewController.xib; sourceTree = "<group>"; };
 		EC1726BE1BF3039E00A973EB /* Poem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poem.h; sourceTree = "<group>"; };
 		EC1726BF1BF3039E00A973EB /* Poem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poem.m; sourceTree = "<group>"; };
 		EC1726C31BF30A4600A973EB /* CXAlterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlterButton.h; sourceTree = "<group>"; };
@@ -146,6 +147,12 @@
 		EC378EC61BDDFAC4006FB4F0 /* NavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NavigationViewController.h; sourceTree = "<group>"; };
 		EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NavigationViewController.m; sourceTree = "<group>"; };
 		EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Image.xcassets; sourceTree = "<group>"; };
+		EC5B45171C196B4700DBD54C /* CXPushTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPushTransition.h; sourceTree = "<group>"; };
+		EC5B45181C196B4700DBD54C /* CXPushTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPushTransition.m; sourceTree = "<group>"; };
+		EC5B451A1C198C2D00DBD54C /* CXPopTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPopTransition.h; sourceTree = "<group>"; };
+		EC5B451B1C198C2D00DBD54C /* CXPopTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPopTransition.m; sourceTree = "<group>"; };
+		EC5B45261C1AB6F800DBD54C /* CXIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXIntercepter.h; sourceTree = "<group>"; };
+		EC5B45271C1AB6F800DBD54C /* CXIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXIntercepter.m; sourceTree = "<group>"; };
 		EC6A7B701BFB085F00789E41 /* CXSliderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSliderViewCell.h; sourceTree = "<group>"; };
 		EC6A7B711BFB085F00789E41 /* CXSliderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSliderViewCell.m; sourceTree = "<group>"; };
 		EC6A7B721BFB085F00789E41 /* CXSliderViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSliderViewLayout.h; sourceTree = "<group>"; };
@@ -177,8 +184,6 @@
 		EC82440B1C03FD7F0082219E /* CXDropMenuItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDropMenuItemView.m; sourceTree = "<group>"; };
 		EC82440C1C03FD7F0082219E /* CXDropMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDropMenuView.h; sourceTree = "<group>"; };
 		EC82440D1C03FD7F0082219E /* CXDropMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDropMenuView.m; sourceTree = "<group>"; };
-		EC8244101C0405E70082219E /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		EC8244111C0405E70082219E /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		EC9642031C0C364000D16E39 /* ShowDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDetailViewModel.h; sourceTree = "<group>"; };
 		EC9642041C0C364000D16E39 /* ShowDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDetailViewModel.m; sourceTree = "<group>"; };
 		EC9642071C0C45F400D16E39 /* UINavigationBar+Awesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Awesome.h"; sourceTree = "<group>"; };
@@ -188,6 +193,10 @@
 		EC96420D1C0C93A500D16E39 /* ShowDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowDetailViewController.h; sourceTree = "<group>"; };
 		EC96420E1C0C93A500D16E39 /* ShowDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowDetailViewController.m; sourceTree = "<group>"; };
 		EC96420F1C0C93A500D16E39 /* ShowDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowDetailViewController.xib; sourceTree = "<group>"; };
+		ECA1D8D01C22827900DC35F9 /* ModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalViewController.h; sourceTree = "<group>"; };
+		ECA1D8D11C22827900DC35F9 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
+		ECA1D8D31C228F2000DC35F9 /* ModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalView.h; sourceTree = "<group>"; };
+		ECA1D8D41C228F2000DC35F9 /* ModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalView.m; sourceTree = "<group>"; };
 		ECBC75151C15211300234000 /* CXProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgress.h; sourceTree = "<group>"; };
 		ECBC75161C15211300234000 /* CXProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXProgress.m; sourceTree = "<group>"; };
 		ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -201,12 +210,8 @@
 		ECC381481BD8863A007A3680 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ECC381491BD8863A007A3680 /* chaoxiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = chaoxiTests.m; sourceTree = "<group>"; };
 		ECC3815F1BD8888A007A3680 /* CateGoryHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CateGoryHeader.h; sourceTree = "<group>"; };
-		ECC381641BD8888A007A3680 /* NSString+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Category.h"; sourceTree = "<group>"; };
-		ECC381651BD8888A007A3680 /* NSString+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Category.m"; sourceTree = "<group>"; };
 		ECC3816A1BD8888A007A3680 /* UIImage+Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Common.h"; sourceTree = "<group>"; };
 		ECC3816B1BD8888A007A3680 /* UIImage+Common.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Common.m"; sourceTree = "<group>"; };
-		ECC3816D1BD8888A007A3680 /* UIView+BorderStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+BorderStyle.h"; sourceTree = "<group>"; };
-		ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+BorderStyle.m"; sourceTree = "<group>"; };
 		ECC381701BD8888A007A3680 /* UIView+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Utils.h"; sourceTree = "<group>"; };
 		ECC381711BD8888A007A3680 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		ECC381971BD8898F007A3680 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -215,6 +220,12 @@
 		ECC3819C1BD88A11007A3680 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		ECEC6FA91C17C45E00A5251D /* CXImageShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXImageShow.h; sourceTree = "<group>"; };
 		ECEC6FAA1C17C45E00A5251D /* CXImageShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXImageShow.m; sourceTree = "<group>"; };
+		ECFBA0E81C23A6B100761349 /* CXPresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPresentTransition.h; sourceTree = "<group>"; };
+		ECFBA0E91C23A6B100761349 /* CXPresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPresentTransition.m; sourceTree = "<group>"; };
+		ECFBA0EB1C23A6C800761349 /* CXDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDismissTransition.h; sourceTree = "<group>"; };
+		ECFBA0EC1C23A6C800761349 /* CXDismissTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDismissTransition.m; sourceTree = "<group>"; };
+		ECFBA0EE1C23AAF500761349 /* MuseumDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MuseumDetailViewController.h; sourceTree = "<group>"; };
+		ECFBA0EF1C23AAF500761349 /* MuseumDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MuseumDetailViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -345,7 +356,6 @@
 			children = (
 				EC1726B01BF3033F00A973EB /* ClearCacheViewController.h */,
 				EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */,
-				EC1726B21BF3033F00A973EB /* ClearCacheViewController.xib */,
 			);
 			path = ClearCache;
 			sourceTree = "<group>";
@@ -355,7 +365,6 @@
 			children = (
 				EC1726B41BF3033F00A973EB /* SaveViewController.h */,
 				EC1726B51BF3033F00A973EB /* SaveViewController.m */,
-				EC1726B61BF3033F00A973EB /* SaveViewController.xib */,
 			);
 			path = Save;
 			sourceTree = "<group>";
@@ -372,6 +381,8 @@
 		EC1726C11BF30A4600A973EB /* PublicViews */ = {
 			isa = PBXGroup;
 			children = (
+				EC5B45251C1AB6E300DBD54C /* CXIntercepter */,
+				EC5B45161C196B2400DBD54C /* CXTransitions */,
 				ECEC6FA81C17C43E00A5251D /* CXImageShow */,
 				ECBC75141C15211300234000 /* CXProgress */,
 				EC8244091C03FD7F0082219E /* CXDropMenuView */,
@@ -458,8 +469,6 @@
 			children = (
 				EC378EC61BDDFAC4006FB4F0 /* NavigationViewController.h */,
 				EC378EC71BDDFAC4006FB4F0 /* NavigationViewController.m */,
-				EC8244101C0405E70082219E /* ViewController.h */,
-				EC8244111C0405E70082219E /* ViewController.m */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -467,6 +476,10 @@
 		EC378EC41BDDFA96006FB4F0 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				ECA1D8D01C22827900DC35F9 /* ModalViewController.h */,
+				ECA1D8D11C22827900DC35F9 /* ModalViewController.m */,
+				ECA1D8D31C228F2000DC35F9 /* ModalView.h */,
+				ECA1D8D41C228F2000DC35F9 /* ModalView.m */,
 				ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */,
 				ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */,
 			);
@@ -496,6 +509,30 @@
 				EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */,
 			);
 			path = Image;
+			sourceTree = "<group>";
+		};
+		EC5B45161C196B2400DBD54C /* CXTransitions */ = {
+			isa = PBXGroup;
+			children = (
+				EC5B45171C196B4700DBD54C /* CXPushTransition.h */,
+				EC5B45181C196B4700DBD54C /* CXPushTransition.m */,
+				EC5B451A1C198C2D00DBD54C /* CXPopTransition.h */,
+				EC5B451B1C198C2D00DBD54C /* CXPopTransition.m */,
+				ECFBA0E81C23A6B100761349 /* CXPresentTransition.h */,
+				ECFBA0E91C23A6B100761349 /* CXPresentTransition.m */,
+				ECFBA0EB1C23A6C800761349 /* CXDismissTransition.h */,
+				ECFBA0EC1C23A6C800761349 /* CXDismissTransition.m */,
+			);
+			path = CXTransitions;
+			sourceTree = "<group>";
+		};
+		EC5B45251C1AB6E300DBD54C /* CXIntercepter */ = {
+			isa = PBXGroup;
+			children = (
+				EC5B45261C1AB6F800DBD54C /* CXIntercepter.h */,
+				EC5B45271C1AB6F800DBD54C /* CXIntercepter.m */,
+			);
+			path = CXIntercepter;
 			sourceTree = "<group>";
 		};
 		EC6A7AD61BF9AB3B00789E41 /* ReadViewModel */ = {
@@ -568,6 +605,8 @@
 				EC7E6E4A1C05B4CA0062518A /* ArtCell.m */,
 				EC7E6E4B1C05B4CA0062518A /* ArtHeaderView.h */,
 				EC7E6E4C1C05B4CA0062518A /* ArtHeaderView.m */,
+				ECFBA0EE1C23AAF500761349 /* MuseumDetailViewController.h */,
+				ECFBA0EF1C23AAF500761349 /* MuseumDetailViewController.m */,
 			);
 			path = MuseumList;
 			sourceTree = "<group>";
@@ -716,21 +755,10 @@
 			children = (
 				ECC3815F1BD8888A007A3680 /* CateGoryHeader.h */,
 				EC9642061C0C45F400D16E39 /* UINavigationBar+Awesome */,
-				ECC381631BD8888A007A3680 /* NSString+Category */,
 				ECC381691BD8888A007A3680 /* UIImage+Common */,
-				ECC3816C1BD8888A007A3680 /* UIView+BorderStyle */,
 				ECC3816F1BD8888A007A3680 /* UIView+Utils */,
 			);
 			path = CateGory;
-			sourceTree = "<group>";
-		};
-		ECC381631BD8888A007A3680 /* NSString+Category */ = {
-			isa = PBXGroup;
-			children = (
-				ECC381641BD8888A007A3680 /* NSString+Category.h */,
-				ECC381651BD8888A007A3680 /* NSString+Category.m */,
-			);
-			path = "NSString+Category";
 			sourceTree = "<group>";
 		};
 		ECC381691BD8888A007A3680 /* UIImage+Common */ = {
@@ -740,15 +768,6 @@
 				ECC3816B1BD8888A007A3680 /* UIImage+Common.m */,
 			);
 			path = "UIImage+Common";
-			sourceTree = "<group>";
-		};
-		ECC3816C1BD8888A007A3680 /* UIView+BorderStyle */ = {
-			isa = PBXGroup;
-			children = (
-				ECC3816D1BD8888A007A3680 /* UIView+BorderStyle.h */,
-				ECC3816E1BD8888A007A3680 /* UIView+BorderStyle.m */,
-			);
-			path = "UIView+BorderStyle";
 			sourceTree = "<group>";
 		};
 		ECC3816F1BD8888A007A3680 /* UIView+Utils */ = {
@@ -931,7 +950,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC0A94711BE350A00085BC9B /* VideoDetailController.xib in Resources */,
-				EC1726BA1BF3033F00A973EB /* ClearCacheViewController.xib in Resources */,
 				EC7D9EBB1BFB294B0092D887 /* WebViewController.xib in Resources */,
 				EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */,
 				EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */,
@@ -942,7 +960,6 @@
 				EC17268C1BF3023200A973EB /* PoeViewController.xib in Resources */,
 				EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */,
 				EC029A561BDF54FE000F304C /* LuoIMagaCell.xib in Resources */,
-				EC1726BC1BF3033F00A973EB /* SaveViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1008,8 +1025,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC5B45281C1AB6F800DBD54C /* CXIntercepter.m in Sources */,
 				EC9642101C0C93A500D16E39 /* ShowDetailViewController.m in Sources */,
-				EC8244131C0405E70082219E /* ViewController.m in Sources */,
+				ECFBA0F01C23AAF500761349 /* MuseumDetailViewController.m in Sources */,
+				ECA1D8D51C228F2000DC35F9 /* ModalView.m in Sources */,
 				EC6A7B751BFB085F00789E41 /* CXSliderViewLayout.m in Sources */,
 				ECEC6FAB1C17C45E00A5251D /* CXImageShow.m in Sources */,
 				EC1726D91BF30A8F00A973EB /* AFHTTPSessionManager+RACSupport.m in Sources */,
@@ -1022,11 +1041,9 @@
 				EC0A94701BE350A00085BC9B /* VideoDetailController.m in Sources */,
 				ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */,
 				EC0A94571BE20EEF0085BC9B /* CXHttpManager.m in Sources */,
-				ECC381871BD8888A007A3680 /* UIView+BorderStyle.m in Sources */,
 				EC1726DB1BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m in Sources */,
 				EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */,
 				EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */,
-				ECC381841BD8888A007A3680 /* NSString+Category.m in Sources */,
 				EC6A7B781BFB10A400789E41 /* FunnyViewModel.m in Sources */,
 				EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */,
 				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
@@ -1034,18 +1051,22 @@
 				EC7E6E521C05B4CA0062518A /* ArtHeaderView.m in Sources */,
 				EC7E6E511C05B4CA0062518A /* ArtCell.m in Sources */,
 				EC7E6E651C06D1120062518A /* MuseumShowViewController.m in Sources */,
+				EC5B45191C196B4700DBD54C /* CXPushTransition.m in Sources */,
 				EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */,
 				EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */,
 				EC6A7B741BFB085F00789E41 /* CXSliderViewCell.m in Sources */,
 				EC7D9EBA1BFB294B0092D887 /* WebViewController.m in Sources */,
 				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
 				EC1726831BF2F27F00A973EB /* PoeViewModel.m in Sources */,
+				EC5B451C1C198C2D00DBD54C /* CXPopTransition.m in Sources */,
+				ECA1D8D21C22827900DC35F9 /* ModalViewController.m in Sources */,
 				EC1726871BF300BA00A973EB /* ListenListViewModel.m in Sources */,
 				ECBC75171C15211300234000 /* CXProgress.m in Sources */,
 				EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */,
 				ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */,
 				EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */,
 				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
+				ECFBA0ED1C23A6C800761349 /* CXDismissTransition.m in Sources */,
 				EC7E6E3A1C05B1B80062518A /* MuseumModel.m in Sources */,
 				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
 				EC9642091C0C45F400D16E39 /* UINavigationBar+Awesome.m in Sources */,
@@ -1056,6 +1077,7 @@
 				EC1726DA1BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m in Sources */,
 				EC7E6E741C06F0D50062518A /* MuseumShowViewModel.m in Sources */,
 				EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */,
+				ECFBA0EA1C23A6B100761349 /* CXPresentTransition.m in Sources */,
 				EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */,
 				EC1726841BF2F27F00A973EB /* CXViewModelClass.m in Sources */,
 				EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */,

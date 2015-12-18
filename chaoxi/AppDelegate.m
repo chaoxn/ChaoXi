@@ -7,10 +7,9 @@
 //
 
 #import "AppDelegate.h"
-#import "ListenViewController.h"
+#import "ReadViewController.h"
 #import "NavigationViewController.h"
 #import "ArtViewController.h"
-#import "ViewController.h"
 
 #import "ShowDetailViewController.h"
 @interface AppDelegate ()
@@ -26,6 +25,7 @@
     self.window.rootViewController = [[NavigationViewController alloc]initWithRootViewController:[[ArtViewController alloc]init]];
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

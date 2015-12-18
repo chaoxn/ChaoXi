@@ -7,13 +7,8 @@
 //
 
 #import "BaseViewController.h"
-#import "NavigationViewController.h"
-#import "AboutUsViewController.h"
-#import "ClearCacheViewController.h"
-#import "SaveViewController.h"
-#import "CXAlterButton.h"
 
-@interface BaseViewController ()<CXAlterButtonDelegate>
+@interface BaseViewController ()
 
 @end
 
@@ -22,85 +17,16 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"潮汐" style:UIBarButtonItemStylePlain target:self.navigationController action:@selector(toggleMenu)];
-    
-     [self performSelector:@selector(addWindow) withObject:nil afterDelay:0.01];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.hidesBarsOnSwipe = YES;
-
+    
     [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
-    
-//    for (UIView *view in self.navigationController.navigationBar.subviews) {
-//        if ([view isKindOfClass:NSClassFromString(@"_UINavigationBarBackground")]) {
-//            view.backgroundColor = [UIColor whiteColor];
-//        }
-//    }
 }
 
--(void)addWindow
-{
-    CXAlterButton *button = [[CXAlterButton alloc]initWithImage:[UIImage imageNamed:@"jian"]];
-    
-    CXAlterItemButton *item1 = [[CXAlterItemButton alloc]initWithImage:[UIImage imageNamed:@"item1"]];
-    
-    CXAlterItemButton *item2 = [[CXAlterItemButton alloc]initWithImage:[UIImage imageNamed:@"item2"]];
-    
-    CXAlterItemButton *item3 = [[CXAlterItemButton alloc]initWithImage:[UIImage imageNamed:@"item3"]];
-    
-    [button addButtonItems:@[item1, item2, item3]];
-        
-    button.buttonCenter = CGPointMake(225,8);
-    button.buttonSize = CGSizeMake(30, 30);
-    
-    button.animationDuration = 0.5;
-    button.delegate = self;
-    
-    UIView *view = [[UIView alloc]initWithFrame:CGRectMake(0, 0, 250, 44)];
-    view.backgroundColor = [UIColor clearColor];
-    
-    
-    [view addSubview:button];
-
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:view];
-}
-
-- (void)AlterButton:(CXAlterButton *)button clickItemButtonAtIndex:(NSUInteger)index
-{
-    switch (index) {
-        case 0:
-        {
-            SaveViewController *saveVC = [[SaveViewController alloc]init];
-            [self.navigationController pushViewController:saveVC animated:YES];
-        }
-            break;
-        case 1:
-        {
-            AboutUsViewController *abVC = [[AboutUsViewController alloc]init];
-            [self.navigationController pushViewController:abVC animated:YES];
-        }
-            break;
-        case 2:
-        {
-            ClearCacheViewController *clearVC = [[ClearCacheViewController alloc]init];
-            [self.navigationController pushViewController:clearVC animated:YES];
-        }
-            break;
-        default:
-            break;
-    }
-}
-
-- (void)viewWillLayoutSubviews
-{
-    [super viewWillLayoutSubviews];
-    NavigationViewController *navigationController = (NavigationViewController *)self.navigationController;
-    [navigationController.menu setNeedsLayout];
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

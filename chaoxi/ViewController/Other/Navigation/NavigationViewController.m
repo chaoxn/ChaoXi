@@ -13,9 +13,13 @@
 #import "FunnyViewController.h"
 #import "CXWelcomeView.h"
 #import "CXAlterButton.h"
-#import "CXDropMenuView.h"
+#import "ModalViewController.h"
+#import "CXPresentTransition.h"
+#import "CXDismissTransition.h"
 
 @interface NavigationViewController ()
+
+@property (nonatomic, assign) NSInteger index;
 
 @end
 
@@ -25,61 +29,6 @@
     
     [super viewDidLoad];
     
-    if (REUIKitIsFlatMode()) {
-        [self.navigationBar performSelector:@selector(setBarTintColor:) withObject:CXRGBAColor(245, 245, 245, 1)];
-        self.navigationBar.tintColor = [UIColor colorWithRed:0.196  green:0.278  blue:0.376 alpha:1];
-    } else {
-        self.navigationBar.tintColor = CXRGBAColor(0, 179, 134, 1);
-    }
-    
-    __typeof (self) __weak weakSelf = self;
-    
-    REMenuItem *listen = [[REMenuItem alloc] initWithTitle:@"Listen"
-                                                     image:nil
-                                          highlightedImage:nil
-                                                    action:^(REMenuItem *item) {
-                                                        ListenViewController *controller = [[ListenViewController alloc] init];
-                                                        [weakSelf setViewControllers:@[controller] animated:NO];
-                                                    }];
-    
-    REMenuItem *poem = [[REMenuItem alloc] initWithTitle:@"Poem"
-                                                   image:nil
-                                        highlightedImage:nil
-                                                  action:^(REMenuItem *item) {
-                                                      PoeViewController *controller = [[PoeViewController alloc] init];
-                                                      [weakSelf setViewControllers:@[controller] animated:NO];
-                                                  }];
-    
-    REMenuItem *read = [[REMenuItem alloc] initWithTitle:@"Movie"
-                                                    image:nil
-                                         highlightedImage:nil
-                                                   action:^(REMenuItem *item) {
-                                                       ReadViewController *controller = [[ReadViewController alloc] init];
-                                                       [weakSelf setViewControllers:@[controller] animated:NO];
-                                                   }];
-    // 高亮小标
-    //    movie.badge = @"12";
-    REMenuItem *art = [[REMenuItem alloc] initWithTitle:@"Art"
-                                                   image:nil
-                                        highlightedImage:nil
-                                                  action:^(REMenuItem *item) {
-                                                      ArtViewController *controller = [[ArtViewController alloc] init];
-                                                      [weakSelf setViewControllers:@[controller] animated:NO];
-                                                  }];
-    
-    REMenuItem *funny = [[REMenuItem alloc] initWithTitle:@"Picture"
-//                                               subtitle:@"cici wish"
-                                                  image:nil
-                                       highlightedImage:nil
-                                                 action:^(REMenuItem *item) {
-                                                     FunnyViewController *controller = [[FunnyViewController alloc] init];
-                                                     [weakSelf setViewControllers:@[controller] animated:NO];
-                                                 }];
-    
-    
-    self.menu = [[REMenu alloc] initWithItems:@[listen, poem, read, art, funny]];
-    self.menu.separatorOffset = CGSizeMake(15.0, 0.0);
-
 //     MARK:- 欢迎页
 //    [self addWelcomeView];
 }
@@ -94,12 +43,69 @@
     }
 }
 
-- (void)toggleMenu
+- (void)presenting
 {
-    if (self.menu.isOpen)
-        return [self.menu close];
+    ModalViewController *modalViewController = [ModalViewController new];
+    modalViewController.transitioningDelegate = self;
+    modalViewController.modalPresentationStyle = UIModalPresentationCustom;
     
-    [self.menu showFromNavigationController:self];
+    [[RACObserve(modalViewController, index) filter:^BOOL(NSNumber *value) {
+        
+        return [value integerValue] > 9;
+        
+    }] subscribeNext:^(NSNumber *index) {
+                
+        switch ([index integerValue]) {
+            case 11:
+            {
+                PoeViewController *poe = [[PoeViewController alloc]init];
+                [self setViewControllers:@[poe] animated:NO];
+            }
+                break;
+            case 10:
+            {
+                ListenViewController *listen =[[ListenViewController alloc]init];
+                [self setViewControllers:@[listen] animated:NO];
+            }
+                break;
+            case 12:
+            {
+                ReadViewController *controller = [[ReadViewController alloc] init];
+                [self setViewControllers:@[controller] animated:NO];
+            }
+                break;
+            case 13:
+            {
+                ArtViewController *controller = [[ArtViewController alloc] init];
+                [self setViewControllers:@[controller] animated:NO];
+            }
+                break;
+            case 14:
+            {
+                FunnyViewController *controller = [[FunnyViewController alloc] init];
+                [self setViewControllers:@[controller] animated:NO];
+            }
+                break;
+            default:
+                break;
+        }
+    }];
+    
+    [self presentViewController:modalViewController
+                                            animated:YES
+                                          completion:NULL];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented
+                                                                  presentingController:(UIViewController *)presenting
+                                                                      sourceController:(UIViewController *)source
+{
+    return [CXPresentTransition new];
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return [CXDismissTransition new];
 }
 
 - (void)didReceiveMemoryWarning

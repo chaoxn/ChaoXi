@@ -11,11 +11,14 @@
 #import "ArtHeaderView.h"
 #import "MuseumListViewModel.h"
 #import "MuseumShowViewController.h"
+#import "MuseumDetailViewController.h"
+#import "CXPushTransition.h"
+#import "CXPopTransition.h"
 
 #define ItemPadding 10
 #define HeaderHeight 190
 
-@interface ArtViewController ()<UICollectionViewDataSource, UICollectionViewDelegate>
+@interface ArtViewController ()<UICollectionViewDataSource, UICollectionViewDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UIImageView *backGroundImageView;
 
@@ -36,6 +39,7 @@
 @end
 
 @implementation ArtViewController
+@dynamic button;
 
 #pragma mark- life cycle
 
@@ -53,10 +57,6 @@
 }
 
 // TODO:- navi 优化
-//- (void)viewWillAppear:(BOOL)animated
-//{
-//    self.navigationController.navigationBarHidden = YES;
-//}
 
 #pragma mark- event response
 
@@ -92,7 +92,6 @@
         [CXProgress dismiss];
     }];
     
-    
     [[RACObserve(self, page) filter:^BOOL(id value) {
         
        @strongify(self);
@@ -103,7 +102,6 @@
         MuseumModel *model = [self.viewModel.modelArr objectAtIndex:[x integerValue]];
         [self.backGroundImageView sd_setImageWithURL:model.coverUrl[@"url"]];
     }];
-
 }
 
 #pragma mark- collectionView delegate
@@ -122,6 +120,15 @@
 {
     ArtCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ARTCELL" forIndexPath:indexPath];
     cell.model = self.viewModel.modelArr[indexPath.item];
+    cell.detailButton.tag = indexPath.row;
+    
+    [[cell.detailButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *button) {
+        
+        MuseumDetailViewController *mdVC = [[MuseumDetailViewController alloc]init];
+        mdVC.model = self.viewModel.modelArr[button.tag];
+        self.button = button;
+        [self.navigationController pushViewController:mdVC animated:YES];
+    }];
     
     return cell;
 }
@@ -140,9 +147,10 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     MuseumShowViewController *msVC = [[MuseumShowViewController alloc]init];
+    UINavigationController *msNaVC = [[UINavigationController alloc]initWithRootViewController:msVC];
     MuseumModel *model = self.viewModel.modelArr[indexPath.row];
     msVC.musuemId = model.objectId;
-    [self.navigationController pushViewController:msVC animated:YES];
+    [self presentViewController:msNaVC animated:YES completion:nil];
 }
 
 /*
@@ -195,11 +203,15 @@
     [self snapToNearestItem];
 }
 
+
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section
 {    
     CGSize size={ScreenWidth,110 * HeightRate};
     return size;
 }
+
+#pragma mark- private method
+
 
 #pragma mark- setter && getter
 

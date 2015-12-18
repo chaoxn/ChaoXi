@@ -45,6 +45,7 @@
 {
     [super viewWillAppear:YES];
     [CXProgress showWithType:CXProgressTypeFullCatch];
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithRed:0.196  green:0.278  blue:0.376 alpha:1];
     [self.navigationController.navigationBar setShadowImage:[UIImage new]];//去白线
     self.navigationController.hidesBarsOnSwipe = NO;
 }

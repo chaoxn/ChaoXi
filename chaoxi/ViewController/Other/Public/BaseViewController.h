@@ -8,11 +8,14 @@
 
 #import <UIKit/UIKit.h>
 #import "NavigationViewController.h"
+#import "CXAlterButton.h"
 
 @interface BaseViewController : UIViewController
 
 @property (nonatomic) KVNProgressConfiguration *basicConfiguration;
 @property (nonatomic) KVNProgressConfiguration *customConfiguration;
+
+@property (nonatomic,strong) UIButton *button;
 
 - (void)showProgress:(NSString *)str;
 
