@@ -8,7 +8,7 @@
 
 #import "BaseViewController.h"
 
-@interface ArtViewController : BaseViewController
+@interface ArtViewController : UIViewController
 
 @property (nonatomic, strong) UIButton *button;
 

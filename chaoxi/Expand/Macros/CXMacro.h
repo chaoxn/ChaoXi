@@ -71,5 +71,7 @@
 #define CXTempDir NSTemporaryDirectory()
 
 #define CX @"春风十里不如你"
+#define ISFIRSTRADIO @"已经是第一首了"
+#define ISLASTRADIO @"已经是最后一首了"
 
 #endif 

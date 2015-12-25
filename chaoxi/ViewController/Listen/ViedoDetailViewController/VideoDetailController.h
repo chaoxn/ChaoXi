@@ -10,4 +10,6 @@
 
 @interface VideoDetailController : UIViewController
 
+@property (nonatomic, strong) NSString *radioid;
+
 @end

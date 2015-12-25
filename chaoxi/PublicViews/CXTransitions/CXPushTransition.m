@@ -40,7 +40,6 @@
     
     [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
        
-        
         if (x == 0) {
             
             rect = pushVC.button.frame;
@@ -48,7 +47,6 @@
             
             rect = CGRectMake(ScreenWidth-100 - 70*[x intValue], 35, 30, 30);
         }
-        
     }];
     
     UIBezierPath *maskStartBP = [UIBezierPath bezierPathWithOvalInRect:rect];

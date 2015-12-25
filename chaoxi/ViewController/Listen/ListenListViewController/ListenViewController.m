@@ -22,15 +22,6 @@
 
 @implementation ListenViewController
 
-- (ListenListViewModel *)listenViewModel
-{
-    if (_listenViewModel == nil) {
-        
-        _listenViewModel = [[ListenListViewModel alloc]init];
-    }
-    
-    return _listenViewModel;
-}
 /**
  *  数据的请求处理与刷新全部放在视图模型中, 由视图模型的信号自动检测数组的变化动态刷新视图
  *  视图控制器只保留一个刷新命令
@@ -38,7 +29,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+        
     [RACObserve(self.listenViewModel, modelArr) subscribeNext:^(id x) {
        
         [self updateView];
@@ -51,6 +42,11 @@
     self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self.listenViewModel next];
     }];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    self.navigationController.delegate = nil;
 }
 
 - (void) updateView
@@ -90,12 +86,14 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     VideoDetailController *videoDetailVC = [[VideoDetailController alloc]init];
+    ViedoModel *model = self.listenViewModel.modelArr[indexPath.row];
+    videoDetailVC.radioid = model.radioid;
     [self.navigationController pushViewController:videoDetailVC animated:YES];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return ScreenHeight *230/ScreenHeight;
+    return ScreenHeight *250/ScreenHeight;
 }
 
 - (void)didReceiveMemoryWarning
@@ -106,6 +104,16 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+- (ListenListViewModel *)listenViewModel
+{
+    if (_listenViewModel == nil) {
+        
+        _listenViewModel = [[ListenListViewModel alloc]init];
+    }
+    
+    return _listenViewModel;
 }
 
 @end

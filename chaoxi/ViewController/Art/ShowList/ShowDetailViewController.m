@@ -7,7 +7,6 @@
 //
 
 #import "ShowDetailViewController.h"
-#import "UINavigationBar+Awesome.h"
 #import "MuseumModel.h"
 #import "ShowDetailViewModel.h"
 #import <MediaPlayer/MediaPlayer.h>
@@ -53,7 +52,7 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-    self.navigationController.hidesBarsOnSwipe = YES;
+//    self.navigationController.hidesBarsOnSwipe = YES;
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor whiteColor]];
 }
 

@@ -10,3 +10,4 @@
 #import "UIView+BorderStyle.h"
 #import "UINavigationBar+Awesome.h"
 #import "AppDelegate+Navi.h"
+#import "UIImage+Blur.h"

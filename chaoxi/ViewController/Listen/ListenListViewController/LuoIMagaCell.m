@@ -39,7 +39,7 @@
 
 - (void)setTag:(NSInteger)tag
 {
-    [self.beuImageView sd_setImageWithURL: [NSURL URLWithString:self.imgArr[tag]]];
+//    [self.beuImageView sd_setImageWithURL: [NSURL URLWithString:self.imgArr[tag]]];
      self.volLable.text = [NSString stringWithFormat:@"vol.%zd",tag+1];
 }
 

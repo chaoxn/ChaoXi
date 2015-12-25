@@ -32,7 +32,7 @@
                               CGRectGetHeight(transitionContext.containerView.bounds)/3);
     toView.center = CGPointMake(transitionContext.containerView.center.x, -transitionContext.containerView.center.y);
     
-    [transitionContext.containerView addSubview:dimmingView];
+//    [transitionContext.containerView addSubview:dimmingView];
     [transitionContext.containerView addSubview:toView];
     
     POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];

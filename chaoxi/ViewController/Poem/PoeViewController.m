@@ -18,6 +18,8 @@
 @property (nonatomic, strong) UILabel *contentLabel;
 @property (nonatomic, strong) Poem *model;
 @property (nonatomic, strong) PoeViewModel *viewModel ;
+@property (nonatomic, strong) NSTimer *timer;
+@property (nonatomic, assign) NSInteger height;
 
 @end
 
@@ -28,9 +30,16 @@
 {
     [super viewDidLoad];
     
+//    self.scrollView.backgroundColor = [UIColor orangeColor];
+
     [self initModel];
     [self initViewModel];
-    [CXProgress showWithType:CXProgressTypeFullTurn];
+    
+    if(![SCCatWaitingHUD sharedInstance].isAnimating)
+    {
+        [[SCCatWaitingHUD sharedInstance] animateWithInteractionEnabled:YES];
+    }
+    
     [self.scrollView addSubview:self.contentLabel];
     [self.saveButton setBackgroundImage:[UIImage imageNamed:@"bushoucang"] forState:UIControlStateNormal];
     [self.saveButton setBackgroundImage:[UIImage imageNamed:@"shouchang"] forState:UIControlStateSelected];
@@ -57,9 +66,18 @@
     }
 }
 
+- (void)timerFired:(NSTimer *)sender
+{
+    self.height += 1;
+}
+
 - (IBAction)refreshAction:(UIButton *)sender
 {
-//    [CXProgress showWithType:CXProgressTypeFullTurn];
+    self.height = 0;
+    if(![SCCatWaitingHUD sharedInstance].isAnimating)
+    {
+        [[SCCatWaitingHUD sharedInstance] animateWithInteractionEnabled:YES];
+    }
     
     _contentLabel.text = nil;
     [self transitionWithType:@"fade" WithSubtype:kCATransitionFromLeft ForView:self.view];
@@ -79,7 +97,7 @@
     [self.viewModel.delegateSignal subscribeNext:^(id model) {
         
         self.model = model;
-        [CXProgress dismiss];
+        [[SCCatWaitingHUD sharedInstance] stop];
     }];
     
     [self.viewModel.requestCommand execute:nil];
@@ -101,8 +119,44 @@
         CGSize actualSize = [str boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:dic1 context:nil].size;
         
         _scrollView.contentSize = CGSizeMake(0, actualSize.height + 100);
-        _contentLabel.frame = CGRectMake(0, 10, ScreenWidth ,actualSize.height);
-        _contentLabel.text = str;
+        
+        self.contentLabel.text = str;
+        
+        [self.timer setFireDate:[NSDate distantPast]];
+        
+        UITapGestureRecognizer * tap = [UITapGestureRecognizer new];
+        [[tap rac_gestureSignal] subscribeNext:^(UITapGestureRecognizer * tap) {
+            
+//            [self.timer setFireDate:[NSDate distantFuture]];
+        }];
+        [self.contentLabel addGestureRecognizer:tap];
+        
+        [RACObserve(self, height) subscribeNext:^(NSNumber *x) {
+           
+            if ([x  integerValue] == 0) {
+                
+                self.contentLabel.frame = CGRectMake(0, 10, ScreenWidth ,actualSize.height);
+            }
+            
+            if (actualSize.height > 0) {
+            
+                self.contentLabel.frame = CGRectMake(0, 150-[x integerValue], ScreenWidth ,actualSize.height);
+            }
+            
+            int actual = (int)actualSize.height;
+//            DLog(@"-----------%@------- act : (%d)", x, actual);
+            if ([x intValue] == actual-100 && [x integerValue] > 0) {
+                
+                [self.timer setFireDate:[NSDate distantFuture]];
+                self.height = 0;
+            }
+            
+        }];
+        
+        [RACObserve(self, scrollView) subscribeNext:^(UIScrollView *x) {
+            
+        }];
+        
     }];
 }
 
@@ -179,19 +233,13 @@
     [view.layer addAnimation:animation forKey:@"animation"];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    [KVNProgress setConfiguration:self.basicConfiguration];
-}
-
 - (UILabel *)contentLabel
 {
     if (!_contentLabel) {
-        
         _contentLabel = ({
             UILabel *label = [[UILabel alloc]init];
             label.numberOfLines = 0;
+//            label.backgroundColor = [UIColor greenColor];
             label.textColor = CXRGBColor(101, 98, 98);
             label.textAlignment = NSTextAlignmentCenter;
             label.font = CXFont(13);
@@ -207,6 +255,14 @@
         _viewModel = [[PoeViewModel alloc]init];
     }
     return _viewModel;
+}
+
+- (NSTimer *)timer
+{
+    if (!_timer) {
+        _timer = [NSTimer scheduledTimerWithTimeInterval:0.12 target:self selector:@selector(timerFired:) userInfo:nil repeats:YES];
+    }
+    return _timer;
 }
 
 - (void)didReceiveMemoryWarning {

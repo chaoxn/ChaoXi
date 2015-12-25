@@ -35,7 +35,7 @@
     
     [self.returnButton mas_makeConstraints:^(MASConstraintMaker *make) {
        
-        make.leading.and.top.equalTo(self.view).with.offset(30);
+        make.leading.and.top.equalTo(self.view).with.offset(10);
         make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
 }
@@ -55,7 +55,7 @@
     if (!_returnButton) {
         _returnButton = ({
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.backgroundColor = [UIColor purpleColor];
+             [button setImage:[UIImage imageNamed:@"iconfont-return"] forState:UIControlStateNormal];
             button;
         });
     }

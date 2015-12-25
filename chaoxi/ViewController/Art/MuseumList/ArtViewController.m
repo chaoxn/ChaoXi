@@ -121,16 +121,15 @@
     ArtCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"ARTCELL" forIndexPath:indexPath];
     cell.model = self.viewModel.modelArr[indexPath.item];
     cell.detailButton.tag = indexPath.row;
-    
-    [[cell.detailButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *button) {
-        
-        MuseumDetailViewController *mdVC = [[MuseumDetailViewController alloc]init];
-        mdVC.model = self.viewModel.modelArr[button.tag];
-        self.button = button;
-        [self.navigationController pushViewController:mdVC animated:YES];
-    }];
-    
+    [cell.detailButton addTarget:self action:@selector(detailAction:) forControlEvents:UIControlEventTouchUpInside];
     return cell;
+}
+
+- (void)detailAction:(UIButton *)sender
+{
+    MuseumDetailViewController *mdVC = [[MuseumDetailViewController alloc]init];
+    mdVC.model = self.viewModel.modelArr[sender.tag];
+    [self.navigationController pushViewController:mdVC animated:YES];
 }
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath

@@ -1,0 +1,1 @@
+../../../SCCatWaitingHUD/Pod/Classes/SCCatWaitingHUD.h

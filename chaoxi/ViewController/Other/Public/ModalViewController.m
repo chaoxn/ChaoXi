@@ -55,7 +55,7 @@
             
             for (int i = 0; i < 5; i++) {
                 
-                ModalView *view = [[ModalView alloc]initWithFrame:CGRectMake(ScreenWidth, 10+40*i, ScreenWidth-100, 40)];
+                ModalView *view = [[ModalView alloc]initWithFrame:CGRectMake(ScreenWidth, 10+40*HeightRate*i, ScreenWidth-100, 40)];
                 UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClicked:)];
                 view.tag = i+10;
                 view.label.text = TITLEARR[i];
@@ -109,7 +109,7 @@
 
 - (void)dismissAnimation
 {
-    
+
 }
 
 #pragma mark - Private Instance methods
@@ -121,6 +121,7 @@
 
 - (void)dismiss:(id)sender
 {
+    [self dismissAnimation];
     [self dismissViewControllerAnimated:YES completion:NULL];
 }
 

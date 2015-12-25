@@ -16,16 +16,21 @@
 #import "MJRefresh.h"
 #import "Masonry.h"
 #import "ReactiveCocoa.h"
-#import "REMenu.h"
 #import "UIImageView+WebCache.h"
+#import "UINavigationBar+Awesome.h"
 #import "GPUImage.h"
 #import "Aspects.h"
 #import "POP/POP.h"
+#import "STKAudioPlayer.h"
+#import "CRToast/CRToast.h"
 
+#import "SCCatWaitingHUD.h"
 #import "RACAFNetworking.h"
 #import "CXViewModelClass.h" 
 #import "CXHttpManager.h"
 #import "CXMacro.h"
 #import "CXProgress.h"
+#import "CXNotification.h"
+#import "CXAudioPlayer.h"
 
 #endif

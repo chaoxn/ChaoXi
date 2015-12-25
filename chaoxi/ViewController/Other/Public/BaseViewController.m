@@ -21,10 +21,34 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.hidesBarsOnSwipe = YES;
-    
-    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+
+}
+
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar lt_reset];
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat offsetY = scrollView.contentOffset.y;
+    if (offsetY > 0) {
+        if (offsetY >= 44) {
+            [self setNavigationBarTransformProgress:1];
+        } else {
+            [self setNavigationBarTransformProgress:(offsetY / 44)];
+        }
+    } else {
+        [self setNavigationBarTransformProgress:0];
+        self.navigationController.navigationBar.backIndicatorImage = [UIImage new];
+    }
+}
+
+- (void)setNavigationBarTransformProgress:(CGFloat)progress
+{
+    [self.navigationController.navigationBar lt_setTranslationY:(-44 * progress)];
+    [self.navigationController.navigationBar lt_setElementsAlpha:(1-progress)];
 }
 
 

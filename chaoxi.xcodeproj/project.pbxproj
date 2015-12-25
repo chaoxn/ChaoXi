@@ -21,7 +21,6 @@
 		EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726891BF3023200A973EB /* PoeViewController.m */; };
 		EC17268C1BF3023200A973EB /* PoeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC17268A1BF3023200A973EB /* PoeViewController.xib */; };
 		EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */; };
-		EC1726B81BF3033F00A973EB /* AboutUsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC1726AE1BF3033F00A973EB /* AboutUsViewController.xib */; };
 		EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */; };
 		EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726B51BF3033F00A973EB /* SaveViewController.m */; };
 		EC1726C01BF3039E00A973EB /* Poem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726BF1BF3039E00A973EB /* Poem.m */; };
@@ -64,6 +63,22 @@
 		EC9642111C0C93A500D16E39 /* ShowDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC96420F1C0C93A500D16E39 /* ShowDetailViewController.xib */; };
 		ECA1D8D21C22827900DC35F9 /* ModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA1D8D11C22827900DC35F9 /* ModalViewController.m */; };
 		ECA1D8D51C228F2000DC35F9 /* ModalView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA1D8D41C228F2000DC35F9 /* ModalView.m */; };
+		ECA851EC1C27CDA600320E7C /* ViedoDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA851EB1C27CDA600320E7C /* ViedoDetailViewModel.m */; };
+		ECA851EF1C27CDC000320E7C /* PlayOnViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA851EE1C27CDC000320E7C /* PlayOnViewModel.m */; };
+		ECA851F31C27FEA400320E7C /* DetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA851F11C27FEA400320E7C /* DetailCell.m */; };
+		ECA851F41C27FEA400320E7C /* DetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECA851F21C27FEA400320E7C /* DetailCell.xib */; };
+		ECA851F71C2807D700320E7C /* CXRacAFNetMix.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA851F61C2807D700320E7C /* CXRacAFNetMix.m */; };
+		ECA852001C291EC000320E7C /* PlayOnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA851FE1C291EC000320E7C /* PlayOnViewController.m */; };
+		ECA852011C291EC000320E7C /* PlayOnViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECA851FF1C291EC000320E7C /* PlayOnViewController.xib */; };
+		ECA852051C293DF400320E7C /* PlayBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA852031C293DF400320E7C /* PlayBaseViewController.m */; };
+		ECA8520D1C2A4F7900320E7C /* CXAudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA8520C1C2A4F7900320E7C /* CXAudioPlayer.m */; };
+		ECA852141C2A772900320E7C /* UIImage+Blur.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA852131C2A772900320E7C /* UIImage+Blur.m */; };
+		ECA852341C2AA42300320E7C /* RadioListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA852321C2AA42300320E7C /* RadioListViewController.m */; };
+		ECA852351C2AA42300320E7C /* RadioListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECA852331C2AA42300320E7C /* RadioListViewController.xib */; };
+		ECA852391C2AA43B00320E7C /* RadioListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA852371C2AA43B00320E7C /* RadioListCell.m */; };
+		ECA8523A1C2AA43B00320E7C /* RadioListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = ECA852381C2AA43B00320E7C /* RadioListCell.xib */; };
+		ECA852401C2BC6E900320E7C /* CXNotification.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA8523F1C2BC6E900320E7C /* CXNotification.m */; };
+		ECA852441C2BCE1C00320E7C /* CXLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = ECA852431C2BCE1C00320E7C /* CXLineView.m */; };
 		ECBC75171C15211300234000 /* CXProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = ECBC75161C15211300234000 /* CXProgress.m */; };
 		ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BA61BDF1AC5003BE70B /* BaseViewController.m */; };
 		ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECC07BB41BDF531E003BE70B /* ListenViewController.m */; };
@@ -116,7 +131,6 @@
 		EC17268A1BF3023200A973EB /* PoeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoeViewController.xib; sourceTree = "<group>"; };
 		EC1726AC1BF3033F00A973EB /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
-		EC1726AE1BF3033F00A973EB /* AboutUsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutUsViewController.xib; sourceTree = "<group>"; };
 		EC1726B01BF3033F00A973EB /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
 		EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
 		EC1726B41BF3033F00A973EB /* SaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveViewController.h; sourceTree = "<group>"; };
@@ -197,6 +211,34 @@
 		ECA1D8D11C22827900DC35F9 /* ModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalViewController.m; sourceTree = "<group>"; };
 		ECA1D8D31C228F2000DC35F9 /* ModalView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ModalView.h; sourceTree = "<group>"; };
 		ECA1D8D41C228F2000DC35F9 /* ModalView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ModalView.m; sourceTree = "<group>"; };
+		ECA851EA1C27CDA600320E7C /* ViedoDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViedoDetailViewModel.h; sourceTree = "<group>"; };
+		ECA851EB1C27CDA600320E7C /* ViedoDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViedoDetailViewModel.m; sourceTree = "<group>"; };
+		ECA851ED1C27CDC000320E7C /* PlayOnViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayOnViewModel.h; sourceTree = "<group>"; };
+		ECA851EE1C27CDC000320E7C /* PlayOnViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayOnViewModel.m; sourceTree = "<group>"; };
+		ECA851F01C27FEA400320E7C /* DetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailCell.h; sourceTree = "<group>"; };
+		ECA851F11C27FEA400320E7C /* DetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailCell.m; sourceTree = "<group>"; };
+		ECA851F21C27FEA400320E7C /* DetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCell.xib; sourceTree = "<group>"; };
+		ECA851F51C2807D700320E7C /* CXRacAFNetMix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXRacAFNetMix.h; sourceTree = "<group>"; };
+		ECA851F61C2807D700320E7C /* CXRacAFNetMix.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXRacAFNetMix.m; sourceTree = "<group>"; };
+		ECA851FD1C291EC000320E7C /* PlayOnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayOnViewController.h; sourceTree = "<group>"; };
+		ECA851FE1C291EC000320E7C /* PlayOnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayOnViewController.m; sourceTree = "<group>"; };
+		ECA851FF1C291EC000320E7C /* PlayOnViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PlayOnViewController.xib; sourceTree = "<group>"; };
+		ECA852021C293DF400320E7C /* PlayBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayBaseViewController.h; sourceTree = "<group>"; };
+		ECA852031C293DF400320E7C /* PlayBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayBaseViewController.m; sourceTree = "<group>"; };
+		ECA8520B1C2A4F7900320E7C /* CXAudioPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAudioPlayer.h; sourceTree = "<group>"; };
+		ECA8520C1C2A4F7900320E7C /* CXAudioPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAudioPlayer.m; sourceTree = "<group>"; };
+		ECA852121C2A772900320E7C /* UIImage+Blur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Blur.h"; sourceTree = "<group>"; };
+		ECA852131C2A772900320E7C /* UIImage+Blur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Blur.m"; sourceTree = "<group>"; };
+		ECA852311C2AA42300320E7C /* RadioListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioListViewController.h; sourceTree = "<group>"; };
+		ECA852321C2AA42300320E7C /* RadioListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioListViewController.m; sourceTree = "<group>"; };
+		ECA852331C2AA42300320E7C /* RadioListViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioListViewController.xib; sourceTree = "<group>"; };
+		ECA852361C2AA43B00320E7C /* RadioListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadioListCell.h; sourceTree = "<group>"; };
+		ECA852371C2AA43B00320E7C /* RadioListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadioListCell.m; sourceTree = "<group>"; };
+		ECA852381C2AA43B00320E7C /* RadioListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadioListCell.xib; sourceTree = "<group>"; };
+		ECA8523E1C2BC6E800320E7C /* CXNotification.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXNotification.h; sourceTree = "<group>"; };
+		ECA8523F1C2BC6E900320E7C /* CXNotification.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXNotification.m; sourceTree = "<group>"; };
+		ECA852421C2BCE1C00320E7C /* CXLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXLineView.h; sourceTree = "<group>"; };
+		ECA852431C2BCE1C00320E7C /* CXLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXLineView.m; sourceTree = "<group>"; };
 		ECBC75151C15211300234000 /* CXProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXProgress.h; sourceTree = "<group>"; };
 		ECBC75161C15211300234000 /* CXProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXProgress.m; sourceTree = "<group>"; };
 		ECC07BA51BDF1AC5003BE70B /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
@@ -276,6 +318,17 @@
 		EC0A946B1BE3500E0085BC9B /* PlayOnViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ECA852021C293DF400320E7C /* PlayBaseViewController.h */,
+				ECA852031C293DF400320E7C /* PlayBaseViewController.m */,
+				ECA851FD1C291EC000320E7C /* PlayOnViewController.h */,
+				ECA851FE1C291EC000320E7C /* PlayOnViewController.m */,
+				ECA851FF1C291EC000320E7C /* PlayOnViewController.xib */,
+				ECA852311C2AA42300320E7C /* RadioListViewController.h */,
+				ECA852321C2AA42300320E7C /* RadioListViewController.m */,
+				ECA852331C2AA42300320E7C /* RadioListViewController.xib */,
+				ECA852361C2AA43B00320E7C /* RadioListCell.h */,
+				ECA852371C2AA43B00320E7C /* RadioListCell.m */,
+				ECA852381C2AA43B00320E7C /* RadioListCell.xib */,
 			);
 			path = PlayOnViewController;
 			sourceTree = "<group>";
@@ -286,6 +339,9 @@
 				EC0A946D1BE350A00085BC9B /* VideoDetailController.h */,
 				EC0A946E1BE350A00085BC9B /* VideoDetailController.m */,
 				EC0A946F1BE350A00085BC9B /* VideoDetailController.xib */,
+				ECA851F01C27FEA400320E7C /* DetailCell.h */,
+				ECA851F11C27FEA400320E7C /* DetailCell.m */,
+				ECA851F21C27FEA400320E7C /* DetailCell.xib */,
 			);
 			path = ViedoDetailViewController;
 			sourceTree = "<group>";
@@ -309,6 +365,10 @@
 			children = (
 				EC1726851BF300BA00A973EB /* ListenListViewModel.h */,
 				EC1726861BF300BA00A973EB /* ListenListViewModel.m */,
+				ECA851EA1C27CDA600320E7C /* ViedoDetailViewModel.h */,
+				ECA851EB1C27CDA600320E7C /* ViedoDetailViewModel.m */,
+				ECA851ED1C27CDC000320E7C /* PlayOnViewModel.h */,
+				ECA851EE1C27CDC000320E7C /* PlayOnViewModel.m */,
 			);
 			path = ListenViewModel;
 			sourceTree = "<group>";
@@ -346,7 +406,6 @@
 			children = (
 				EC1726AC1BF3033F00A973EB /* AboutUsViewController.h */,
 				EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */,
-				EC1726AE1BF3033F00A973EB /* AboutUsViewController.xib */,
 			);
 			path = AboutUs;
 			sourceTree = "<group>";
@@ -381,6 +440,9 @@
 		EC1726C11BF30A4600A973EB /* PublicViews */ = {
 			isa = PBXGroup;
 			children = (
+				ECA852411C2BCE1100320E7C /* CXLineView */,
+				ECA8523D1C2BC6D500320E7C /* CXNotification */,
+				ECA8520A1C2A4F6800320E7C /* CXAudioPlayer */,
 				EC5B45251C1AB6E300DBD54C /* CXIntercepter */,
 				EC5B45161C196B2400DBD54C /* CXTransitions */,
 				ECEC6FA81C17C43E00A5251D /* CXImageShow */,
@@ -654,6 +716,42 @@
 			path = "UINavigationBar+Awesome";
 			sourceTree = "<group>";
 		};
+		ECA8520A1C2A4F6800320E7C /* CXAudioPlayer */ = {
+			isa = PBXGroup;
+			children = (
+				ECA8520B1C2A4F7900320E7C /* CXAudioPlayer.h */,
+				ECA8520C1C2A4F7900320E7C /* CXAudioPlayer.m */,
+			);
+			path = CXAudioPlayer;
+			sourceTree = "<group>";
+		};
+		ECA852111C2A772900320E7C /* UIImage+Blur */ = {
+			isa = PBXGroup;
+			children = (
+				ECA852121C2A772900320E7C /* UIImage+Blur.h */,
+				ECA852131C2A772900320E7C /* UIImage+Blur.m */,
+			);
+			path = "UIImage+Blur";
+			sourceTree = "<group>";
+		};
+		ECA8523D1C2BC6D500320E7C /* CXNotification */ = {
+			isa = PBXGroup;
+			children = (
+				ECA8523E1C2BC6E800320E7C /* CXNotification.h */,
+				ECA8523F1C2BC6E900320E7C /* CXNotification.m */,
+			);
+			path = CXNotification;
+			sourceTree = "<group>";
+		};
+		ECA852411C2BCE1100320E7C /* CXLineView */ = {
+			isa = PBXGroup;
+			children = (
+				ECA852421C2BCE1C00320E7C /* CXLineView.h */,
+				ECA852431C2BCE1C00320E7C /* CXLineView.m */,
+			);
+			path = CXLineView;
+			sourceTree = "<group>";
+		};
 		ECBC75141C15211300234000 /* CXProgress */ = {
 			isa = PBXGroup;
 			children = (
@@ -753,6 +851,7 @@
 		ECC381591BD8888A007A3680 /* CateGory */ = {
 			isa = PBXGroup;
 			children = (
+				ECA852111C2A772900320E7C /* UIImage+Blur */,
 				ECC3815F1BD8888A007A3680 /* CateGoryHeader.h */,
 				EC9642061C0C45F400D16E39 /* UINavigationBar+Awesome */,
 				ECC381691BD8888A007A3680 /* UIImage+Common */,
@@ -799,6 +898,8 @@
 		ECC381741BD8888A007A3680 /* NetWork */ = {
 			isa = PBXGroup;
 			children = (
+				ECA851F51C2807D700320E7C /* CXRacAFNetMix.h */,
+				ECA851F61C2807D700320E7C /* CXRacAFNetMix.m */,
 				EC0A94551BE20EEF0085BC9B /* CXHttpManager.h */,
 				EC0A94561BE20EEF0085BC9B /* CXHttpManager.m */,
 			);
@@ -817,9 +918,9 @@
 		ECC3817E1BD8888A007A3680 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				ECC3818C1BD888D9007A3680 /* Listen */,
 				EC7E6E471C05B4CA0062518A /* Art */,
 				EC378EB41BDDF82C006FB4F0 /* Funny */,
-				ECC3818C1BD888D9007A3680 /* Listen */,
 				ECC3818D1BD888D9007A3680 /* Poem */,
 				ECC3818E1BD888D9007A3680 /* Read */,
 				EC378EC21BDDFA3C006FB4F0 /* Other */,
@@ -918,6 +1019,7 @@
 				TargetAttributes = {
 					ECC381261BD8863A007A3680 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 72GN5UQFUF;
 					};
 					ECC381421BD8863A007A3680 = {
 						CreatedOnToolsVersion = 6.4;
@@ -949,13 +1051,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA852351C2AA42300320E7C /* RadioListViewController.xib in Resources */,
 				EC0A94711BE350A00085BC9B /* VideoDetailController.xib in Resources */,
 				EC7D9EBB1BFB294B0092D887 /* WebViewController.xib in Resources */,
+				ECA851F41C27FEA400320E7C /* DetailCell.xib in Resources */,
 				EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */,
+				ECA8523A1C2AA43B00320E7C /* RadioListCell.xib in Resources */,
 				EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */,
+				ECA852011C291EC000320E7C /* PlayOnViewController.xib in Resources */,
 				ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */,
 				EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */,
-				EC1726B81BF3033F00A973EB /* AboutUsViewController.xib in Resources */,
 				EC9642111C0C93A500D16E39 /* ShowDetailViewController.xib in Resources */,
 				EC17268C1BF3023200A973EB /* PoeViewController.xib in Resources */,
 				EC378EC11BDDF86E006FB4F0 /* FunnyViewController.xib in Resources */,
@@ -1042,15 +1147,18 @@
 				ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */,
 				EC0A94571BE20EEF0085BC9B /* CXHttpManager.m in Sources */,
 				EC1726DB1BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m in Sources */,
+				ECA852441C2BCE1C00320E7C /* CXLineView.m in Sources */,
 				EC378EC91BDDFAC4006FB4F0 /* NavigationViewController.m in Sources */,
 				EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */,
 				EC6A7B781BFB10A400789E41 /* FunnyViewModel.m in Sources */,
 				EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */,
 				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
 				EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */,
+				ECA852001C291EC000320E7C /* PlayOnViewController.m in Sources */,
 				EC7E6E521C05B4CA0062518A /* ArtHeaderView.m in Sources */,
 				EC7E6E511C05B4CA0062518A /* ArtCell.m in Sources */,
 				EC7E6E651C06D1120062518A /* MuseumShowViewController.m in Sources */,
+				ECA851F31C27FEA400320E7C /* DetailCell.m in Sources */,
 				EC5B45191C196B4700DBD54C /* CXPushTransition.m in Sources */,
 				EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */,
 				EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */,
@@ -1059,27 +1167,36 @@
 				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
 				EC1726831BF2F27F00A973EB /* PoeViewModel.m in Sources */,
 				EC5B451C1C198C2D00DBD54C /* CXPopTransition.m in Sources */,
+				ECA852391C2AA43B00320E7C /* RadioListCell.m in Sources */,
+				ECA8520D1C2A4F7900320E7C /* CXAudioPlayer.m in Sources */,
 				ECA1D8D21C22827900DC35F9 /* ModalViewController.m in Sources */,
 				EC1726871BF300BA00A973EB /* ListenListViewModel.m in Sources */,
 				ECBC75171C15211300234000 /* CXProgress.m in Sources */,
 				EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */,
+				ECA852051C293DF400320E7C /* PlayBaseViewController.m in Sources */,
 				ECC381881BD8888A007A3680 /* UIView+Utils.m in Sources */,
 				EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */,
 				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
+				ECA852341C2AA42300320E7C /* RadioListViewController.m in Sources */,
 				ECFBA0ED1C23A6C800761349 /* CXDismissTransition.m in Sources */,
 				EC7E6E3A1C05B1B80062518A /* MuseumModel.m in Sources */,
 				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
 				EC9642091C0C45F400D16E39 /* UINavigationBar+Awesome.m in Sources */,
 				EC9642051C0C364000D16E39 /* ShowDetailViewModel.m in Sources */,
+				ECA851F71C2807D700320E7C /* CXRacAFNetMix.m in Sources */,
 				EC7E6E361C05AE3C0062518A /* MuseumListViewModel.m in Sources */,
 				EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */,
+				ECA852141C2A772900320E7C /* UIImage+Blur.m in Sources */,
 				ECC3819B1BD8898F007A3680 /* main.m in Sources */,
+				ECA851EC1C27CDA600320E7C /* ViedoDetailViewModel.m in Sources */,
 				EC1726DA1BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m in Sources */,
 				EC7E6E741C06F0D50062518A /* MuseumShowViewModel.m in Sources */,
 				EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */,
+				ECA852401C2BC6E900320E7C /* CXNotification.m in Sources */,
 				ECFBA0EA1C23A6B100761349 /* CXPresentTransition.m in Sources */,
 				EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */,
 				EC1726841BF2F27F00A973EB /* CXViewModelClass.m in Sources */,
+				ECA851EF1C27CDC000320E7C /* PlayOnViewModel.m in Sources */,
 				EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */,
 				EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */,
 			);
@@ -1190,12 +1307,15 @@
 			baseConfigurationReference = 85743A70CF82F191142250A8 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/chaoxi/expand/Macros/PrefixHeader.pch";
 				INFOPLIST_FILE = chaoxi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "chaox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Debug;
@@ -1205,12 +1325,15 @@
 			baseConfigurationReference = 3F2D210BB5C36AC66834FAF5 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Shanghai Red Fortune Wealth Management Co., Ltd. (72GN5UQFUF)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Shanghai Red Fortune Wealth Management Co., Ltd. (72GN5UQFUF)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/chaoxi/expand/Macros/PrefixHeader.pch";
 				INFOPLIST_FILE = chaoxi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "chaox.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/**";
 			};
 			name = Release;

@@ -43,13 +43,11 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = YES;
-    self.navigationController.hidesBarsOnSwipe = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = NO;
-    self.navigationController.hidesBarsOnSwipe = YES;
 }
 
 - (void)layoutSubviews

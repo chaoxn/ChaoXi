@@ -9,7 +9,7 @@
 
 #import "BaseViewController.h"
 
-@interface ListenViewController :BaseViewController
+@interface ListenViewController :UIViewController
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 

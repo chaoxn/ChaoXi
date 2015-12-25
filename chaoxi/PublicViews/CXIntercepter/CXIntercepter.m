@@ -15,11 +15,15 @@
 #import "CXPopTransition.h"
 
 #define NeedInterceptArr @[@"ArtViewController",@"FunnyViewController",@"ListenViewController",@"PoeViewController",@"ReadViewController"]
+
+#define NeedReturnArr @[@"PlayBaseViewController", @"ShowDetailViewController",@"VideoDetailController"]
+
 //typedef void (^AspectHandlerBlock)(id<AspectInfo> aspectInfo);
 
 @interface CXIntercepter()
 
 @property (nonatomic, strong) UIViewController *baseViewController;
+@property (nonatomic, strong) UIViewController *returnViewController;
 @property (nonatomic, assign) NSInteger index;
 @property (nonatomic, strong) SaveViewController *saveVC;
 @property (nonatomic, strong) AboutUsViewController *aboutVC;
@@ -59,12 +63,11 @@
                                        
             NSString *className = NSStringFromClass([[aspectInfo instance] class]);
                                        
-           if ([NeedInterceptArr containsObject:className]) {
+                                       if ([NeedInterceptArr containsObject:className]) {
                
-               self.baseViewController = [aspectInfo instance];
-               [self loadView:[aspectInfo instance]];
-            
-           }
+                                           self.baseViewController = [aspectInfo instance];
+                                           [self loadView:[aspectInfo instance]];
+                                       }
         } error:NULL];
         
         [UIViewController aspect_hookSelector:@selector(viewWillAppear:)
@@ -73,10 +76,16 @@
                                
            NSString *className = NSStringFromClass([[aspectInfo instance] class]);
            
-           if ([NeedInterceptArr containsObject:className]) {
-               
-               [self viewWillAppear:animated viewController:[aspectInfo instance]];
-           }
+                                       if ([NeedInterceptArr containsObject:className]) {
+                                           
+                                           [self viewWillAppear:animated viewController:[aspectInfo instance]];
+                                       }
+                                    
+                                       if ([NeedReturnArr containsObject:className]) {
+                                           
+                                           [self addReturnPic:[aspectInfo instance]];
+                                       }
+                                       
         } error:NULL];
     }
     return self;
@@ -89,7 +98,6 @@
     
     viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"潮汐" style:UIBarButtonItemStylePlain target:viewController.navigationController action:@selector(presenting)];
     
-    viewController.navigationController.hidesBarsOnSwipe = YES;
     viewController.navigationController.delegate = self;
     viewController.navigationController.navigationBar.tintColor = CXRGBColor(32, 47, 60);
     viewController.navigationController.navigationBar.barTintColor = CXRGBColor(245, 245, 245);
@@ -102,9 +110,20 @@
 
 - (void)viewWillAppear:(BOOL)animated viewController:(UIViewController *)viewController
 {
-    viewController.navigationController.hidesBarsOnSwipe = YES;
-
+    viewController.navigationController.navigationBar.tintColor = CXRGBColor(32, 47, 60);
+    viewController.navigationController.navigationBar.barTintColor = CXRGBColor(245, 245, 245);
     NSLog(@"[%@ viewWillAppear]", [viewController class]);
+}
+
+- (void)addReturnPic:(UIViewController *)viewController
+{
+    self.returnViewController = viewController;
+    viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"iconfont-return"] style:UIBarButtonItemStyleDone target:self action:@selector(returnAciton:)];
+}
+
+- (void)returnAciton:(UIBarButtonItem *)sender
+{
+    [self.returnViewController.navigationController popViewControllerAnimated:YES];
 }
 
 -(void)addWindow
@@ -208,5 +227,6 @@
         return nil;
     }
 }
+
 
 @end

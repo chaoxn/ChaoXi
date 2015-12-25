@@ -32,7 +32,6 @@ static void dispatch_main_after(NSTimeInterval delay, void (^block)(void))
     [self.view insertSubview:self.returnButton aboveSubview:self.webView];
     NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:self.urlStr]];
     [self.webView loadRequest:request];
-    
 }
 
 - (void)webViewDidStartLoad:(UIWebView *)webView

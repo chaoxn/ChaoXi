@@ -45,18 +45,14 @@
         
          @strongify(self);
         NSDictionary *parameter = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                            @"", @"auth",
-                                           @"1", @"client",
-                                           @"7F390F40-86ED-43BB-AB07-FC786C148941", @"deviceid",
+                                           @"2", @"client",
                                           @"9", @"limit",
-                                          [NSString stringWithFormat:@"%@", self.page], @"start",
-                                        @"3.0.6", @"version", nil];
+                                          [NSString stringWithFormat:@"%@", self.page], @"start",nil];
         
         self.parameter = parameter;
     }];
     
     // 绑定参数与网络请求 通过上面参数的激活继续激活网络请求,  RACAFNetworking的方式暂时没有掌握仍然使用封装好的AFN
-    
     [RACObserve(self, parameter) subscribeNext:^( NSDictionary *parameter) {
         @strongify(self);
         
@@ -75,7 +71,7 @@
             [listens addObjectsFromArray:self.modelArr];
         }
         
-        [CXHttpManager NetRequestGETWithURL:LISTENURL Parameter:parameter ReturnValeuBlock:^(NSDictionary *returnValue) {
+        [CXHttpManager NetRequestPOSTWithURL:LISTENURL Parameter:parameter ReturnValeuBlock:^(NSDictionary *returnValue) {
             
             NSArray *listenArr = [ViedoModel objectArrayWithKeyValuesArray:[[returnValue objectForKey:@"data"] objectForKey:@"list"]];
         

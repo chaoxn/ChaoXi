@@ -44,13 +44,13 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.hidesBarsOnSwipe = NO;
+//    self.navigationController.hidesBarsOnSwipe = NO;
     self.navigationController.navigationBar.hidden = YES;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
 {
-    self.navigationController.hidesBarsOnSwipe = YES;
+//    self.navigationController.hidesBarsOnSwipe = YES;
     self.navigationController.navigationBar.hidden = NO;
 }
 

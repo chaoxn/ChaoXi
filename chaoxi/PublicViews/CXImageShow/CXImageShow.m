@@ -46,7 +46,7 @@
 
 +(void)showImage :(NSArray *)imageArr index:(NSInteger )index
 {
-    [[self share] createScrollView:imageArr:index];
+    [[self share] createScrollView : imageArr:index];
     [[self share] show];
 }
 
