@@ -11,12 +11,23 @@
 
 @class ViedoModel;
 
-@interface ListenListViewModel : NSObject
+@interface ListenListViewModel : CXViewModelClass
 
 @property (nonatomic, copy) NSArray *modelArr;
+@property (nonatomic, strong) UIViewController *vc;
+
+@property (nonatomic, assign) NSNumber *page;
+@property (nonatomic, assign) NSUInteger perPage;
+
+@property (nonatomic, strong) RACCommand *didSelectCommand;
+@property (nonatomic, strong, readonly) RACCommand *requestRemoteDataCommand;
 
 - (void)first;
 
 - (void)next;
+
+- (BOOL (^)(NSError *error))requestRemoteDataErrorsFilter;
+
+- (RACSignal *)requestRemoteDataSignalWithPage:(NSUInteger)page;
 
 @end

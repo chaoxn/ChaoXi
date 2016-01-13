@@ -9,8 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "UIViewExt.h"
 
-#define ScreenWidth                         [[UIScreen mainScreen] bounds].size.width
-#define ScreenHeight                        [[UIScreen mainScreen] bounds].size.height
+#define ScreenWidth1                         [[UIScreen mainScreen] bounds].size.width
+#define ScreenHeight1                        [[UIScreen mainScreen] bounds].size.height
 
 #define SCCatWaiting_catPurple [UIColor colorWithRed:75.0f/255.0f green:52.0f/255.0f blue:97.0f/255.0f alpha:0.7f]
 #define SCCatWaiting_leftFaceGray [UIColor colorWithRed:200.0f/255.0f green:198.0f/255.0f blue:200.0f/255.0f alpha:1.0f]

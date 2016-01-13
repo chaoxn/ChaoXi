@@ -20,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [CXAudioPlayer shareInstance].delegate = self;
+    CXAudioShare.delegate = self;
     
     [self dataBinding];
     [self basicSetting];
@@ -36,9 +36,9 @@
 { 
     [[RACObserve([CXAudioPlayer shareInstance], index) delay:0.01 ] subscribeNext:^(NSNumber *index) {
         
-        [[CXAudioPlayer shareInstance] pause];
+        [CXAudioShare pause];
         
-        self.model = [CXAudioPlayer shareInstance].modelArr[[index integerValue]];
+        self.model = CXAudioShare.modelArr[[index integerValue]];
     }];
     
     // 全局监听 index 播放页面主要还是靠监听model的变化
@@ -54,14 +54,14 @@
         return value.length > 0;
     }] subscribeNext:^(NSString *url) {
         
-        [[CXAudioPlayer shareInstance] play:url];
+        [CXAudioShare play:url];
         self.timer = [NSTimer scheduledTimerWithTimeInterval:1.f target:self selector:@selector(tracking) userInfo:nil repeats:YES];
     }];
     
     [[self.slider rac_signalForControlEvents:UIControlEventValueChanged] subscribeNext:^(UISlider *x) {
        
-        if ([CXAudioPlayer shareInstance]) {
-            [[CXAudioPlayer shareInstance] seekToTime:x.value];
+        if (CXAudioShare) {
+            [CXAudioShare seekToTime:x.value];
         }
     }];
 }
@@ -73,11 +73,11 @@
 
 - (void)tracking
 {
-    self.slider.maximumValue = [CXAudioPlayer shareInstance].duration;
-    self.slider.value = [CXAudioPlayer shareInstance].progress;
+    self.slider.maximumValue = CXAudioShare.duration;
+    self.slider.value = CXAudioShare.progress;
     
-    self.beginTimeLabel.text = [NSString stringWithFormat:@"%.2ld:%.2ld", (NSInteger) [CXAudioPlayer shareInstance].progress / 60, (NSInteger)[CXAudioPlayer shareInstance].progress % 60];
-    self.endTimeLabel.text = [NSString stringWithFormat:@"%.2ld:%.2ld", (NSInteger) [CXAudioPlayer shareInstance].duration / 60, (NSInteger)[CXAudioPlayer shareInstance].duration % 60];
+    self.beginTimeLabel.text = [NSString stringWithFormat:@"%.2ld:%.2ld", (NSInteger) CXAudioShare.progress / 60, (NSInteger)CXAudioShare.progress % 60];
+    self.endTimeLabel.text = [NSString stringWithFormat:@"%.2ld:%.2ld", (NSInteger) CXAudioShare.duration / 60, (NSInteger)CXAudioShare.duration % 60];
 }
 
 -(void)audioPlayer:(STKAudioPlayer *)audioPlayer didFinishBufferingSourceWithQueueItemId:(NSObject *)queueItemId

@@ -10,7 +10,7 @@
 
 @interface PoeViewModel : CXViewModelClass
 
-@property (nonatomic, strong, readonly) RACCommand *requestCommand;
+@property (nonatomic, strong) RACCommand *requestCommand;
 
 @property (nonatomic, strong) NSString *receiveIndex;
 

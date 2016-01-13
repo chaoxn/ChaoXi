@@ -52,7 +52,6 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
-//    self.navigationController.hidesBarsOnSwipe = YES;
     [self.navigationController.navigationBar lt_setBackgroundColor:[UIColor whiteColor]];
 }
 

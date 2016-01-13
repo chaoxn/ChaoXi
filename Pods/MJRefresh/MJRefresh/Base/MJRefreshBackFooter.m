@@ -15,6 +15,14 @@
 
 @implementation MJRefreshBackFooter
 
+#pragma mark - 初始化
+- (void)willMoveToSuperview:(UIView *)newSuperview
+{
+    [super willMoveToSuperview:newSuperview];
+    
+    [self scrollViewContentSizeDidChange:nil];
+}
+
 #pragma mark - 实现父类的方法
 - (void)scrollViewContentOffsetDidChange:(NSDictionary *)change
 {
@@ -68,7 +76,6 @@
     CGFloat contentHeight = self.scrollView.mj_contentH + self.ignoredScrollViewContentInsetBottom;
     // 表格的高度
     CGFloat scrollHeight = self.scrollView.mj_h - self.scrollViewOriginalInset.top - self.scrollViewOriginalInset.bottom + self.ignoredScrollViewContentInsetBottom;
-    // 这里一定是用：self.scrollView.mj_insetT 和 self.scrollViewOriginalInset.bottom;
     // 设置位置和尺寸
     self.mj_y = MAX(contentHeight, scrollHeight);
 }
@@ -124,6 +131,17 @@
         });
     } else {
         [super endRefreshing];
+    }
+}
+
+- (void)noticeNoMoreData
+{
+    if ([self.scrollView isKindOfClass:[UICollectionView class]]) {
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [super noticeNoMoreData];
+        });
+    } else {
+        [super noticeNoMoreData];
     }
 }
 

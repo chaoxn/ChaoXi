@@ -10,6 +10,8 @@
 #import "FMDatabase.h"
 #import "Poem.h"
 #import "PoeViewModel.h"
+#import "FMDatabaseQueue+Extension.h"
+
 
 @interface PoeViewController ()<UIAlertViewDelegate>
 
@@ -47,7 +49,10 @@
 
 - (void)initModel
 {
-    [self createDB];
+    [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {
+        
+        [db executeUpdate:createPoeSQL];
+    }];
 
     FMResultSet *resultSet = [self.db executeQuery:@"SELECT * FROM poem"];
 
@@ -125,10 +130,12 @@
         [self.timer setFireDate:[NSDate distantPast]];
         
         UITapGestureRecognizer * tap = [UITapGestureRecognizer new];
+        
         [[tap rac_gestureSignal] subscribeNext:^(UITapGestureRecognizer * tap) {
             
 //            [self.timer setFireDate:[NSDate distantFuture]];
         }];
+        
         [self.contentLabel addGestureRecognizer:tap];
         
         [RACObserve(self, height) subscribeNext:^(NSNumber *x) {
@@ -144,7 +151,7 @@
             }
             
             int actual = (int)actualSize.height;
-//            DLog(@"-----------%@------- act : (%d)", x, actual);
+
             if ([x intValue] == actual-100 && [x integerValue] > 0) {
                 
                 [self.timer setFireDate:[NSDate distantFuture]];
@@ -153,7 +160,14 @@
             
         }];
         
-        [RACObserve(self, scrollView) subscribeNext:^(UIScrollView *x) {
+        [[RACObserve(self.scrollView, contentOffset) filter:^BOOL(id value) {
+          
+            return [value CGPointValue].y <= 0;
+        }] subscribeNext:^(id x) {
+            
+//            @strongify(self)
+            CGPoint contentOffset = [x CGPointValue];
+            //FIXME:-优化
             
         }];
         
@@ -164,57 +178,46 @@
 {
     sender.selected = !sender.selected;
     
-    if (sender.selected) {
-        
-        [self delete];
-    } else {
-        
-        [self createDB];
-        [self insert];
-    }
+    sender.selected ? [self saveData] : [self deleteData];
 }
 
-- (void)createDB
+- (BOOL )saveData
 {
-    // 1.获得数据库文件路径
-    NSString *doc = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES)lastObject];
-    NSString *fileName = [doc stringByAppendingPathComponent:@"niu.db"];
-    // 2.获得数据库
-    FMDatabase *db = [FMDatabase databaseWithPath:fileName];
-    if ([db open]) {
-        BOOL result = [db executeUpdate:@"CREATE TABLE IF NOT EXISTS poem (poemIndex text PRIMARY KEY , title text NOT NULL)"];
-        if (result) {
-            NSLog(@"创建表成功");
-        }else{
-            NSLog(@"创建表失败");
+    __block BOOL isSuccess = NO;
+    
+    [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {
+       
+        isSuccess = [db executeUpdate: insertPoeSQL, self.index, self.titleLabel.text];
+        
+        if (!isSuccess) {
+            NSLog(@"插入失败");
+        } else {
+            NSLog(@"插入成功");
         }
-        self.db = db;
-    }
-}
-- (void)insert
-{
-    NSString *insertStr = [NSString stringWithFormat:
-                           @"INSERT INTO poem (poemIndex, title) VALUES ('%@', '%@');", self.index, self.titleLabel.text];
-    BOOL res = [self.db executeUpdate:insertStr];
+    }];
     
-    if (!res) {
-        NSLog(@"插入失败");
-    } else {
-        NSLog(@"插入成功");
-    }
+    return isSuccess;
 }
--(void)delete
-{
-    NSString *deleteSql = [NSString stringWithFormat:
-                           @"delete from poem where  poemIndex= '%@'",
-                           self.index];
-    BOOL res = [self.db executeUpdate:deleteSql];
+
+// FIXME: SQL 语句优化
+- (BOOL)deleteData {
     
-    if (!res) {
-        NSLog(@"删除失败");
-    } else {
-        NSLog(@"删除成功");
-    }
+    __block BOOL isSuccess = NO;
+    
+    [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {
+        
+        isSuccess = [db executeUpdate:[NSString stringWithFormat:
+                                       @"delete from poem where  poemIndex= '%@'",
+                                       self.index]];
+        
+        if (!isSuccess) {
+            NSLog(@"删除失败");
+        } else {
+            NSLog(@"删除成功");
+        }
+    }];
+    
+    return isSuccess;
 }
 
 - (void) transitionWithType:(NSString *) type WithSubtype:(NSString *) subtype ForView:(UIView *) view
@@ -239,7 +242,6 @@
         _contentLabel = ({
             UILabel *label = [[UILabel alloc]init];
             label.numberOfLines = 0;
-//            label.backgroundColor = [UIColor greenColor];
             label.textColor = CXRGBColor(101, 98, 98);
             label.textAlignment = NSTextAlignmentCenter;
             label.font = CXFont(13);
@@ -268,6 +270,5 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
-
 
 @end

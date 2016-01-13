@@ -10,6 +10,7 @@
 #define CXMacro_h
 
 #define Prefix CX
+
 /** 字体*/
 #define CXFont(x) [UIFont systemFontOfSize:x]
 #define CXBoldFont(x) [UIFont boldSystemFontOfSize:x]
@@ -38,6 +39,7 @@
 #define CXCurrentLanguage ([[NSLocale preferredLanguages] objectAtIndex:0])
 #define CXCurrentSystemVersion [[[UIDevice currentDevice] systemVersion] floatValue]
 
+#define kKeyWindow [UIApplication sharedApplication].keyWindow
 
 /** 适配*/
 #define CXiOS_5_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 5.0)
@@ -73,5 +75,13 @@
 #define CX @"春风十里不如你"
 #define ISFIRSTRADIO @"已经是第一首了"
 #define ISLASTRADIO @"已经是最后一首了"
+
+#define CX_DOCUMENT_DIRECTORY NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES).firstObject
+
+#define CXAudioShare [CXAudioPlayer shareInstance]
+
+#define CX_APP_NAME    ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"])
+#define CX_APP_VERSION ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"])
+#define CX_APP_BUILD   ([[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"])
 
 #endif 

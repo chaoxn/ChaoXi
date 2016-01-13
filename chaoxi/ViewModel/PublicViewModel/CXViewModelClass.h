@@ -11,6 +11,11 @@
 
 @interface CXViewModelClass : NSObject
 
+@property (nonatomic, strong, readonly) RACSubject *errors;
+@property (nonatomic, strong, readonly) RACSubject *willDisappearSignal;
+
+@property (nonatomic, copy, readonly) NSDictionary *params;
+
 @property (strong, nonatomic) ReturnValueBlock returnBlock;
 @property (strong, nonatomic) ErrorCodeBlock errorBlock;
 @property (strong, nonatomic) FailureBlock failureBlock;

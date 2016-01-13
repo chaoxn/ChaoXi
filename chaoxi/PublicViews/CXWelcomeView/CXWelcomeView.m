@@ -72,6 +72,7 @@
     [view addSubview:self.doneButton];
 }
 
+
 #pragma mark- setter and getter
 - (void)setPageCount:(NSInteger)pageCount
 {

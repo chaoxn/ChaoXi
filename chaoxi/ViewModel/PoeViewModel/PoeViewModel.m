@@ -8,6 +8,7 @@
 
 #import "PoeViewModel.h"
 #import "Poem.h"
+#import "CXAPIManage.h"
 
 @interface PoeViewModel ()
 
@@ -26,49 +27,21 @@
 
 - (void)initBind
 {
-    _requestCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
+    self.requestCommand = [[RACCommand alloc]initWithSignalBlock:^RACSignal *(id input) {
        
-        RACSignal *requestSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-           
-            NSString *urlStr = [NSString stringWithFormat:@"http://bubo.in/poe/poem?s=%@",self.receiveIndex];
+        return [[CXAPIManage getPoeData:self.receiveIndex]map:^id(RACTuple *x) {
             
-            [CXHttpManager NetRequestGETWithURL:urlStr Parameter:nil ReturnValeuBlock:^(id returnValue) {
-                
-                [subscriber sendNext:returnValue];
-                [subscriber sendCompleted];
-                
-            } ErrorCodeBlock:^(id errorCode) {
-                
-            } FailureBlock:^{
-                
-            }];
-
-            return nil;
-        }];
-        
-        return [requestSignal map:^id(NSArray *value) {
-            
-            return [Poem objectWithKeyValues:[value firstObject]];
+            return x.first;
         }];
     }];
     
-    [_requestCommand.executionSignals.switchToLatest subscribeNext:^(id model) {
+    [self.requestCommand.executionSignals.switchToLatest subscribeNext:^(Poem *model) {
        
         if (self.delegateSignal) {
             
             [self.delegateSignal sendNext:model];
         }
     }];
-}
-
--(void) errorCodeWithDic: (NSDictionary *) errorDic
-{
-    self.errorBlock(errorDic);
-}
-
--(void) netFailure
-{
-    self.failureBlock();
 }
 
 @end

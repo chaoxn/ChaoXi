@@ -141,7 +141,7 @@
     // 阅读视图
     [[RACObserve([CXAudioPlayer shareInstance], index) map:^id(NSNumber *value) {
         
-        return [CXAudioPlayer shareInstance].modelArr[[value integerValue]];
+        return CXAudioShare.modelArr[[value integerValue]];
     }] subscribeNext:^(ViedoModel *model) {
         
         NSURLRequest *request =[NSURLRequest requestWithURL:[NSURL URLWithString:model.webview_url]];
@@ -151,17 +151,17 @@
     [[self.playBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(UIButton *button) {
         
         button.selected = !button.selected;
-        [[CXAudioPlayer shareInstance] begin];
+        [CXAudioShare begin];
     }];
     
     [[self.nextBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
        
-        [[CXAudioPlayer shareInstance] next];
+        [CXAudioShare next];
     }];
     
     [[self.lastBt rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         
-        [[CXAudioPlayer shareInstance] last];
+        [CXAudioShare last];
     }];
 }
 

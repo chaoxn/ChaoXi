@@ -76,7 +76,6 @@
     }];
 }
 
-// 无需代理传modelArr
 - (void)bindModel
 {
     [self.viewModel.requestCommand execute:nil];

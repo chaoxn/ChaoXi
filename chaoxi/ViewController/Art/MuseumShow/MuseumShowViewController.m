@@ -63,14 +63,14 @@
         
         @strongify(self)
         make.left.top.and.right.equalTo(self.view);
-        make.height.mas_equalTo(40);
+        make.height.mas_equalTo(60);
     }];
     
     [self.returnButton mas_makeConstraints:^(MASConstraintMaker *make) {
 
         @strongify(self)
-        make.top.equalTo(self.coverView).offset(20);
-        make.left.equalTo(self.coverView).offset(20);
+        make.top.equalTo(self.coverView).offset(25);
+        make.left.equalTo(self.coverView).offset(25);
         make.width.and.height.mas_equalTo(18);
     }];
     

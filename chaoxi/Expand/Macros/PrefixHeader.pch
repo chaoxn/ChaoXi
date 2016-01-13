@@ -9,6 +9,7 @@
 #ifndef chaoxi_PrefixHeader_pch
 #define chaoxi_PrefixHeader_pch
 
+#import "SQL.h"
 #import "AFNetworking.h"
 #import "FMDB.h"
 #import "KVNProgress.h"
@@ -23,14 +24,18 @@
 #import "POP/POP.h"
 #import "STKAudioPlayer.h"
 #import "CRToast/CRToast.h"
-
+#import "MBProgressHUD/MBProgressHUD.h"
+#import "ODRefreshControl.h"
 #import "SCCatWaitingHUD.h"
 #import "RACAFNetworking.h"
+
 #import "CXViewModelClass.h" 
 #import "CXHttpManager.h"
 #import "CXMacro.h"
 #import "CXProgress.h"
 #import "CXNotification.h"
 #import "CXAudioPlayer.h"
+#import "CXAPIManage.h"
+#import "CXAPIClient.h"
 
 #endif

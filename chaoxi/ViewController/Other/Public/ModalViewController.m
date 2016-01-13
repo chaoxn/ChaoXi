@@ -49,6 +49,7 @@
     }];
     
     self.viewArr = [NSMutableArray array];
+    
     [RACObserve(self, animationFinished) subscribeNext:^(NSString *x) {
         
         if ([x isEqualToString:@"Yes"]) {
@@ -67,7 +68,7 @@
                 positionAnimation.toValue = @(view.center.x-ScreenWidth);
                 positionAnimation.springBounciness = 8;
                 positionAnimation.springSpeed = 20;
-                positionAnimation.beginTime = CACurrentMediaTime() + 0.0618 * i;
+//                positionAnimation.beginTime = 0.5;
                 
                 POPBasicAnimation *opacityAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
                 opacityAnimation.toValue = @(1);
@@ -92,7 +93,6 @@
             rotationAnimation.springBounciness = 1.f;
             rotationAnimation.springSpeed = 4;
     
-            
             [self.dismissButton.layer pop_addAnimation:rotationAnimation forKey:@"rotationAnim"];
             [self.dismissButton.layer pop_addAnimation:opacityAnimation forKey:@"opacityAnim"];
             [self.dismissButton.layer pop_addAnimation:scaleAnimation forKey:@"scaleAnim"];

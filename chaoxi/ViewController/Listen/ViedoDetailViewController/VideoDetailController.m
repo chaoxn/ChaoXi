@@ -28,6 +28,7 @@
 @property (nonatomic, strong) UIImageView *iconImageView;
 @property (nonatomic, strong) ViedoDetailViewModel *viewModel;
 @property (nonatomic, strong) CXLineView *lineView;
+@property (nonatomic, strong) ODRefreshControl *refreshControl;
 
 @end
 
@@ -53,14 +54,19 @@
     
     [self layoutSubviews];
     [self dataBinding];
-
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [self.viewModel first];
-    }];
     
     self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
         [self.viewModel next];
     }];
+    
+    self.refreshControl = [[ODRefreshControl alloc]initInScrollView:self.tableView];
+    
+    [self.refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing) forControlEvents:UIControlEventValueChanged];
+}
+
+- (void)dropViewDidBeginRefreshing
+{
+    [self.viewModel first];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -148,8 +154,8 @@
 
 - (void) updateView
 {
-    [self.tableView.header endRefreshing];
     [self.tableView.footer endRefreshing];
+    [self.refreshControl endRefreshing];
     [self.tableView reloadData];
 }
 

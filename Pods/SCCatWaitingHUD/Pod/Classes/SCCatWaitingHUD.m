@@ -42,7 +42,7 @@
     static dispatch_once_t  onceToken;
     static SCCatWaitingHUD * sharedInstance;
     dispatch_once(&onceToken, ^{
-        sharedInstance = [[SCCatWaitingHUD alloc] initWithFrame:CGRectMake(0.0f,0.0f,ScreenWidth,ScreenHeight)];
+        sharedInstance = [[SCCatWaitingHUD alloc] initWithFrame:CGRectMake(0.0f,0.0f,ScreenWidth1,ScreenHeight1)];
     });
     return sharedInstance;
 }
@@ -85,7 +85,7 @@
     _backgroundWindow.userInteractionEnabled = NO;
     self.isAnimating = NO;
     
-    self.indicatorView = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f)];
+    self.indicatorView = [[UIView alloc]initWithFrame:CGRectMake(ScreenWidth1/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenHeight1/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f)];
     _indicatorView.backgroundColor = SCCatWaiting_catPurple;
     _indicatorView.layer.cornerRadius = 6.0f;
     _indicatorView.alpha = 0.0f;
@@ -226,21 +226,21 @@
     self.previousOrientation = oriention;
     if(oriention == UIInterfaceOrientationPortrait)
     {
-        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth, ScreenHeight);
-        _indicatorView.frame = CGRectMake(ScreenWidth/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenHeight/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
+        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenWidth1, ScreenHeight1);
+        _indicatorView.frame = CGRectMake(ScreenWidth1/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenHeight1/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
     }
     else if(oriention == UIInterfaceOrientationLandscapeRight)
     {
-        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenHeight, ScreenWidth);
-        _indicatorView.frame = CGRectMake(ScreenHeight/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
+        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenHeight1, ScreenWidth1);
+        _indicatorView.frame = CGRectMake(ScreenHeight1/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenWidth1/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
         CGAffineTransform transform = _indicatorView.transform;
         transform = CGAffineTransformRotate(transform,  radians(90.0f));
         _indicatorView.transform = transform;
     }
     else if(oriention == UIInterfaceOrientationLandscapeLeft)
     {
-        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenHeight, ScreenWidth);
-        _indicatorView.frame = CGRectMake(ScreenHeight/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenWidth/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
+        _blurView.frame = CGRectMake(0.0f, 0.0f, ScreenHeight1, ScreenWidth1);
+        _indicatorView.frame = CGRectMake(ScreenHeight1/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, ScreenWidth1/2.0f - (SCCatWaiting_animationSize * 4.0f)/2.0f, SCCatWaiting_animationSize * 4.0f, SCCatWaiting_animationSize * 4.0f);
         CGAffineTransform transform = _indicatorView.transform;
         transform = CGAffineTransformRotate(transform,  radians(-90.0f));
         _indicatorView.transform = transform;

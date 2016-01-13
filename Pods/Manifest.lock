@@ -1,23 +1,23 @@
 PODS:
-  - AFNetworking (2.6.0):
-    - AFNetworking/NSURLConnection (= 2.6.0)
-    - AFNetworking/NSURLSession (= 2.6.0)
-    - AFNetworking/Reachability (= 2.6.0)
-    - AFNetworking/Security (= 2.6.0)
-    - AFNetworking/Serialization (= 2.6.0)
-    - AFNetworking/UIKit (= 2.6.0)
-  - AFNetworking/NSURLConnection (2.6.0):
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.0):
+  - AFNetworking/NSURLSession (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.0)
-  - AFNetworking/Security (2.6.0)
-  - AFNetworking/Serialization (2.6.0)
-  - AFNetworking/UIKit (2.6.0):
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - Aspects (1.4.1)
@@ -28,10 +28,11 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - GPUImage (0.1.7)
-  - KVNProgress (2.2.1)
-  - Masonry (0.6.2)
-  - MJExtension (2.5.9)
-  - MJRefresh (2.4.7)
+  - KVNProgress (2.2.2)
+  - Masonry (0.6.4)
+  - MBProgressHUD (0.9.2)
+  - MJExtension (2.5.16)
+  - MJRefresh (2.4.12)
   - pop (1.0.8)
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
@@ -54,24 +55,26 @@ DEPENDENCIES:
   - GPUImage (~> 0.1.7)
   - KVNProgress (~> 2.2.d)
   - Masonry (~> 0.6.2)
+  - MBProgressHUD (~> 0.9.2)
   - MJExtension (~> 2.5.9)
   - MJRefresh (~> 2.4.7)
   - pop (~> 1.0)
-  - ReactiveCocoa
+  - ReactiveCocoa (~> 2.5)
   - SCCatWaitingHUD (~> 0.1.6)
   - SDWebImage (~> 3.7.3)
   - StreamingKit (~> 0.1.28)
 
 SPEC CHECKSUMS:
-  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   Aspects: 7595ba96a6727a58ebcbfc954497fc5d2fdde546
   CRToast: 5a78c22b921c5ed3487488af605bc403a9c92fed
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  KVNProgress: 7001d2d16a2755cee5599e8e485befe056f2197b
-  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
-  MJExtension: 2330aeb6c83428c820749290bf766e81827cda65
-  MJRefresh: 6eb2f61338f89f64fd628fd43debcf479381ff59
+  KVNProgress: 4697347e21e37fdaa5264ebc24e377c205a50328
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MJExtension: b8c1321a77d91bcc007b94d38cbf5383c95ea30e
+  MJRefresh: ca8e9589895977df32d379d46e6b8a5450b3ff44
   pop: bb773ae2c791ca2629de13b347e7a8b450fa6a57
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SCCatWaitingHUD: 0953610d12ee0267389486d74c244635d805083e

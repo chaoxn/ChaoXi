@@ -17,10 +17,13 @@
 @property (nonatomic, strong) NSMutableArray *imgArr;
 @property (nonatomic, assign) NSInteger count;
 @property (nonatomic, strong) ListenListViewModel *listenViewModel;
+@property (nonatomic, strong) ODRefreshControl *refreshControl;
 
 @end
 
 @implementation ListenViewController
+
+#pragma mark- lifeCycle
 
 /**
  *  数据的请求处理与刷新全部放在视图模型中, 由视图模型的信号自动检测数组的变化动态刷新视图
@@ -35,11 +38,18 @@
         [self updateView];
     }];
     
-    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+//    self.refreshControl = [[ODRefreshControl alloc]initInScrollView:self.tableView];
+//    
+//    [self.refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing) forControlEvents:UIControlEventValueChanged];
+    
+    // FIXME:-
+    self.tableView.header = [MJRefreshHeader headerWithRefreshingBlock:^{
+       
         [self.listenViewModel first];
     }];
     
     self.tableView.footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
+        
         [self.listenViewModel next];
     }];
 }
@@ -49,19 +59,27 @@
     self.navigationController.delegate = nil;
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
+}
+
+#pragma mark- method
+
 - (void) updateView
 {
-    [self.tableView.header endRefreshing];
+//    [self.refreshControl endRefreshing];
     [self.tableView.footer endRefreshing];
+    [self.tableView.header endRefreshing];
     [self.tableView reloadData];
 }
 
-#pragma mark- tableView Delegate
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+- (void)dropViewDidBeginRefreshing
 {
-    return 1;
+    [self.listenViewModel first];
 }
+
+#pragma mark- tableView Delegate
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -85,10 +103,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    VideoDetailController *videoDetailVC = [[VideoDetailController alloc]init];
-    ViedoModel *model = self.listenViewModel.modelArr[indexPath.row];
-    videoDetailVC.radioid = model.radioid;
-    [self.navigationController pushViewController:videoDetailVC animated:YES];
+    [self.listenViewModel.didSelectCommand execute:indexPath];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -96,24 +111,20 @@
     return ScreenHeight *250/ScreenHeight;
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:NO animated:YES];
-}
+#pragma mark- getter
 
 - (ListenListViewModel *)listenViewModel
 {
     if (_listenViewModel == nil) {
-        
         _listenViewModel = [[ListenListViewModel alloc]init];
+        _listenViewModel.vc = self;
     }
-    
     return _listenViewModel;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
 }
 
 @end

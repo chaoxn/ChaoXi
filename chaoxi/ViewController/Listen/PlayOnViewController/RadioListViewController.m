@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     
-    [RACObserve([CXAudioPlayer shareInstance], index)subscribeNext:^(id x) {
+    [RACObserve(CXAudioShare, index)subscribeNext:^(id x) {
        
         [self.tableView reloadData];
     }];
@@ -35,9 +35,9 @@
         cell = [[RadioListCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indeinitfier];
     }
     
-    cell.model =  [CXAudioPlayer shareInstance].modelArr[indexPath.row];
+    cell.model =  CXAudioShare.modelArr[indexPath.row];
     
-    cell.playing =  [CXAudioPlayer shareInstance].index == indexPath.row ? YES : NO;
+    cell.playing =  CXAudioShare.index == indexPath.row ? YES : NO;
     
     return cell;
 }
@@ -45,7 +45,7 @@
 
 - (NSInteger )tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [CXAudioPlayer shareInstance].modelArr.count;
+    return CXAudioShare.modelArr.count;
 }
 
 - (CGFloat )tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -55,7 +55,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [CXAudioPlayer shareInstance].index = indexPath.row;
+    CXAudioShare.index = indexPath.row;
 }
 
 - (void)didReceiveMemoryWarning
