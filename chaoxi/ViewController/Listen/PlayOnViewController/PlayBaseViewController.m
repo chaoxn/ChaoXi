@@ -10,10 +10,11 @@
 #import "PlayOnViewController.h"
 #import "RadioListViewController.h"
 #import "CXAudioPlayer.h"
+#import "VideoDetailController.h"
+#import "CXMagicMoveRetrun.h"
 
-@interface PlayBaseViewController ()<UIScrollViewDelegate, UIWebViewDelegate>
+@interface PlayBaseViewController ()<UIScrollViewDelegate, UIWebViewDelegate ,UINavigationControllerDelegate>
 
-@property (nonatomic, strong) PlayOnViewController *playOnVC;
 @property (nonatomic, strong) RadioListViewController *radioListVC;
 @property (nonatomic, strong) UIView *baseView;
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -31,7 +32,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.navigationController.delegate = self;
     self.view.backgroundColor = [UIColor whiteColor];
     [self.scrollView addSubview:self.baseView];
     self.scrollView.delegate = self;
@@ -111,6 +112,8 @@
     [self.baseView addSubview:self.playOnVC.view];
     [self.baseView addSubview:self.webView];
     
+    self.currentView = self.playOnVC.bgImageView;
+    
     @weakify(self);
     [self.playOnVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
        
@@ -168,12 +171,24 @@
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView
 {
     CGFloat pageFraction = self.scrollView.contentOffset.x / ScreenWidth;
-    
     self.pageControl.currentPage = roundf(pageFraction);
 }
 
-#pragma mark - getter
+#pragma mark <UINavigationControllerDelegate>
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC{
+    if ([toVC isKindOfClass:[VideoDetailController class]]) {
+        CXMagicMoveRetrun *inverseTransition = [[CXMagicMoveRetrun alloc]init];
+        return inverseTransition;
+    }else{
+        return nil;
+    }
+}
 
+
+#pragma mark - getter
 - (UIScrollView *)scrollView
 {
     if (!_scrollView) {
@@ -194,7 +209,7 @@
     if (!_baseView) {
         _baseView = ({
             UIView *view = [UIView new];
-            view.backgroundColor = [UIColor redColor];
+            view.backgroundColor = [UIColor clearColor];
             view;
         });
     }

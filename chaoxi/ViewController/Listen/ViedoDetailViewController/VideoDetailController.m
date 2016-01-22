@@ -14,13 +14,14 @@
 #import "CXAudioPlayer.h"
 #import "PlayOnViewController.h"
 #import "PlayBaseViewController.h"
+#import "PlayBaseViewController.h"
+#import "CXMagicMoveTransition.h"
 
 #define APPEARHEIGHE 50
 #define NAIHEIGHT 64
 
 @interface VideoDetailController ()<UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
 
-@property (nonatomic, strong) UITableView *tableView;
 @property (nonatomic, strong) UIView *header;
 @property (nonatomic, strong) UIImageView *headerImage;
 @property (nonatomic, strong) UILabel *desLabel;
@@ -51,7 +52,7 @@
     [self.header addSubview:self.iconImageView];
     [self.header addSubview:self.lineView];
     [self.view addSubview:self.tableView];
-    
+        
     [self layoutSubviews];
     [self dataBinding];
     
@@ -69,6 +70,10 @@
     [self.viewModel first];
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{    
+    self.navigationController.delegate = self;
+}
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"iconfont-return"] style:UIBarButtonItemStyleDone target:self action:@selector(returnAciton:)];
@@ -79,6 +84,19 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
     [self.navigationController.navigationBar lt_setBackgroundColor:CXRGBColor(245, 245, 245)];
+}
+
+-(id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                 animationControllerForOperation:(UINavigationControllerOperation)operation
+                                              fromViewController:(UIViewController *)fromVC
+                                                toViewController:(UIViewController *)toVC
+{
+    if ([toVC isKindOfClass:[PlayBaseViewController class]]) {
+        CXMagicMoveTransition *transition = [[CXMagicMoveTransition alloc]init];
+        return transition;
+    }else{
+        return nil;
+    }
 }
 
 #pragma mark- private method

@@ -43,7 +43,7 @@
 //    [self.refreshControl addTarget:self action:@selector(dropViewDidBeginRefreshing) forControlEvents:UIControlEventValueChanged];
     
     // FIXME:-
-    self.tableView.header = [MJRefreshHeader headerWithRefreshingBlock:^{
+    self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
        
         [self.listenViewModel first];
     }];

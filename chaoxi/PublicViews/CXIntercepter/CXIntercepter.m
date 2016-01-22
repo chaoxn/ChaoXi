@@ -102,8 +102,6 @@
     viewController.navigationController.navigationBar.tintColor = CXRGBColor(32, 47, 60);
     viewController.navigationController.navigationBar.barTintColor = CXRGBColor(245, 245, 245);
     
-//    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
-//    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     
     [self addWindow];
 }
@@ -161,7 +159,6 @@
         {
             SaveViewController *saveVC = [[SaveViewController alloc]init];
             [self.baseViewController.navigationController pushViewController:saveVC animated:YES];
-            
         }
             break;
         case 1:

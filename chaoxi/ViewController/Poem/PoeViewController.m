@@ -12,7 +12,6 @@
 #import "PoeViewModel.h"
 #import "FMDatabaseQueue+Extension.h"
 
-
 @interface PoeViewController ()<UIAlertViewDelegate>
 
 @property (nonatomic, retain) FMDatabase *db;
@@ -31,9 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-//    self.scrollView.backgroundColor = [UIColor orangeColor];
-
     [self initModel];
     [self initViewModel];
     
@@ -123,23 +119,27 @@
 
         CGSize actualSize = [str boundingRectWithSize:size options:NSStringDrawingUsesLineFragmentOrigin attributes:dic1 context:nil].size;
         
+        RACSignal *heightSignal = [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+           
+            NSString *str = [NSString stringWithFormat:@"%f", actualSize.height];
+            
+            [subscriber sendNext:str];
+            [subscriber sendCompleted];
+            
+            return [RACDisposable disposableWithBlock:^{
+                
+            }];
+        }];
+        
         _scrollView.contentSize = CGSizeMake(0, actualSize.height + 100);
         
         self.contentLabel.text = str;
         
         [self.timer setFireDate:[NSDate distantPast]];
         
-        UITapGestureRecognizer * tap = [UITapGestureRecognizer new];
-        
-        [[tap rac_gestureSignal] subscribeNext:^(UITapGestureRecognizer * tap) {
-            
-//            [self.timer setFireDate:[NSDate distantFuture]];
-        }];
-        
-        [self.contentLabel addGestureRecognizer:tap];
-        
         [RACObserve(self, height) subscribeNext:^(NSNumber *x) {
            
+            DLog(@"%@", x);
             if ([x  integerValue] == 0) {
                 
                 self.contentLabel.frame = CGRectMake(0, 10, ScreenWidth ,actualSize.height);
@@ -150,25 +150,38 @@
                 self.contentLabel.frame = CGRectMake(0, 150-[x integerValue], ScreenWidth ,actualSize.height);
             }
             
-            int actual = (int)actualSize.height;
-
-            if ([x intValue] == actual-100 && [x integerValue] > 0) {
+            if (actualSize.height > 0 && [x integerValue] > actualSize.height) {
                 
-                [self.timer setFireDate:[NSDate distantFuture]];
-                self.height = 0;
+                self.contentLabel.frame = CGRectMake(0, 10, ScreenWidth ,actualSize.height);
             }
-            
         }];
+        
+    
+        // TODO:- 销毁信号
+//        [RACObserve(self.contentLabel, frame) subscribeNext:^(id labelValue) {
+//            
+//            DLog(@"-----------%f", [labelValue CGRectValue].origin.y);
+//            [[[heightSignal filter:^BOOL(NSString *value) {
+//               
+//                return [value floatValue] > 0;
+//            }]take:1] subscribeNext:^(id x) {
+//               
+//                DLog(@"%@", x);
+//                DLog(@"%f", [labelValue CGRectValue].origin.y);
+//                
+//                if ([labelValue CGRectValue].origin.y + [x floatValue] < 0) {
+//
+//                    self.contentLabel.frame = CGRectMake(0, 10, ScreenWidth ,actualSize.height);
+//          
+//                }
+//            }];;
+//        }];
         
         [[RACObserve(self.scrollView, contentOffset) filter:^BOOL(id value) {
           
             return [value CGPointValue].y <= 0;
         }] subscribeNext:^(id x) {
-            
-//            @strongify(self)
-            CGPoint contentOffset = [x CGPointValue];
-            //FIXME:-优化
-            
+//            CGPoint contentOffset = [x CGPointValue];
         }];
         
     }];
@@ -177,7 +190,6 @@
 - (IBAction)saveAction:(UIButton *)sender
 {
     sender.selected = !sender.selected;
-    
     sender.selected ? [self saveData] : [self deleteData];
 }
 
@@ -220,7 +232,7 @@
     return isSuccess;
 }
 
-- (void) transitionWithType:(NSString *) type WithSubtype:(NSString *) subtype ForView:(UIView *) view
+- (void)transitionWithType:(NSString *) type WithSubtype:(NSString *) subtype ForView:(UIView *) view
 {
     CATransition *animation = [CATransition animation];
     
@@ -269,6 +281,11 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)dealloc
+{
+    
 }
 
 @end

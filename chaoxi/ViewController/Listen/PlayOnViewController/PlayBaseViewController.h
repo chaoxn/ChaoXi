@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import "ViedoModel.h"
+#import "PlayOnViewController.h"
 
 @interface PlayBaseViewController : UIViewController
+
+@property (nonatomic, strong) UIImageView *currentView;
+@property (nonatomic, strong) PlayOnViewController *playOnVC;
 
 @end

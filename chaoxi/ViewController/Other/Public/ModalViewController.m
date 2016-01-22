@@ -56,7 +56,7 @@
             
             for (int i = 0; i < 5; i++) {
                 
-                ModalView *view = [[ModalView alloc]initWithFrame:CGRectMake(ScreenWidth, 10+40*HeightRate*i, ScreenWidth-100, 40)];
+                ModalView *view = [[ModalView alloc]initWithFrame:CGRectMake(ScreenWidth + 20 * i, 10+40*HeightRate*i, ScreenWidth-100, 40)];
                 UITapGestureRecognizer *tapGes = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(viewClicked:)];
                 view.tag = i+10;
                 view.label.text = TITLEARR[i];
@@ -65,31 +65,35 @@
                 [self.view addSubview:view];
                 
                 POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
-                positionAnimation.toValue = @(view.center.x-ScreenWidth);
+                positionAnimation.toValue = @(view.center.x-ScreenWidth - 20 * i);
                 positionAnimation.springBounciness = 8;
                 positionAnimation.springSpeed = 20;
-//                positionAnimation.beginTime = 0.5;
+                positionAnimation.beginTime = CACurrentMediaTime() + 0.1 * i;
                 
                 POPBasicAnimation *opacityAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
+                opacityAnimation.fromValue = @(0);
                 opacityAnimation.toValue = @(1);
-                positionAnimation.beginTime = CACurrentMediaTime() + 0.2 * i;
+                opacityAnimation.beginTime = CACurrentMediaTime() + 0.1 * i;
                 
                 [view.layer pop_addAnimation:positionAnimation forKey:@"position"];
                 [view.layer pop_addAnimation:opacityAnimation forKey:@"opacity"];
             }
             
             POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-            scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.3, 1.3)];
+//            scaleAnimation.fromValue  = [NSValue valueWithCGSize:CGSizeMake(0.2f, 0.2f)];
+            scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.3f, 1.3f)];
             scaleAnimation.springBounciness = 15.f;
             scaleAnimation.springSpeed = 7;
             scaleAnimation.dynamicsFriction = 2;
             
             POPBasicAnimation *opacityAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
+            opacityAnimation.fromValue = @(0);
             opacityAnimation.toValue = @(1);
+            opacityAnimation.beginTime = CACurrentMediaTime() + 0.1; 
             
             POPSpringAnimation *rotationAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerRotation];
-            rotationAnimation.beginTime = CACurrentMediaTime() + 0.2;
-            rotationAnimation.toValue = @(M_PI);
+            rotationAnimation.beginTime = CACurrentMediaTime() + 0.1;
+            rotationAnimation.toValue = @(M_PI*2);
             rotationAnimation.springBounciness = 1.f;
             rotationAnimation.springSpeed = 4;
     
@@ -101,8 +105,10 @@
                 
                 make.centerY.equalTo(self.view);
                 make.right.equalTo(self.view).with.offset(-20);
-                make.size.mas_equalTo(CGSizeMake(20, 20));
+                make.size.mas_equalTo(CGSizeMake(26, 26));
             }];
+            
+            self.dismissButton.layer.cornerRadius = 13;
         }
     }];
 }
@@ -131,9 +137,9 @@
         _dismissButton = ({
             UIButton *button = [UIButton buttonWithType:UIButtonTypeSystem];
             button.alpha = 0;
+            button.tintColor = [UIColor colorWithRed:0.922  green:0.310  blue:0.220 alpha:1];
             button.translatesAutoresizingMaskIntoConstraints = NO;
-            button.tintColor = [UIColor whiteColor];
-            [button setBackgroundImage:[UIImage imageNamed:@"dismiss"] forState:UIControlStateNormal];
+            [button setImage:[UIImage imageNamed:@"dismiss"] forState:UIControlStateNormal];
             [button addTarget:self action:@selector(dismiss:) forControlEvents:UIControlEventTouchUpInside];
             button;
         });

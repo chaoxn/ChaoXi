@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5AEAD03D57A1938CD5033752 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F55B9FC2E6AA861816118FA /* Pods.framework */; };
+		EC025E471C45FB7D001C16D8 /* UIScrollView+Paging.m in Sources */ = {isa = PBXBuildFile; fileRef = EC025E461C45FB7D001C16D8 /* UIScrollView+Paging.m */; };
 		EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC029A531BDF54FE000F304C /* LuoIMagaCell.m */; };
 		EC029A561BDF54FE000F304C /* LuoIMagaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC029A541BDF54FE000F304C /* LuoIMagaCell.xib */; };
 		EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC029A571BDF64FA000F304C /* imagePlist.plist */; };
@@ -40,6 +41,9 @@
 		EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */; };
 		EC3DDA8B1C3113D900814986 /* CXAPIManage.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3DDA8A1C3113D900814986 /* CXAPIManage.m */; };
 		EC3DDA8E1C3125E100814986 /* CXAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3DDA8D1C3125E100814986 /* CXAPIClient.m */; };
+		EC55B0F91C51CDEB00732520 /* CXDashLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = EC55B0F81C51CDEB00732520 /* CXDashLineView.m */; };
+		EC55B0FC1C5205C700732520 /* CXMagicMoveTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC55B0FB1C5205C700732520 /* CXMagicMoveTransition.m */; };
+		EC55B0FF1C520B7300732520 /* CXMagicMoveRetrun.m in Sources */ = {isa = PBXBuildFile; fileRef = EC55B0FE1C520B7300732520 /* CXMagicMoveRetrun.m */; };
 		EC55F1E71C3263A10060E638 /* FMDatabaseQueue+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = EC55F1E61C3263A10060E638 /* FMDatabaseQueue+Extension.m */; };
 		EC55F1EA1C3263F10060E638 /* SSObjectBase.m in Sources */ = {isa = PBXBuildFile; fileRef = EC55F1E91C3263F10060E638 /* SSObjectBase.m */; };
 		EC5B45191C196B4700DBD54C /* CXPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B45181C196B4700DBD54C /* CXPushTransition.m */; };
@@ -113,6 +117,8 @@
 		3F2D210BB5C36AC66834FAF5 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		85743A70CF82F191142250A8 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8F55B9FC2E6AA861816118FA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC025E451C45FB7D001C16D8 /* UIScrollView+Paging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+Paging.h"; sourceTree = "<group>"; };
+		EC025E461C45FB7D001C16D8 /* UIScrollView+Paging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+Paging.m"; sourceTree = "<group>"; };
 		EC029A521BDF54FE000F304C /* LuoIMagaCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LuoIMagaCell.h; sourceTree = "<group>"; };
 		EC029A531BDF54FE000F304C /* LuoIMagaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuoIMagaCell.m; sourceTree = "<group>"; };
 		EC029A541BDF54FE000F304C /* LuoIMagaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LuoIMagaCell.xib; sourceTree = "<group>"; };
@@ -172,6 +178,12 @@
 		EC3DDA8A1C3113D900814986 /* CXAPIManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAPIManage.m; sourceTree = "<group>"; };
 		EC3DDA8C1C3125E100814986 /* CXAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAPIClient.h; sourceTree = "<group>"; };
 		EC3DDA8D1C3125E100814986 /* CXAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXAPIClient.m; sourceTree = "<group>"; };
+		EC55B0F71C51CDEB00732520 /* CXDashLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDashLineView.h; sourceTree = "<group>"; };
+		EC55B0F81C51CDEB00732520 /* CXDashLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXDashLineView.m; sourceTree = "<group>"; };
+		EC55B0FA1C5205C700732520 /* CXMagicMoveTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMagicMoveTransition.h; sourceTree = "<group>"; };
+		EC55B0FB1C5205C700732520 /* CXMagicMoveTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMagicMoveTransition.m; sourceTree = "<group>"; };
+		EC55B0FD1C520B7300732520 /* CXMagicMoveRetrun.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMagicMoveRetrun.h; sourceTree = "<group>"; };
+		EC55B0FE1C520B7300732520 /* CXMagicMoveRetrun.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXMagicMoveRetrun.m; sourceTree = "<group>"; };
 		EC55F1E51C3263A10060E638 /* FMDatabaseQueue+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FMDatabaseQueue+Extension.h"; sourceTree = "<group>"; };
 		EC55F1E61C3263A10060E638 /* FMDatabaseQueue+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "FMDatabaseQueue+Extension.m"; sourceTree = "<group>"; };
 		EC55F1E81C3263F10060E638 /* SSObjectBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SSObjectBase.h; sourceTree = "<group>"; };
@@ -467,6 +479,8 @@
 				EC6A7B6F1BFB085F00789E41 /* CXSliderView */,
 				EC1726C21BF30A4600A973EB /* CXAlterButton */,
 				EC1726C71BF30A4600A973EB /* CXWelcomeView */,
+				EC55B0F71C51CDEB00732520 /* CXDashLineView.h */,
+				EC55B0F81C51CDEB00732520 /* CXDashLineView.m */,
 			);
 			name = PublicViews;
 			path = chaoxi/PublicViews;
@@ -610,6 +624,10 @@
 				ECFBA0E91C23A6B100761349 /* CXPresentTransition.m */,
 				ECFBA0EB1C23A6C800761349 /* CXDismissTransition.h */,
 				ECFBA0EC1C23A6C800761349 /* CXDismissTransition.m */,
+				EC55B0FA1C5205C700732520 /* CXMagicMoveTransition.h */,
+				EC55B0FB1C5205C700732520 /* CXMagicMoveTransition.m */,
+				EC55B0FD1C520B7300732520 /* CXMagicMoveRetrun.h */,
+				EC55B0FE1C520B7300732520 /* CXMagicMoveRetrun.m */,
 			);
 			path = CXTransitions;
 			sourceTree = "<group>";
@@ -957,6 +975,8 @@
 				EC55F1E61C3263A10060E638 /* FMDatabaseQueue+Extension.m */,
 				EC55F1E81C3263F10060E638 /* SSObjectBase.h */,
 				EC55F1E91C3263F10060E638 /* SSObjectBase.m */,
+				EC025E451C45FB7D001C16D8 /* UIScrollView+Paging.h */,
+				EC025E461C45FB7D001C16D8 /* UIScrollView+Paging.m */,
 			);
 			path = CateGory;
 			sourceTree = "<group>";
@@ -1156,6 +1176,7 @@
 				EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */,
 				EC55F1E71C3263A10060E638 /* FMDatabaseQueue+Extension.m in Sources */,
 				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
+				EC55B0FC1C5205C700732520 /* CXMagicMoveTransition.m in Sources */,
 				EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */,
 				ECA852001C291EC000320E7C /* PlayOnViewController.m in Sources */,
 				EC7E6E521C05B4CA0062518A /* ArtHeaderView.m in Sources */,
@@ -1172,6 +1193,7 @@
 				EC7D9EBA1BFB294B0092D887 /* WebViewController.m in Sources */,
 				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
 				EC1726831BF2F27F00A973EB /* PoeViewModel.m in Sources */,
+				EC025E471C45FB7D001C16D8 /* UIScrollView+Paging.m in Sources */,
 				EC5B451C1C198C2D00DBD54C /* CXPopTransition.m in Sources */,
 				ECA852391C2AA43B00320E7C /* RadioListCell.m in Sources */,
 				ECD97A921C3262FD003B9514 /* NSObject+Common.m in Sources */,
@@ -1181,12 +1203,14 @@
 				ECBC75171C15211300234000 /* CXProgress.m in Sources */,
 				ECD97A931C3262FD003B9514 /* UIImage+Blur.m in Sources */,
 				EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */,
+				EC55B0F91C51CDEB00732520 /* CXDashLineView.m in Sources */,
 				ECA852051C293DF400320E7C /* PlayBaseViewController.m in Sources */,
 				EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */,
 				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
 				ECA852341C2AA42300320E7C /* RadioListViewController.m in Sources */,
 				ECFBA0ED1C23A6C800761349 /* CXDismissTransition.m in Sources */,
 				ECD97A941C3262FD003B9514 /* UIImage+Common.m in Sources */,
+				EC55B0FF1C520B7300732520 /* CXMagicMoveRetrun.m in Sources */,
 				EC7E6E3A1C05B1B80062518A /* MuseumModel.m in Sources */,
 				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
 				EC9642051C0C364000D16E39 /* ShowDetailViewModel.m in Sources */,
