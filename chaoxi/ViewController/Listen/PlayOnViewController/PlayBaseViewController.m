@@ -20,9 +20,6 @@
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) UIPageControl *pageControl;
 @property (nonatomic, strong) UIWebView *webView;
-@property (nonatomic, strong) UIButton *playBt;
-@property (nonatomic, strong) UIButton *nextBt;
-@property (nonatomic, strong) UIButton *lastBt;
 @property (nonatomic, strong) RACSignal *listPlaySignal;
 
 @end
@@ -102,6 +99,22 @@
         make.size.mas_equalTo(CGSizeMake(25, 25));
     }];
     
+    POPSpringAnimation *positionAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionY];
+    positionAnimation.toValue = @(ScreenHeight - 60);
+    positionAnimation.springBounciness = 10;
+    positionAnimation.springSpeed = 17;
+    
+    [positionAnimation setCompletionBlock:^(POPAnimation *anim, BOOL finished) {
+       
+        [self.playBt layoutIfNeeded];
+        
+        [self.playBt mas_updateConstraints:^(MASConstraintMaker *make) {
+            
+            make.bottom.equalTo(self.view.mas_bottom).offset(20);
+        }];
+    }];
+    
+    [self.playBt.layer pop_addAnimation:positionAnimation forKey:@"positionAnimation"];
 }
 
 - (void)addChildVC

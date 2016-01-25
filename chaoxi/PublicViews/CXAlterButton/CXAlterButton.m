@@ -8,6 +8,8 @@
 
 #import "CXAlterButton.h"
 
+#define NormalHeight 60
+
 @interface CXAlterButton()<CXAlterItemButtonDelegate>
 
 @property (strong, nonatomic) UIImage *centerImage;
@@ -29,7 +31,6 @@
 #pragma mark- publicMethod
 - (instancetype)initWithImage :(UIImage *)centerImage{
     
-    // TODO:- 加旋转
     if (self = [super init]) {
         
         self.centerImage = centerImage;
@@ -40,10 +41,10 @@
         self.closeSize = CGRectZero.size;
         self.openSize = [UIScreen mainScreen].bounds.size;
         
-//        self.frame = CGRectMake(0, 0,self.closeSize.width, self.closeSize.height);
-        self.frame = CGRectMake(0, 0,ScreenWidth,60);
-    
-        [self initViews];
+        self.frame = CGRectMake(0, 0, ScreenWidth,60);
+        
+        [self.buttonBGView addSubview:self.centerButton];
+        [self addSubview:self.buttonBGView];
     }
     return self;
 }
@@ -57,7 +58,9 @@
     
     if (![self.items containsObject:button]) {
         [self.items addObject:button];
+        button.center = self.buttonBGView.center;
         button.alpha = 0;
+        button.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
         [self addSubview:button];
     }
 }
@@ -75,7 +78,9 @@
 - (void)setButtonCenter:(CGPoint)buttonCenter
 {
     _buttonCenter = buttonCenter;
-    self.buttonBGView.frame = CGRectMake(_buttonCenter.x, self.buttonCenter.y, self.buttonSize.width, self.buttonSize.height);
+
+    self.buttonBGView.size = CGSizeMake(self.buttonSize.width, self.buttonSize.height);
+    self.buttonBGView.center = buttonCenter;
 }
 
 - (void)setButtonSize:(CGSize)buttonSize
@@ -92,25 +97,6 @@
 
 - (void)initViews
 {
-    self.buttonBGView = ({
-        UIView *view = [[UIView alloc]initWithFrame:({
-            CGRect frame = CGRectMake(0, 0, 40, 40);
-            frame;
-        })];
-        view.backgroundColor = [UIColor clearColor];
-        view;
-    });
-    
-    self.centerButton = ({
-        UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setBackgroundImage:self.centerImage forState:UIControlStateNormal];
-        [button addTarget:self action:@selector(rollAction:) forControlEvents:UIControlEventTouchUpInside];
-        button.frame = CGRectMake(0, 0, 40, 40);
-        button;
-    });
-    [self.buttonBGView addSubview:self.centerButton];
-    [self addSubview:self.buttonBGView];
-    
     self.coverView = ({
         UIView *view = [[UIView alloc]initWithFrame:({
             CGRect frame = CGRectMake(0, 0, self.openSize.width*2, self.openSize.height*2);
@@ -138,81 +124,51 @@
 
 #pragma mark- buttonClicked
 - (void)centerButtonOpen
-{    
-    [CATransaction begin];
-    [CATransaction setAnimationDuration:0.5];
-    [self showAnimatonWithSeleted:M_PI_4];
+{
+    [self showAnimatonWithSeleted:M_PI_4*3];
     
     for (int i = 0;  i < self.items.count; i++) {
         
         CXAlterItemButton *itemButton = self.items[i];
         itemButton.index = i;
         
-        [CATransaction setCompletionBlock:^{
-            
-            for (CXAlterItemButton *itemButton in self.items) {
-                itemButton.transform = CGAffineTransformIdentity;
-                itemButton.alpha = 1;
-            }
-        }];
+        POPSpringAnimation *pa = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+        pa.toValue = @(self.buttonBGView.center.x - (i+1)*70);
+        pa.beginTime = CACurrentMediaTime() + 0.3;
+        pa.springBounciness = 4;
+        pa.springSpeed = 8;
+        [itemButton pop_addAnimation:pa forKey:@"positionAnimation"];
         
-        CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
+        POPBasicAnimation *aa = [POPBasicAnimation animation];
+        aa.property = [POPAnimatableProperty propertyWithName:kPOPViewAlpha];
+        aa.beginTime = CACurrentMediaTime() + 0.3;
+        aa.fromValue= @(0);
+        aa.toValue= @(1);
+        [itemButton pop_addAnimation:aa forKey:@"aa"];
         
-        CGPoint originPosition = self.buttonBGView.center;
-        CGPoint finalPosition = CGPointMake(self.buttonBGView.center.x - (i+1)*70, self.buttonBGView.center.y);
+        POPSpringAnimation *rotationAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerRotation];
+        rotationAnimation.beginTime = CACurrentMediaTime() + 0.3;
+        rotationAnimation.toValue = @(M_PI*2);
+        rotationAnimation.springBounciness = 4;
+        rotationAnimation.springSpeed = 10;
+        [itemButton.layer pop_addAnimation:rotationAnimation forKey:@"rotationAnimation"];
         
-        positionAnimation.duration = self.animationDuration;
-        positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        positionAnimation.fromValue = [NSValue valueWithCGPoint:originPosition];
-        positionAnimation.toValue = [NSValue valueWithCGPoint:finalPosition];
-        positionAnimation.beginTime = CACurrentMediaTime() + (0.5/(float)self.items.count * (float)i);
-        
-        positionAnimation.fillMode = kCAFillModeForwards;
-        positionAnimation.removedOnCompletion = NO;
-        
-        [itemButton.layer addAnimation:positionAnimation forKey:@"positionAnimation"];
-        
-        itemButton.layer.position = finalPosition;
-        
-        CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-        
-        scaleAnimation.duration = _animationDuration;
-        scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        scaleAnimation.fromValue = [NSNumber numberWithFloat:0.01f];
-        scaleAnimation.toValue = [NSNumber numberWithFloat:1.f];
-        scaleAnimation.beginTime = CACurrentMediaTime() + (_animationDuration/(float)_items.count * (float)i) + 0.03f;
-        scaleAnimation.fillMode = kCAFillModeForwards;
-        scaleAnimation.removedOnCompletion = NO;
-        
-        [itemButton.layer addAnimation:scaleAnimation forKey:@"scaleAnimation"];
-        
-        itemButton.transform = CGAffineTransformMakeScale(0.01f, 0.01f);
-        
+        POPSpringAnimation *av = [POPSpringAnimation animation];
+        av.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
+        av.beginTime = CACurrentMediaTime() + 0.3;
+        av.springBounciness = 6;
+        av.springSpeed = 10;
+        av.toValue=[NSValue valueWithCGSize:CGSizeMake(1, 1)];
+        av.name=@"i1";
+        av.delegate=self;
+        [itemButton pop_addAnimation:av forKey:@"avatar"];
     }
-    [CATransaction commit];
-}
-
-- (void)closeAnimation
-{
-     [self showAnimatonWithSeleted:0];
-        for (int i = (int)self.items.count - 1; i>=0; i--) {
-            
-            CXAlterItemButton *button = self.items[i];
-            [UIView animateWithDuration:0.2
-                             animations:^{
-                                 
-                                 button.center = self.buttonBGView.center;
-                                 button.alpha = 0;
-                             }];
-                }
 }
 
 #pragma mark- buttonUnclicked
 - (void)centerButtonClosed
 {
-    [CATransaction begin];
     [self showAnimatonWithSeleted:0];
-    [CATransaction setAnimationDuration:_animationDuration];
     
     [UIView animateWithDuration:0.1f
                           delay:_animationDuration + 0.05f
@@ -222,63 +178,52 @@
                      }
                      completion:nil];
     
-    [CATransaction setCompletionBlock:^{
-        
-        for (CXAlterItemButton *button in self.items) {
-            button.transform = CGAffineTransformIdentity;
-            button.alpha = 0;
-        }
-    }];
     
     for (int i = (int)self.items.count - 1; i>=0; i--) {
         
         CXAlterItemButton *button = self.items[i];
         
-        CABasicAnimation *scaleAnimation = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+        POPSpringAnimation *pa = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
+        pa.toValue = @(self.buttonBGView.center.x);
+        pa.beginTime = CACurrentMediaTime() + 0.2;
+        pa.springBounciness = 4;
+        pa.springSpeed = 8;
+        [button pop_addAnimation:pa forKey:@"positionAnimation"];
         
-        scaleAnimation.duration = _animationDuration;
-        scaleAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        scaleAnimation.fromValue = [NSNumber numberWithFloat:1.f];
-        scaleAnimation.toValue = [NSNumber numberWithFloat:0.01f];
-        scaleAnimation.beginTime = CACurrentMediaTime() + (_animationDuration/(float)_items.count * (float)i) + 0.03;
-        scaleAnimation.fillMode = kCAFillModeForwards;
-        scaleAnimation.removedOnCompletion = NO;
+        POPSpringAnimation *av = [POPSpringAnimation animation];
+        av.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
+        av.beginTime = CACurrentMediaTime() + 0.2;
+        av.springBounciness = 6;
+        av.springSpeed = 10;
+        av.toValue=[NSValue valueWithCGSize:CGSizeMake(0.01, 0.01)];
+        av.delegate=self;
+        [button pop_addAnimation:av forKey:@"avatar"];
         
-        [button.layer addAnimation:scaleAnimation forKey:@"scaleAnimation"];
+        POPBasicAnimation *aa = [POPBasicAnimation animation];
+        aa.property = [POPAnimatableProperty propertyWithName:kPOPViewAlpha];
+        aa.beginTime = CACurrentMediaTime() + 0.2;
+        aa.fromValue= @(1);
+        aa.toValue= @(0);
+        [button pop_addAnimation:aa forKey:@"aa"];
         
-        button.transform = CGAffineTransformMakeScale(1.f, 1.f);
-        
-        
-        CABasicAnimation *positionAnimation = [CABasicAnimation animationWithKeyPath:@"position"];
-        
-        CGPoint originPosition = button.layer.position;
-        CGPoint finalPosition = self.buttonBGView.center;
-        
-        positionAnimation.duration = _animationDuration;
-        positionAnimation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseInEaseOut];
-        positionAnimation.fromValue = [NSValue valueWithCGPoint:originPosition];
-        positionAnimation.toValue = [NSValue valueWithCGPoint:finalPosition];
-        positionAnimation.beginTime = CACurrentMediaTime() + (_animationDuration/(float)_items.count * (float)i);
-        positionAnimation.fillMode = kCAFillModeForwards;
-        positionAnimation.removedOnCompletion = NO;
-        
-        [button.layer addAnimation:positionAnimation forKey:@"positionAnimation"];
-        
-        button.layer.position = originPosition;
+        POPSpringAnimation *rotationAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerRotation];
+        rotationAnimation.beginTime = CACurrentMediaTime() + 0.2;
+        rotationAnimation.toValue = @(0);
+        rotationAnimation.springBounciness = 4;
+        rotationAnimation.springSpeed = 10;
+        [button.layer pop_addAnimation:rotationAnimation forKey:@"ra"];
     }
-    
-    [CATransaction commit];
 }
 
 - (void)showAnimatonWithSeleted:(CGFloat)Rotataion
 {
-    [UIView animateWithDuration:1 delay:0.05 usingSpringWithDamping:0.1 initialSpringVelocity:5 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-        
-        _buttonBGView.transform = CGAffineTransformMakeRotation(Rotataion);
-        
-    } completion:^(BOOL finished) {
-        
-    }];
+    POPSpringAnimation *rotationAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerRotation];
+    rotationAnimation.beginTime = CACurrentMediaTime() + 0.1;
+    rotationAnimation.toValue = @(Rotataion);
+    rotationAnimation.springBounciness = 4;
+    rotationAnimation.springSpeed = 10;
+    rotationAnimation.dynamicsFriction = 12;
+    [_buttonBGView.layer pop_addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 }
 
 - (void)showAnimationType:(NSString *)type
@@ -292,7 +237,6 @@
     animation.duration = 0.5;
     animation.type = type;
     animation.subtype = subType;
-    
     [self.layer addAnimation:animation forKey:nil];
 }
 
@@ -316,6 +260,35 @@
         
         [self centerButtonClosed];
     }
+}
+
+- (UIButton *)centerButton
+{
+    if (!_centerButton) {
+        self.centerButton = ({
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            [button setBackgroundImage:self.centerImage forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(rollAction:) forControlEvents:UIControlEventTouchUpInside];
+            button.size = CGSizeMake(40, 40);
+            button.center = CGPointMake(30, 30);
+            button;
+        });
+    }
+    return _centerButton;
+}
+
+- (UIView *)buttonBGView
+{
+    if (!_buttonBGView) {
+        self.buttonBGView = ({
+            UIView *view = [[UIView alloc]initWithFrame:({
+                CGRect frame = CGRectMake(200 , 0, NormalHeight, NormalHeight);
+                frame;
+            })];
+            view;
+        });
+    }
+    return _buttonBGView;
 }
 
 @end

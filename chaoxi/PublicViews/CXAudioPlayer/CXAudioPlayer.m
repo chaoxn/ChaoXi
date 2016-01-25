@@ -21,7 +21,6 @@
         
         cxAudioPlayer = [[CXAudioPlayer alloc] initWithOptions:(STKAudioPlayerOptions){ .flushQueueOnSeek = YES, .enableVolumeMixer = NO, .equalizerBandFrequencies = {50, 100, 200, 400, 800, 1600, 2600, 16000} }];
         cxAudioPlayer.meteringEnabled = YES;
-//        cxAudioPlayer.delegate  =se;
         cxAudioPlayer.volume = 1;
     });
     

@@ -15,4 +15,8 @@
 @property (nonatomic, strong) UIImageView *currentView;
 @property (nonatomic, strong) PlayOnViewController *playOnVC;
 
+@property (nonatomic, strong) UIButton *playBt;
+@property (nonatomic, strong) UIButton *nextBt;
+@property (nonatomic, strong) UIButton *lastBt;
+
 @end

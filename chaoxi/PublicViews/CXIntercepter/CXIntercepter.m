@@ -102,7 +102,6 @@
     viewController.navigationController.navigationBar.tintColor = CXRGBColor(32, 47, 60);
     viewController.navigationController.navigationBar.barTintColor = CXRGBColor(245, 245, 245);
     
-    
     [self addWindow];
 }
 
@@ -134,10 +133,10 @@
     
     CXAlterItemButton *item3 = [[CXAlterItemButton alloc]initWithImage:[UIImage imageNamed:@"item3"]];
     
-    [button addButtonItems:@[item1, item2, item3]];
-    
     button.buttonCenter = CGPointMake(225,8);
     button.buttonSize = CGSizeMake(30, 30);
+    
+    [button addButtonItems:@[item1, item2, item3]];
     
     button.animationDuration = 0.5;
     button.delegate = self;

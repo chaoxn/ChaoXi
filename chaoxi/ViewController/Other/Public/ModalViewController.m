@@ -68,23 +68,25 @@
                 positionAnimation.toValue = @(view.center.x-ScreenWidth - 20 * i);
                 positionAnimation.springBounciness = 8;
                 positionAnimation.springSpeed = 20;
-                positionAnimation.beginTime = CACurrentMediaTime() + 0.1 * i;
+                positionAnimation.beginTime = CACurrentMediaTime() + 0.1+0.05*i;
                 
                 POPBasicAnimation *opacityAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
                 opacityAnimation.fromValue = @(0);
                 opacityAnimation.toValue = @(1);
-                opacityAnimation.beginTime = CACurrentMediaTime() + 0.1 * i;
+                opacityAnimation.beginTime = CACurrentMediaTime() + 0.1+0.05*i;
                 
                 [view.layer pop_addAnimation:positionAnimation forKey:@"position"];
                 [view.layer pop_addAnimation:opacityAnimation forKey:@"opacity"];
             }
             
+            self.dismissButton.transform = CGAffineTransformMakeScale(0.001, 0.001);
+            
             POPSpringAnimation *scaleAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerScaleXY];
-//            scaleAnimation.fromValue  = [NSValue valueWithCGSize:CGSizeMake(0.2f, 0.2f)];
+            scaleAnimation.beginTime = CACurrentMediaTime() + 0.1;
             scaleAnimation.toValue = [NSValue valueWithCGSize:CGSizeMake(1.3f, 1.3f)];
-            scaleAnimation.springBounciness = 15.f;
-            scaleAnimation.springSpeed = 7;
-            scaleAnimation.dynamicsFriction = 2;
+            scaleAnimation.springBounciness = 6.f;
+            scaleAnimation.springSpeed = 10;
+            scaleAnimation.dynamicsFriction = 10;
             
             POPBasicAnimation *opacityAnimation = [POPBasicAnimation animationWithPropertyNamed:kPOPLayerOpacity];
             opacityAnimation.fromValue = @(0);

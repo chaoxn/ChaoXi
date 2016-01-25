@@ -11,6 +11,7 @@
 @interface AboutUsViewController ()
 
 @property (nonatomic, strong) UIButton *returnButton;
+@property (nonatomic, strong) UIImageView *avatarImageView;
 
 @end
 
@@ -30,11 +31,12 @@
 
 - (void)layoutSubViews
 {
-    self.view.backgroundColor = [UIColor cyanColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     
     [self.returnButton mas_makeConstraints:^(MASConstraintMaker *make) {
         
-        make.leading.and.top.equalTo(self.view).with.offset(25);
+        make.top.equalTo(self.view).with.offset(25);
+        make.leading.equalTo(self.view).offset(10);
         make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
 }
@@ -42,6 +44,24 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = YES;
+    
+    [self.view addSubview:self.avatarImageView];
+    self.avatarImageView.transform = CGAffineTransformMakeScale(0.001, 0.001);
+    
+    POPSpringAnimation *av = [POPSpringAnimation animation];
+    av.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
+    av.beginTime = CACurrentMediaTime() + 0.5 +0.1;
+    av.springBounciness = 6;
+    av.springSpeed = 10;
+    av.toValue=[NSValue valueWithCGSize:CGSizeMake(1, 1)];
+    av.name=@"i1";
+    av.delegate=self;
+    [self.avatarImageView pop_addAnimation:av forKey:@"avatar"];
+    
+     av.completionBlock =^(POPAnimation *anim, BOOL finished){
+         
+         
+     };
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -60,6 +80,20 @@
     }
     return _returnButton;
 }
+
+- (UIImageView *)avatarImageView
+{
+    if (!_avatarImageView) {
+        _avatarImageView = ({
+            UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"Avatar"]];
+            imageView.size = CGSizeMake(100, 100);
+            imageView.center = CGPointMake(ScreenWidth/2, 100);
+            imageView;
+        });
+    }
+    return _avatarImageView;
+}
+
 
 - (void)didReceiveMemoryWarning
 {

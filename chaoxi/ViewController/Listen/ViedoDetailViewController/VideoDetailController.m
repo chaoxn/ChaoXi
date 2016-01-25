@@ -144,7 +144,6 @@
         make.centerX.equalTo(self.header);
         make.size.mas_equalTo(CGSizeMake(ScreenWidth, 0.5));
     }];
-    
 }
 
 - (void)dataBinding

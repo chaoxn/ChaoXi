@@ -139,7 +139,7 @@
         
         [RACObserve(self, height) subscribeNext:^(NSNumber *x) {
            
-            DLog(@"%@", x);
+//            DLog(@"%@", x);
             if ([x  integerValue] == 0) {
                 
                 self.contentLabel.frame = CGRectMake(0, 10, ScreenWidth ,actualSize.height);

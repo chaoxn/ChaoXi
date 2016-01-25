@@ -46,7 +46,7 @@
     } completion:^(BOOL finished) {
 
         toVC.playOnVC.bgImageView.hidden = NO;
-        cell.imageView.hidden = NO;
+        cell.iconImageView.hidden = NO;
         [snapShotView removeFromSuperview];
 
         [transitionContext completeTransition:!transitionContext.transitionWasCancelled];
