@@ -97,7 +97,11 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/ReactiveCocoa.framework"
   install_framework "Pods/SCCatWaitingHUD.framework"
   install_framework "Pods/SDWebImage.framework"
+  install_framework "Pods/Shimmer.framework"
   install_framework "Pods/StreamingKit.framework"
+  install_framework "Pods/TOMSMorphingLabel.framework"
+  install_framework "Pods/YLGIFImage.framework"
+  install_framework "Pods/ZCAnimatedLabel.framework"
   install_framework "Pods/pop.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -114,6 +118,10 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/ReactiveCocoa.framework"
   install_framework "Pods/SCCatWaitingHUD.framework"
   install_framework "Pods/SDWebImage.framework"
+  install_framework "Pods/Shimmer.framework"
   install_framework "Pods/StreamingKit.framework"
+  install_framework "Pods/TOMSMorphingLabel.framework"
+  install_framework "Pods/YLGIFImage.framework"
+  install_framework "Pods/ZCAnimatedLabel.framework"
   install_framework "Pods/pop.framework"
 fi

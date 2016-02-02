@@ -33,10 +33,13 @@
     
     __block CGRect rect;
     
-    [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
-        
-        rect = CGRectMake(ScreenWidth-100 - 70*[x intValue], 35, 30, 30);
-    }];
+    // pop回 push来的button位置
+//    [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
+//        
+//        rect = CGRectMake(ScreenWidth-100 - 70*[x intValue], 35, 30, 30);
+//    }];
+    
+    rect = CGRectMake(ScreenWidth - 50, 35, 30, 30);
     
     UIBezierPath *finalPath = [UIBezierPath bezierPathWithOvalInRect:rect];
     
@@ -83,6 +86,6 @@
     [self.transitionContext completeTransition:![self.transitionContext transitionWasCancelled]];
     [self.transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey].view.layer.mask = nil;
     [self.transitionContext viewControllerForKey:UITransitionContextToViewControllerKey].view.layer.mask = nil;
-    
 }
+
 @end

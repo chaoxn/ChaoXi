@@ -19,6 +19,7 @@
 @property (nonatomic, strong) ListenListViewModel *listenViewModel;
 @property (nonatomic, strong) ODRefreshControl *refreshControl;
 
+@property (nonatomic, strong) NSMutableArray *cellArr;
 @end
 
 @implementation ListenViewController
@@ -52,6 +53,15 @@
         
         [self.listenViewModel next];
     }];
+    
+    
+//    self.tableView.alpha = 0;
+//    [self.tableView reloadData];
+//    double diff = 0.05;
+//    CGFloat tableHeight = self.tableView.bounds.size.height;
+//    NSArray *cells = self.tableView.visibleCells;
+
+    
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -96,6 +106,8 @@
         
         cell = [[LuoIMagaCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:indeinitfier];
     }
+    
+    
     cell.model = self.listenViewModel.modelArr[indexPath.row];
     cell.tag = indexPath.row;
     return cell;

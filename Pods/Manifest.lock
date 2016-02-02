@@ -45,7 +45,11 @@ PODS:
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
+  - Shimmer (1.0.2)
   - StreamingKit (0.1.28)
+  - TOMSMorphingLabel (0.5.1)
+  - YLGIFImage (0.11)
+  - ZCAnimatedLabel (0.0.4)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
@@ -62,7 +66,11 @@ DEPENDENCIES:
   - ReactiveCocoa (~> 2.5)
   - SCCatWaitingHUD (~> 0.1.6)
   - SDWebImage (~> 3.7.3)
+  - Shimmer (~> 1.0.2)
   - StreamingKit (~> 0.1.28)
+  - TOMSMorphingLabel (~> 0.5.1)
+  - YLGIFImage
+  - ZCAnimatedLabel (~> 0.0.4)
 
 SPEC CHECKSUMS:
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
@@ -79,6 +87,10 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SCCatWaitingHUD: 0953610d12ee0267389486d74c244635d805083e
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
+  Shimmer: c5374be1c2b0c9e292fb05b339a513cf291cac86
   StreamingKit: 3b9c78009275ef1caf198bae44cfb982fee65d4d
+  TOMSMorphingLabel: 3e88a2bf5257f8993ebc51fb3109187a0bfb2c4d
+  YLGIFImage: c0ae132fe80e5282b2762a97d14e23ba71a748ae
+  ZCAnimatedLabel: 519b688bef4403fd356bc785f9b61cdfd8e6472d
 
 COCOAPODS: 0.39.0

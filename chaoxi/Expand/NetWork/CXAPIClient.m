@@ -96,8 +96,8 @@ static dispatch_once_t onceToken;
 -(id)handleResponse:(id)responseJSON autoShowError:(BOOL)autoShowError
 rerequestJsonDataWithPath:(NSString *)aPath
          withParams:(NSDictionary*)params {
-    NSError *error = nil;
     
+    NSError *error = nil;
     //    NSNumber *resultCode = [responseJSON valueForKeyPath:@"code"];
     //
     //    if (resultCode.integerValue != 0) {

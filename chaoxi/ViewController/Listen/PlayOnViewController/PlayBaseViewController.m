@@ -114,7 +114,7 @@
         }];
     }];
     
-    [self.playBt.layer pop_addAnimation:positionAnimation forKey:@"positionAnimation"];
+//    [self.playBt.layer pop_addAnimation:positionAnimation forKey:@"positionAnimation"];
 }
 
 - (void)addChildVC

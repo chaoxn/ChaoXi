@@ -134,28 +134,28 @@
         
         POPSpringAnimation *pa = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
         pa.toValue = @(self.buttonBGView.center.x - (i+1)*70);
-        pa.beginTime = CACurrentMediaTime() + 0.3;
-        pa.springBounciness = 4;
+        pa.beginTime = CACurrentMediaTime() + 0.1 + 0.1*i;
+        pa.springBounciness = 6;
         pa.springSpeed = 8;
         [itemButton pop_addAnimation:pa forKey:@"positionAnimation"];
         
         POPBasicAnimation *aa = [POPBasicAnimation animation];
         aa.property = [POPAnimatableProperty propertyWithName:kPOPViewAlpha];
-        aa.beginTime = CACurrentMediaTime() + 0.3;
+        aa.beginTime = CACurrentMediaTime() + 0.1 + 0.1*i;
         aa.fromValue= @(0);
         aa.toValue= @(1);
         [itemButton pop_addAnimation:aa forKey:@"aa"];
         
         POPSpringAnimation *rotationAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerRotation];
-        rotationAnimation.beginTime = CACurrentMediaTime() + 0.3;
-        rotationAnimation.toValue = @(M_PI*2);
+        rotationAnimation.beginTime = CACurrentMediaTime() + 0.1 + 0.1i;
+        rotationAnimation.toValue = @(M_PI*4);
         rotationAnimation.springBounciness = 4;
         rotationAnimation.springSpeed = 10;
         [itemButton.layer pop_addAnimation:rotationAnimation forKey:@"rotationAnimation"];
         
         POPSpringAnimation *av = [POPSpringAnimation animation];
         av.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
-        av.beginTime = CACurrentMediaTime() + 0.3;
+        av.beginTime = CACurrentMediaTime() + 0.1 + 0.1*i;
         av.springBounciness = 6;
         av.springSpeed = 10;
         av.toValue=[NSValue valueWithCGSize:CGSizeMake(1, 1)];
@@ -185,29 +185,28 @@
         
         POPSpringAnimation *pa = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerPositionX];
         pa.toValue = @(self.buttonBGView.center.x);
-        pa.beginTime = CACurrentMediaTime() + 0.2;
-        pa.springBounciness = 4;
+        pa.beginTime = CACurrentMediaTime() + 0.2 + 0.1*i;
+        pa.springBounciness = 6;
         pa.springSpeed = 8;
         [button pop_addAnimation:pa forKey:@"positionAnimation"];
         
         POPSpringAnimation *av = [POPSpringAnimation animation];
         av.property = [POPAnimatableProperty propertyWithName:kPOPViewScaleXY];
-        av.beginTime = CACurrentMediaTime() + 0.2;
+        av.beginTime = CACurrentMediaTime() + 0.2 + 0.18*i;
         av.springBounciness = 6;
         av.springSpeed = 10;
         av.toValue=[NSValue valueWithCGSize:CGSizeMake(0.01, 0.01)];
-        av.delegate=self;
         [button pop_addAnimation:av forKey:@"avatar"];
         
         POPBasicAnimation *aa = [POPBasicAnimation animation];
         aa.property = [POPAnimatableProperty propertyWithName:kPOPViewAlpha];
-        aa.beginTime = CACurrentMediaTime() + 0.2;
+        aa.beginTime = CACurrentMediaTime() + 0.2 + 0.1*i;
         aa.fromValue= @(1);
         aa.toValue= @(0);
         [button pop_addAnimation:aa forKey:@"aa"];
         
         POPSpringAnimation *rotationAnimation = [POPSpringAnimation animationWithPropertyNamed:kPOPLayerRotation];
-        rotationAnimation.beginTime = CACurrentMediaTime() + 0.2;
+        rotationAnimation.beginTime = CACurrentMediaTime() + 0.2 + 0.1*i;
         rotationAnimation.toValue = @(0);
         rotationAnimation.springBounciness = 4;
         rotationAnimation.springSpeed = 10;
@@ -246,13 +245,13 @@
 {
     if ([self.delegate respondsToSelector:@selector(AlterButton:clickItemButtonAtIndex:)]) {
         
-        CXAlterItemButton *selectedButton = self.items[itemButton.index];
-        
-        [UIView animateWithDuration:0.0618f * 3
-                         animations:^{
-                             selectedButton.transform = CGAffineTransformMakeScale(3, 3);
-                             selectedButton.alpha = 0.0f;
-                         }];
+//        CXAlterItemButton *selectedButton = self.items[itemButton.index];
+//        
+//        [UIView animateWithDuration:0.0618f * 3
+//                         animations:^{
+//                             selectedButton.transform = CGAffineTransformMakeScale(3, 3);
+//                             selectedButton.alpha = 0.0f;
+//                         }];
         
         [self.delegate AlterButton:self clickItemButtonAtIndex:itemButton.index];
         

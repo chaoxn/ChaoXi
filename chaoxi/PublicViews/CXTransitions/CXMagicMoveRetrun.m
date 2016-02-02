@@ -11,7 +11,8 @@
 #import "PlayBaseViewController.h"
 #import "DetailCell.h"
 
-@implementation CXMagicMoveRetrun 
+@implementation CXMagicMoveRetrun
+
 - (NSTimeInterval)transitionDuration:(id <UIViewControllerContextTransitioning>)transitionContext{
     return 0.6f;
 }
@@ -34,7 +35,6 @@
     //获取toVC中图片的位置
     DetailCell *cell = (DetailCell *)[toVC.tableView cellForRowAtIndexPath:toVC.indexPath];
     cell.iconImageView.hidden = YES;
-//    CGRect finalRect =  [containerView convertRect:cell.imageView.frame fromView:cell.imageView.superview];
     
     //顺序很重要，
     [containerView insertSubview:toVC.view belowSubview:fromVC.view];

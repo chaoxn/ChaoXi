@@ -28,6 +28,7 @@
 #import "ODRefreshControl.h"
 #import "SCCatWaitingHUD.h"
 #import "RACAFNetworking.h"
+#import "FBShimmeringView.h"
 
 #import "CXViewModelClass.h" 
 #import "CXHttpManager.h"

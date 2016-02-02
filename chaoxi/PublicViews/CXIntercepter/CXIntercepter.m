@@ -98,7 +98,7 @@
     
     viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"潮汐" style:UIBarButtonItemStylePlain target:viewController.navigationController action:@selector(presenting)];
     
-    viewController.navigationController.delegate = self;
+//    viewController.navigationController.delegate = self;
     viewController.navigationController.navigationBar.tintColor = CXRGBColor(32, 47, 60);
     viewController.navigationController.navigationBar.barTintColor = CXRGBColor(245, 245, 245);
     
@@ -157,18 +157,21 @@
         case 0:
         {
             SaveViewController *saveVC = [[SaveViewController alloc]init];
+            saveVC.vc = self.baseViewController;
             [self.baseViewController.navigationController pushViewController:saveVC animated:YES];
         }
             break;
         case 1:
         {
             AboutUsViewController *abVC = [[AboutUsViewController alloc]init];
+            abVC.vc = self.baseViewController;
             [self.baseViewController.navigationController pushViewController:abVC animated:YES];
         }
             break;
         case 2:
         {
             ClearCacheViewController *clearVC = [[ClearCacheViewController alloc]init];
+            clearVC.vc = self.baseViewController;
             [self.baseViewController.navigationController pushViewController:clearVC animated:YES];
         }
             break;
@@ -223,6 +226,5 @@
         return nil;
     }
 }
-
 
 @end

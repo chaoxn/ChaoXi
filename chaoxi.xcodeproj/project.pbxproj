@@ -21,9 +21,6 @@
 		EC1726871BF300BA00A973EB /* ListenListViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726861BF300BA00A973EB /* ListenListViewModel.m */; };
 		EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726891BF3023200A973EB /* PoeViewController.m */; };
 		EC17268C1BF3023200A973EB /* PoeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC17268A1BF3023200A973EB /* PoeViewController.xib */; };
-		EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */; };
-		EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */; };
-		EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726B51BF3033F00A973EB /* SaveViewController.m */; };
 		EC1726C01BF3039E00A973EB /* Poem.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726BF1BF3039E00A973EB /* Poem.m */; };
 		EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726C41BF30A4600A973EB /* CXAlterButton.m */; };
 		EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726C61BF30A4600A973EB /* CXAlterItemButton.m */; };
@@ -33,6 +30,7 @@
 		EC1726DA1BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726D41BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m */; };
 		EC1726DB1BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726D71BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m */; };
 		EC2702FD1C3147F200D10C52 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2702FC1C3147F200D10C52 /* ODRefreshControl.m */; };
+		EC2A39081C5F015100A8D688 /* PoemSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2A39071C5F015100A8D688 /* PoemSaveViewController.m */; };
 		EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */; };
 		EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */; };
 		EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */; };
@@ -48,6 +46,11 @@
 		EC5B45191C196B4700DBD54C /* CXPushTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B45181C196B4700DBD54C /* CXPushTransition.m */; };
 		EC5B451C1C198C2D00DBD54C /* CXPopTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B451B1C198C2D00DBD54C /* CXPopTransition.m */; };
 		EC5B45281C1AB6F800DBD54C /* CXIntercepter.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5B45271C1AB6F800DBD54C /* CXIntercepter.m */; };
+		EC5EBD721C58980A00B0495E /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5EBD6D1C58980A00B0495E /* AboutUsViewController.m */; };
+		EC5EBD731C58980A00B0495E /* ClearCacheViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5EBD6F1C58980A00B0495E /* ClearCacheViewController.m */; };
+		EC5EBD741C58980A00B0495E /* SaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC5EBD711C58980A00B0495E /* SaveViewController.m */; };
+		EC5EBD761C5A1A0600B0495E /* testGit.gif in Resources */ = {isa = PBXBuildFile; fileRef = EC5EBD751C5A1A0600B0495E /* testGit.gif */; };
+		EC5EBD7C1C5B594D00B0495E /* rol.gif in Resources */ = {isa = PBXBuildFile; fileRef = EC5EBD7B1C5B594D00B0495E /* rol.gif */; };
 		EC6A7B741BFB085F00789E41 /* CXSliderViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B711BFB085F00789E41 /* CXSliderViewCell.m */; };
 		EC6A7B751BFB085F00789E41 /* CXSliderViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B731BFB085F00789E41 /* CXSliderViewLayout.m */; };
 		EC6A7B781BFB10A400789E41 /* FunnyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC6A7B771BFB10A400789E41 /* FunnyViewModel.m */; };
@@ -139,12 +142,6 @@
 		EC1726881BF3023200A973EB /* PoeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoeViewController.h; sourceTree = "<group>"; };
 		EC1726891BF3023200A973EB /* PoeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoeViewController.m; sourceTree = "<group>"; };
 		EC17268A1BF3023200A973EB /* PoeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PoeViewController.xib; sourceTree = "<group>"; };
-		EC1726AC1BF3033F00A973EB /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
-		EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
-		EC1726B01BF3033F00A973EB /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
-		EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
-		EC1726B41BF3033F00A973EB /* SaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveViewController.h; sourceTree = "<group>"; };
-		EC1726B51BF3033F00A973EB /* SaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveViewController.m; sourceTree = "<group>"; };
 		EC1726BE1BF3039E00A973EB /* Poem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poem.h; sourceTree = "<group>"; };
 		EC1726BF1BF3039E00A973EB /* Poem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poem.m; sourceTree = "<group>"; };
 		EC1726C31BF30A4600A973EB /* CXAlterButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXAlterButton.h; sourceTree = "<group>"; };
@@ -164,6 +161,8 @@
 		EC1726D71BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSubscriber+AFProgressCallbacks.m"; sourceTree = "<group>"; };
 		EC2702FB1C3147F200D10C52 /* ODRefreshControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ODRefreshControl.h; sourceTree = "<group>"; };
 		EC2702FC1C3147F200D10C52 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
+		EC2A39061C5F015100A8D688 /* PoemSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemSaveViewController.h; sourceTree = "<group>"; };
+		EC2A39071C5F015100A8D688 /* PoemSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemSaveViewController.m; sourceTree = "<group>"; };
 		EC378EAE1BDDF7F6006FB4F0 /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
 		EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
 		EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
@@ -192,6 +191,15 @@
 		EC5B451B1C198C2D00DBD54C /* CXPopTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPopTransition.m; sourceTree = "<group>"; };
 		EC5B45261C1AB6F800DBD54C /* CXIntercepter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXIntercepter.h; sourceTree = "<group>"; };
 		EC5B45271C1AB6F800DBD54C /* CXIntercepter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXIntercepter.m; sourceTree = "<group>"; };
+		EC5EBD6B1C58707E00B0495E /* yingbi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = yingbi.ttf; path = chaoxi/Resource/font/yingbi.ttf; sourceTree = SOURCE_ROOT; };
+		EC5EBD6C1C58980A00B0495E /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
+		EC5EBD6D1C58980A00B0495E /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		EC5EBD6E1C58980A00B0495E /* ClearCacheViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ClearCacheViewController.h; sourceTree = "<group>"; };
+		EC5EBD6F1C58980A00B0495E /* ClearCacheViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClearCacheViewController.m; sourceTree = "<group>"; };
+		EC5EBD701C58980A00B0495E /* SaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SaveViewController.h; sourceTree = "<group>"; };
+		EC5EBD711C58980A00B0495E /* SaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SaveViewController.m; sourceTree = "<group>"; };
+		EC5EBD751C5A1A0600B0495E /* testGit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = testGit.gif; sourceTree = "<group>"; };
+		EC5EBD7B1C5B594D00B0495E /* rol.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = rol.gif; sourceTree = "<group>"; };
 		EC6A7B701BFB085F00789E41 /* CXSliderViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSliderViewCell.h; sourceTree = "<group>"; };
 		EC6A7B711BFB085F00789E41 /* CXSliderViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXSliderViewCell.m; sourceTree = "<group>"; };
 		EC6A7B721BFB085F00789E41 /* CXSliderViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXSliderViewLayout.h; sourceTree = "<group>"; };
@@ -419,38 +427,16 @@
 		EC1726AA1BF3033F00A973EB /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				EC1726AB1BF3033F00A973EB /* AboutUs */,
-				EC1726AF1BF3033F00A973EB /* ClearCache */,
-				EC1726B31BF3033F00A973EB /* Save */,
+				EC5EBD6C1C58980A00B0495E /* AboutUsViewController.h */,
+				EC5EBD6D1C58980A00B0495E /* AboutUsViewController.m */,
+				EC5EBD6E1C58980A00B0495E /* ClearCacheViewController.h */,
+				EC5EBD6F1C58980A00B0495E /* ClearCacheViewController.m */,
+				EC5EBD701C58980A00B0495E /* SaveViewController.h */,
+				EC5EBD711C58980A00B0495E /* SaveViewController.m */,
+				EC2A39061C5F015100A8D688 /* PoemSaveViewController.h */,
+				EC2A39071C5F015100A8D688 /* PoemSaveViewController.m */,
 			);
 			path = Setting;
-			sourceTree = "<group>";
-		};
-		EC1726AB1BF3033F00A973EB /* AboutUs */ = {
-			isa = PBXGroup;
-			children = (
-				EC1726AC1BF3033F00A973EB /* AboutUsViewController.h */,
-				EC1726AD1BF3033F00A973EB /* AboutUsViewController.m */,
-			);
-			path = AboutUs;
-			sourceTree = "<group>";
-		};
-		EC1726AF1BF3033F00A973EB /* ClearCache */ = {
-			isa = PBXGroup;
-			children = (
-				EC1726B01BF3033F00A973EB /* ClearCacheViewController.h */,
-				EC1726B11BF3033F00A973EB /* ClearCacheViewController.m */,
-			);
-			path = ClearCache;
-			sourceTree = "<group>";
-		};
-		EC1726B31BF3033F00A973EB /* Save */ = {
-			isa = PBXGroup;
-			children = (
-				EC1726B41BF3033F00A973EB /* SaveViewController.h */,
-				EC1726B51BF3033F00A973EB /* SaveViewController.m */,
-			);
-			path = Save;
 			sourceTree = "<group>";
 		};
 		EC1726BD1BF3039E00A973EB /* PoemModel */ = {
@@ -596,6 +582,7 @@
 		EC378ECC1BDDFD39006FB4F0 /* Font */ = {
 			isa = PBXGroup;
 			children = (
+				EC5EBD6B1C58707E00B0495E /* yingbi.ttf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -603,6 +590,8 @@
 		EC378ECF1BDDFD5E006FB4F0 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				EC5EBD7B1C5B594D00B0495E /* rol.gif */,
+				EC5EBD751C5A1A0600B0495E /* testGit.gif */,
 				EC378ED01BDDFD6E006FB4F0 /* Image.xcassets */,
 			);
 			path = Image;
@@ -1077,7 +1066,9 @@
 				ECA8523A1C2AA43B00320E7C /* RadioListCell.xib in Resources */,
 				EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */,
 				ECA852011C291EC000320E7C /* PlayOnViewController.xib in Resources */,
+				EC5EBD7C1C5B594D00B0495E /* rol.gif in Resources */,
 				ECC07BB71BDF531E003BE70B /* ListenViewController.xib in Resources */,
+				EC5EBD761C5A1A0600B0495E /* testGit.gif in Resources */,
 				EC378ED11BDDFD6E006FB4F0 /* Image.xcassets in Resources */,
 				EC9642111C0C93A500D16E39 /* ShowDetailViewController.xib in Resources */,
 				EC17268C1BF3023200A973EB /* PoeViewController.xib in Resources */,
@@ -1171,15 +1162,16 @@
 				EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */,
 				EC55F1E71C3263A10060E638 /* FMDatabaseQueue+Extension.m in Sources */,
 				ECC3819A1BD8898F007A3680 /* AppDelegate.m in Sources */,
+				EC5EBD731C58980A00B0495E /* ClearCacheViewController.m in Sources */,
 				EC55B0FC1C5205C700732520 /* CXMagicMoveTransition.m in Sources */,
 				EC1726CB1BF30A4600A973EB /* CXAlterItemButton.m in Sources */,
 				ECA852001C291EC000320E7C /* PlayOnViewController.m in Sources */,
 				EC7E6E521C05B4CA0062518A /* ArtHeaderView.m in Sources */,
+				EC2A39081C5F015100A8D688 /* PoemSaveViewController.m in Sources */,
 				EC7E6E511C05B4CA0062518A /* ArtCell.m in Sources */,
 				EC7E6E651C06D1120062518A /* MuseumShowViewController.m in Sources */,
 				ECA851F31C27FEA400320E7C /* DetailCell.m in Sources */,
 				EC5B45191C196B4700DBD54C /* CXPushTransition.m in Sources */,
-				EC1726BB1BF3033F00A973EB /* SaveViewController.m in Sources */,
 				ECD97A971C3262FD003B9514 /* UIView+Utils.m in Sources */,
 				EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */,
 				EC6A7B741BFB085F00789E41 /* CXSliderViewCell.m in Sources */,
@@ -1189,6 +1181,7 @@
 				ECC07BA81BDF1AC5003BE70B /* BaseViewController.m in Sources */,
 				EC1726831BF2F27F00A973EB /* PoeViewModel.m in Sources */,
 				EC025E471C45FB7D001C16D8 /* UIScrollView+Paging.m in Sources */,
+				EC5EBD741C58980A00B0495E /* SaveViewController.m in Sources */,
 				EC5B451C1C198C2D00DBD54C /* CXPopTransition.m in Sources */,
 				ECA852391C2AA43B00320E7C /* RadioListCell.m in Sources */,
 				ECD97A921C3262FD003B9514 /* NSObject+Common.m in Sources */,
@@ -1199,6 +1192,7 @@
 				ECD97A931C3262FD003B9514 /* UIImage+Blur.m in Sources */,
 				EC1726CA1BF30A4600A973EB /* CXAlterButton.m in Sources */,
 				ECA852051C293DF400320E7C /* PlayBaseViewController.m in Sources */,
+				EC5EBD721C58980A00B0495E /* AboutUsViewController.m in Sources */,
 				EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */,
 				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
 				ECA852341C2AA42300320E7C /* RadioListViewController.m in Sources */,
@@ -1209,7 +1203,6 @@
 				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
 				EC9642051C0C364000D16E39 /* ShowDetailViewModel.m in Sources */,
 				EC7E6E361C05AE3C0062518A /* MuseumListViewModel.m in Sources */,
-				EC1726B91BF3033F00A973EB /* ClearCacheViewController.m in Sources */,
 				ECC3819B1BD8898F007A3680 /* main.m in Sources */,
 				ECA851EC1C27CDA600320E7C /* ViedoDetailViewModel.m in Sources */,
 				EC1726DA1BF30A8F00A973EB /* AFURLConnectionOperation+RACSupport.m in Sources */,
@@ -1224,7 +1217,6 @@
 				EC3DDA8E1C3125E100814986 /* CXAPIClient.m in Sources */,
 				ECA851EF1C27CDC000320E7C /* PlayOnViewModel.m in Sources */,
 				EC82440E1C03FD7F0082219E /* CXDropMenuItemView.m in Sources */,
-				EC1726B71BF3033F00A973EB /* AboutUsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
