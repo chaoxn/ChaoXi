@@ -205,7 +205,7 @@
     else if (operation == UINavigationControllerOperationPop){
         
         CXPopTransition *pop  = [[CXPopTransition alloc]init];
-        pop.pushVC = self.baseViewController;
+//        pop.pushVC = self.baseViewController;
         
         [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
             

@@ -7,6 +7,7 @@
 //
 
 #import "CXPopTransition.h"
+#import "SaveViewController.h"
 
 @interface CXPopTransition()
 
@@ -25,10 +26,10 @@
     self.transitionContext = transitionContext;
     
     self.popVC =[transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
-    self.pushVC= [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    SaveViewController *toVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     UIView *containerView = [transitionContext containerView];
 
-    [containerView addSubview:self.pushVC.view];
+    [containerView addSubview:toVC.view];
     [containerView addSubview:self.popVC.view];
     
     __block CGRect rect;
@@ -39,27 +40,27 @@
 //        rect = CGRectMake(ScreenWidth-100 - 70*[x intValue], 35, 30, 30);
 //    }];
     
-    rect = CGRectMake(ScreenWidth - 50, 35, 30, 30);
+    rect.origin = toVC.rectOrigin;
     
     UIBezierPath *finalPath = [UIBezierPath bezierPathWithOvalInRect:rect];
     
     CGPoint finalPoint;
     
-    if(rect.origin.x > (self.pushVC.view.bounds.size.width / 2)){
-        if (rect.origin.y < (self.pushVC.view.bounds.size.height / 2)) {
+    if(rect.origin.x > (toVC.view.bounds.size.width / 2)){
+        if (rect.origin.y < (toVC.view.bounds.size.height / 2)) {
             //第一象限
-            finalPoint = CGPointMake(rect.origin.x - 0, rect.origin.y - CGRectGetMaxY(self.pushVC.view.bounds)+30);
+            finalPoint = CGPointMake(rect.origin.x - 0, rect.origin.y - CGRectGetMaxY(toVC.view.bounds)+30);
         }else{
             //第四象限
             finalPoint = CGPointMake(rect.origin.x - 0, rect.origin.y - 0);
         }
     }else{
-        if (rect.origin.y < (self.pushVC.view.bounds.size.height / 2)) {
+        if (rect.origin.y < (toVC.view.bounds.size.height / 2)) {
             //第二象限
-            finalPoint = CGPointMake(rect.origin.x - CGRectGetMaxX(self.pushVC.view.bounds), rect.origin.y - CGRectGetMaxY(self.popVC.view.bounds)+30);
+            finalPoint = CGPointMake(rect.origin.x - CGRectGetMaxX(toVC.view.bounds), rect.origin.y - CGRectGetMaxY(self.popVC.view.bounds)+30);
         }else{
             //第三象限
-            finalPoint = CGPointMake(rect.origin.x - CGRectGetMaxX(self.pushVC.view.bounds), rect.origin.y - 0);
+            finalPoint = CGPointMake(rect.origin.x - CGRectGetMaxX(toVC.view.bounds), rect.origin.y - 0);
         }
     }
 

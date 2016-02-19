@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UIButton *returnButton;
 
-@property (nonatomic, strong)  UIViewController *vc;
+@property (nonatomic, strong) UIViewController *vc;
+
+@property (nonatomic, assign) CGPoint rectOrigin;
 
 @end

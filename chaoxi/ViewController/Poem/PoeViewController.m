@@ -33,8 +33,8 @@
     [self initModel];
     [self initViewModel];
     
-    if(![SCCatWaitingHUD sharedInstance].isAnimating)
-    {
+    if(![SCCatWaitingHUD sharedInstance].isAnimating){
+        
         [[SCCatWaitingHUD sharedInstance] animateWithInteractionEnabled:YES];
     }
     
@@ -75,8 +75,8 @@
 - (IBAction)refreshAction:(UIButton *)sender
 {
     self.height = 0;
-    if(![SCCatWaitingHUD sharedInstance].isAnimating)
-    {
+    if(![SCCatWaitingHUD sharedInstance].isAnimating){
+        
         [[SCCatWaitingHUD sharedInstance] animateWithInteractionEnabled:YES];
     }
     
@@ -138,7 +138,6 @@
         [self.timer setFireDate:[NSDate distantPast]];
         
         [RACObserve(self, height) subscribeNext:^(NSNumber *x) {
-           
 //            DLog(@"%@", x);
             if ([x  integerValue] == 0) {
                 
@@ -156,7 +155,6 @@
             }
         }];
         
-    
         // TODO:- 销毁信号
 //        [RACObserve(self.contentLabel, frame) subscribeNext:^(id labelValue) {
 //            

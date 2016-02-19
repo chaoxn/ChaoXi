@@ -8,9 +8,12 @@
 
 #import "SaveViewController.h"
 #import "CXPopTransition.h"
+#import "CXPushTransition.h"
 #import <ImageIO/ImageIO.h>
 #import "YLGIFImage.h"
 #import "YLImageView.h"
+#import "PoemSaveViewController.h"
+#import "ListenSaveViewController.h"
 
 #define RADIANS_TO_DEGREES(radians) ((radians) * (180.0 / M_PI)) //弧度转角度
 #define DEGREES_TO_RADIANS(angle) ((angle) / 180.0 * M_PI) // 角度转弧度
@@ -30,6 +33,10 @@
 @property (nonatomic, strong) UITapGestureRecognizer *tapGesture;
 @property (nonatomic, strong) NSMutableArray *layerArr;
 
+@property (nonatomic, strong) PoemSaveViewController *psVC;
+@property (nonatomic, strong) ListenSaveViewController *lsVC;
+@property (nonatomic, assign) NSInteger index;
+
 @end
 
 @implementation SaveViewController
@@ -42,6 +49,12 @@
 //    [self.view addSubview:self.imageView];
 //    [self.view sendSubviewToBack:self.imageView];
     
+    self.psVC = [[PoemSaveViewController alloc]init];
+    self.lsVC = [[ListenSaveViewController alloc]init];
+    
+    [self addAnimations];
+    
+     self.layerArr = [NSMutableArray array];
     [self.view addSubview:self.returnButton];
     [self layoutSubViews];
     
@@ -62,8 +75,15 @@
 {
     self.navigationController.navigationBarHidden = YES;
     self.navigationController.delegate = self;
-    self.layerArr = [NSMutableArray array];
-    
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    _vc.navigationController.navigationBarHidden = NO;
+}
+
+- (void)addAnimations
+{
     [self.view addSubview:self.containerView];
     [self.view addSubview:self.circleView];
     [self.circleView addSubview:self.imageView];
@@ -80,9 +100,9 @@
     [self.circleView pop_addAnimation:ca forKey:@"avatar"];
     
     ca.completionBlock =^(POPAnimation *anim, BOOL finished){
-    
+        
         [self setEmmiter];
-    
+        
         POPBasicAnimation *CA = [POPBasicAnimation animation];
         CA.property = [POPAnimatableProperty propertyWithName:kPOPViewAlpha];
         CA.beginTime = CACurrentMediaTime() + 0.1;
@@ -125,16 +145,11 @@
                 [movingLayer setBackgroundColor:[UIColor orangeColor].CGColor];
                 
                 [button.layer addAnimation:keyframeAnimation forKey:@"position"];
-    
+                
                 [self.layerArr addObject:button.layer];
             }];
         }
     };
-}
-
-- (void)viewDidDisappear:(BOOL)animated
-{
-    _vc.navigationController.navigationBarHidden = NO;
 }
 
 - (void)createButton
@@ -167,17 +182,83 @@
             
             if (i == 4) {
                 self.circleView.hidden = YES;
+                self.navigationController.delegate = nil;
                 [self.navigationController popViewControllerAnimated:YES];
             }
             
+            if (i == 3) {
+                
+                self.index = i;
+                self.rectOrigin = touchPoint;
+                [self.navigationController pushViewController:self.psVC animated:YES];
+            }
             
+            if (i == 2) {
+                
+                self.index = i;
+                self.rectOrigin = touchPoint;
+                [self.navigationController pushViewController:self.lsVC animated:YES];
+            }
+            
+            if (i == 1) {
+                
+                self.index = i;
+                self.rectOrigin = touchPoint;
+            }
             
             NSLog(@"presentationLayer");
         }
     }
-    
 }
 
+- (id <UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController
+                                   animationControllerForOperation:(UINavigationControllerOperation)operation
+                                                fromViewController:(UIViewController *)fromVC
+                                                  toViewController:(UIViewController *)toVC{
+    if (operation == UINavigationControllerOperationPush) {
+        
+        CXPushTransition *push = [[CXPushTransition alloc]init];
+        
+        [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
+            
+            push.index = [x intValue];
+            
+            if ([x intValue]== 3) {
+                push.popVC = self.psVC;
+            }else if ([x intValue]== 2){
+                push.popVC = self.lsVC;
+            }
+//            else{
+//                push.popVC = self.clearVC;
+//            }
+        }];
+    
+        return push;
+    }
+    else if (operation == UINavigationControllerOperationPop){
+        
+        CXPopTransition *pop  = [[CXPopTransition alloc]init];
+//        pop.pushVC = self;
+        
+        [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
+            
+            pop.index = [x intValue];
+            
+            if ([x intValue]== 3) {
+                pop.popVC = self.psVC;
+            }else if ([x intValue] == 2){
+                pop.popVC = self.lsVC;
+            }
+//            else{
+//                pop.popVC = self.clearVC;
+//            }
+        }];
+        return pop;
+    }
+    else{
+        return nil;
+    }
+}
 
 - (void)setEmmiter
 {

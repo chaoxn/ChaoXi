@@ -31,6 +31,7 @@
 		EC1726DB1BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = EC1726D71BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m */; };
 		EC2702FD1C3147F200D10C52 /* ODRefreshControl.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2702FC1C3147F200D10C52 /* ODRefreshControl.m */; };
 		EC2A39081C5F015100A8D688 /* PoemSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2A39071C5F015100A8D688 /* PoemSaveViewController.m */; };
+		EC2BEE421C76FE010090E249 /* ListenSaveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2BEE411C76FE010090E249 /* ListenSaveViewController.m */; };
 		EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */; };
 		EC378EB21BDDF7F6006FB4F0 /* ReadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */; };
 		EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC378EBE1BDDF86E006FB4F0 /* FunnyViewController.m */; };
@@ -163,6 +164,8 @@
 		EC2702FC1C3147F200D10C52 /* ODRefreshControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ODRefreshControl.m; sourceTree = "<group>"; };
 		EC2A39061C5F015100A8D688 /* PoemSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PoemSaveViewController.h; sourceTree = "<group>"; };
 		EC2A39071C5F015100A8D688 /* PoemSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PoemSaveViewController.m; sourceTree = "<group>"; };
+		EC2BEE401C76FE010090E249 /* ListenSaveViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListenSaveViewController.h; sourceTree = "<group>"; };
+		EC2BEE411C76FE010090E249 /* ListenSaveViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListenSaveViewController.m; sourceTree = "<group>"; };
 		EC378EAE1BDDF7F6006FB4F0 /* ReadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReadViewController.h; sourceTree = "<group>"; };
 		EC378EAF1BDDF7F6006FB4F0 /* ReadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReadViewController.m; sourceTree = "<group>"; };
 		EC378EB01BDDF7F6006FB4F0 /* ReadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReadViewController.xib; sourceTree = "<group>"; };
@@ -435,6 +438,8 @@
 				EC5EBD711C58980A00B0495E /* SaveViewController.m */,
 				EC2A39061C5F015100A8D688 /* PoemSaveViewController.h */,
 				EC2A39071C5F015100A8D688 /* PoemSaveViewController.m */,
+				EC2BEE401C76FE010090E249 /* ListenSaveViewController.h */,
+				EC2BEE411C76FE010090E249 /* ListenSaveViewController.m */,
 			);
 			path = Setting;
 			sourceTree = "<group>";
@@ -1171,6 +1176,7 @@
 				EC7E6E511C05B4CA0062518A /* ArtCell.m in Sources */,
 				EC7E6E651C06D1120062518A /* MuseumShowViewController.m in Sources */,
 				ECA851F31C27FEA400320E7C /* DetailCell.m in Sources */,
+				EC2BEE421C76FE010090E249 /* ListenSaveViewController.m in Sources */,
 				EC5B45191C196B4700DBD54C /* CXPushTransition.m in Sources */,
 				ECD97A971C3262FD003B9514 /* UIView+Utils.m in Sources */,
 				EC1726CC1BF30A4600A973EB /* CXWelcomeView.m in Sources */,

@@ -9,7 +9,6 @@
 #import "CXPushTransition.h"
 #import "BaseViewController.h"
 #import "SaveViewController.h"
-
 #import "ArtViewController.h"
 
 @interface CXPushTransition()
@@ -29,25 +28,26 @@
 {
     self.transitionContext = transitionContext;
     
-    ArtViewController *pushVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
+    SaveViewController *pushVC = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     self.popVC = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
     
     UIView *contView = [transitionContext containerView];
     
     [contView addSubview:self.popVC.view];
     
-   __block CGRect rect;
+    __block CGRect rect;
+    rect.origin = pushVC.rectOrigin;
     
-    [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
-       
-        if (x == 0) {
-            
-            rect = pushVC.button.frame;
-        } else{
-            
-            rect = CGRectMake(ScreenWidth-100 - 70*[x intValue], 35, 30, 30);
-        }
-    }];
+//    [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
+//       
+//        if (x == 0) {
+//            
+//            rect = pushVC.touchBtn.frame;
+//        } else{
+//            
+//            rect = CGRectMake(ScreenWidth-100 - 70*[x intValue], 35, 30, 30);
+//        }
+//    }];
     
     UIBezierPath *maskStartBP = [UIBezierPath bezierPathWithOvalInRect:rect];
     

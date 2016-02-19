@@ -10,7 +10,7 @@
 
 @interface CXPopTransition : NSObject <UIViewControllerAnimatedTransitioning>
 
-@property (nonatomic, strong) UIViewController *pushVC;
+//@property (nonatomic, strong) UIViewController *pushVC;
 
 @property (nonatomic, strong) UIViewController *popVC;
 
