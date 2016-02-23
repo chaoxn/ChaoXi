@@ -14,42 +14,8 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PSp-Ty-7z7">
-                    <rect key="frame" x="31" y="84" width="218" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="41b-Kb-Z8O"/>
-                        <constraint firstAttribute="width" constant="218" id="hEj-zY-qYs"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CX4-Ih-17r">
-                    <rect key="frame" x="271" y="88" width="22" height="22"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="22" id="bcX-4H-ZfL"/>
-                        <constraint firstAttribute="height" constant="22" id="irm-xd-dtH"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="search"/>
-                </button>
-            </subviews>
             <color key="backgroundColor" red="0.96078431369999995" green="0.96078431369999995" blue="0.96078431369999995" alpha="1" colorSpace="calibratedRGB"/>
-            <constraints>
-                <constraint firstItem="PSp-Ty-7z7" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" constant="-20" id="Fbb-3w-Hgc"/>
-                <constraint firstItem="PSp-Ty-7z7" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="84" id="JMG-o6-FET"/>
-                <constraint firstItem="PSp-Ty-7z7" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="40" id="LiW-0K-hPM"/>
-                <constraint firstItem="CX4-Ih-17r" firstAttribute="leading" secondItem="PSp-Ty-7z7" secondAttribute="trailing" constant="22" id="ZAz-UN-KkI"/>
-                <constraint firstItem="CX4-Ih-17r" firstAttribute="centerY" secondItem="PSp-Ty-7z7" secondAttribute="centerY" id="ldK-7q-1p5"/>
-            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <variation key="default">
-                <mask key="constraints">
-                    <exclude reference="LiW-0K-hPM"/>
-                </mask>
-            </variation>
         </view>
     </objects>
-    <resources>
-        <image name="search" width="64" height="64"/>
-    </resources>
 </document>

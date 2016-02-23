@@ -79,6 +79,20 @@
     }
 }
 
+
+-(void)application:(UIApplication *)application performActionForShortcutItem:(UIApplicationShortcutItem *)shortcutItem completionHandler:(void (^)(BOOL))completionHandler
+{
+    
+    if([shortcutItem.localizedTitle isEqualToString:@"读诗"]){
+        
+        
+        PoeViewController *poeVC = [[PoeViewController alloc]init];
+        
+        [self.window.rootViewController presentViewController:poeVC animated:YES completion:nil];
+    }
+
+}
+
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     

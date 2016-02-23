@@ -13,7 +13,6 @@
 @property (nonatomic, strong) UITextField *inPutTF;
 @property (nonatomic, strong) UIButton *searchButton;
 
-
 @end
 
 @implementation ReadViewController
@@ -23,16 +22,15 @@
     [super viewDidLoad];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-}
 
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.hidesBarsOnSwipe = NO;
 }
 
-
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+}
 
 @end
