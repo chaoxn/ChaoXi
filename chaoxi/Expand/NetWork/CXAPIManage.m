@@ -63,4 +63,24 @@
     return nil;
 }
 
++ (RACSignal *)getWhetherData:(NSString *)cityName
+{
+    NSString *path = [NSString stringWithFormat:@"https://api.heweather.com/x3/weather?city=%@&key=02a5e1fb5dd64f36ab1791188201c90f", cityName];
+    
+    return [[[CXAPIClient sharedJsonClient] requestJsonDataWithPath:path withParams:nil withMethodType:Get] map:^id(RACTuple *JSONAndHeaders) {
+        
+        id resultData = JSONAndHeaders[0];
+        NSError *error = JSONAndHeaders[1];
+        if (resultData) {
+            
+            return RACTuplePack(resultData, nil);
+        } else {
+            
+            return RACTuplePack(nil, error);
+        }
+    }];
+    
+    return nil;
+}
+
 @end

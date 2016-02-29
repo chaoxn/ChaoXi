@@ -12,6 +12,7 @@
 		EC029A551BDF54FE000F304C /* LuoIMagaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EC029A531BDF54FE000F304C /* LuoIMagaCell.m */; };
 		EC029A561BDF54FE000F304C /* LuoIMagaCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC029A541BDF54FE000F304C /* LuoIMagaCell.xib */; };
 		EC029A581BDF64FA000F304C /* imagePlist.plist in Resources */ = {isa = PBXBuildFile; fileRef = EC029A571BDF64FA000F304C /* imagePlist.plist */; };
+		EC057E151C803BED00F067F0 /* WeatherViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC057E141C803BED00F067F0 /* WeatherViewModel.m */; };
 		EC0A94571BE20EEF0085BC9B /* CXHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A94561BE20EEF0085BC9B /* CXHttpManager.m */; };
 		EC0A945B1BE212020085BC9B /* ViedoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A945A1BE212020085BC9B /* ViedoModel.m */; };
 		EC0A94701BE350A00085BC9B /* VideoDetailController.m in Sources */ = {isa = PBXBuildFile; fileRef = EC0A946E1BE350A00085BC9B /* VideoDetailController.m */; };
@@ -126,6 +127,8 @@
 		EC029A531BDF54FE000F304C /* LuoIMagaCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LuoIMagaCell.m; sourceTree = "<group>"; };
 		EC029A541BDF54FE000F304C /* LuoIMagaCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LuoIMagaCell.xib; sourceTree = "<group>"; };
 		EC029A571BDF64FA000F304C /* imagePlist.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imagePlist.plist; sourceTree = "<group>"; };
+		EC057E131C803BED00F067F0 /* WeatherViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WeatherViewModel.h; sourceTree = "<group>"; };
+		EC057E141C803BED00F067F0 /* WeatherViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WeatherViewModel.m; sourceTree = "<group>"; };
 		EC0A94521BE20AAC0085BC9B /* CXMacro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXMacro.h; sourceTree = "<group>"; };
 		EC0A94551BE20EEF0085BC9B /* CXHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXHttpManager.h; sourceTree = "<group>"; };
 		EC0A94561BE20EEF0085BC9B /* CXHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXHttpManager.m; sourceTree = "<group>"; };
@@ -342,6 +345,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		EC057E121C803BBA00F067F0 /* WeatherViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				EC057E131C803BED00F067F0 /* WeatherViewModel.h */,
+				EC057E141C803BED00F067F0 /* WeatherViewModel.m */,
+			);
+			path = WeatherViewModel;
+			sourceTree = "<group>";
+		};
 		EC0A94581BE211EA0085BC9B /* ListenModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -389,8 +401,8 @@
 				EC1726761BF2F27F00A973EB /* ListenViewModel */,
 				EC6A7B621BFAD5FF00789E41 /* ArtViewModel */,
 				EC6A7B631BFAD5FF00789E41 /* FunnyViewModel */,
-				EC6A7AD61BF9AB3B00789E41 /* ReadViewModel */,
 				EC17267B1BF2F27F00A973EB /* PoeViewModel */,
+				EC057E121C803BBA00F067F0 /* WeatherViewModel */,
 			);
 			name = ViewModel;
 			path = chaoxi/ViewModel;
@@ -628,13 +640,6 @@
 				EC5B45271C1AB6F800DBD54C /* CXIntercepter.m */,
 			);
 			path = CXIntercepter;
-			sourceTree = "<group>";
-		};
-		EC6A7AD61BF9AB3B00789E41 /* ReadViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ReadViewModel;
 			sourceTree = "<group>";
 		};
 		EC6A7B621BFAD5FF00789E41 /* ArtViewModel */ = {
@@ -1217,6 +1222,7 @@
 				EC378EB11BDDF7F6006FB4F0 /* ReadViewController.m in Sources */,
 				ECA852401C2BC6E900320E7C /* CXNotification.m in Sources */,
 				ECFBA0EA1C23A6B100761349 /* CXPresentTransition.m in Sources */,
+				EC057E151C803BED00F067F0 /* WeatherViewModel.m in Sources */,
 				EC2702FD1C3147F200D10C52 /* ODRefreshControl.m in Sources */,
 				EC378EC01BDDF86E006FB4F0 /* FunnyViewController.m in Sources */,
 				EC1726841BF2F27F00A973EB /* CXViewModelClass.m in Sources */,

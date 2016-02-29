@@ -34,6 +34,9 @@ static dispatch_once_t onceToken;
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [self.requestSerializer setValue:url.absoluteString forHTTPHeaderField:@"Referer"];
     
+    //是否验证主机名
+    self.securityPolicy.validatesDomainName = NO;
+    //是否允许CA不信任的证书通过
     self.securityPolicy.allowInvalidCertificates = YES;
     
     return self;
@@ -51,6 +54,7 @@ static dispatch_once_t onceToken;
                         withMethodType:(NetworkMethod)method
                          autoShowError:(BOOL)autoShowError
 {
+    
     switch (method) {
         case Get:
             return [[[[self rac_GET:aPath parameters:params] map:^id(RACTuple *JSONAndHeaders) {
@@ -64,6 +68,7 @@ static dispatch_once_t onceToken;
                 }
             }]
                      catch:^RACSignal *(NSError *error) {
+                         
                          DLog(@"\n===========response===========\n%@:\n%@", aPath, error);
                          return [self showError:error];
                      }] replayLazily];

@@ -12,13 +12,13 @@
 
 + (instancetype)sharedManager;
 
-#pragma mark  PoeApi
+#pragma mark PoeApi
 + (RACSignal *)getPoeData:(NSString *)index;
 
 #pragma mark ListenApi
 + (RACSignal *)getListenData:(NSDictionary *)para;
 
-
-
+#pragma mark WeatherApi
++ (RACSignal *)getWhetherData:(NSString *)cityName;
 
 @end
