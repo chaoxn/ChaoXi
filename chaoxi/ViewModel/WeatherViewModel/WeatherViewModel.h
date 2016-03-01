@@ -16,4 +16,8 @@
 
 @property (nonatomic, strong) NSDictionary *dataDic;
 
+@property (nonatomic, strong) RACSignal *locSignal;
+
+@property (nonatomic, strong) NSString *cityStr;
+
 @end

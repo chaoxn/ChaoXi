@@ -10,7 +10,7 @@
 #import <TOMSMorphingLabel/TOMSMorphingLabel.h>
 
 
-@interface AboutUsViewController ()
+@interface AboutUsViewController ()<UINavigationControllerDelegate>
 
 @property (nonatomic, strong) UIButton *returnButton;
 @property (nonatomic, strong) UIImageView *avatarImageView;
@@ -45,6 +45,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     self.navigationController.navigationBarHidden = YES;
+    self.navigationController.delegate = self;
     
     [self.view addSubview:self.avatarImageView];
     [self.view addSubview:self.returnButton];
@@ -58,7 +59,7 @@
 //    shimmeringView.contentView = self.labelTwo;
 //    shimmeringView.shimmering = YES;
     
-    [self toggleText];
+//    [self toggleText];
     [self createLabel];
     
     self.avatarImageView.transform = CGAffineTransformMakeScale(0.001, 0.001);
@@ -205,6 +206,7 @@
             })];
             label.center = CGPointMake(ScreenWidth/2, 160);
             label.textAlignment = NSTextAlignmentCenter;
+            label.text = @"春风十里";
 //            春水初生，春林初盛，春风十里，不如你。下联   ：秋池渐涨，秋叶渐黄，秋思一半，赋予卿
             label.textColor = [UIColor darkGrayColor];
             label.font = CXBoldFont(18);

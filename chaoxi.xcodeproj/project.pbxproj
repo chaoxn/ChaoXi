@@ -102,6 +102,10 @@
 		ECD97A961C3262FD003B9514 /* UINavigationBar+HideAppear.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD97A8F1C3262FD003B9514 /* UINavigationBar+HideAppear.m */; };
 		ECD97A971C3262FD003B9514 /* UIView+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = ECD97A911C3262FD003B9514 /* UIView+Utils.m */; };
 		ECEC6FAB1C17C45E00A5251D /* CXImageShow.m in Sources */ = {isa = PBXBuildFile; fileRef = ECEC6FAA1C17C45E00A5251D /* CXImageShow.m */; };
+		ECF53FD61C85358F000727FB /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECF53FD51C85358F000727FB /* CoreLocation.framework */; };
+		ECF53FD91C857DC2000727FB /* CXScaleTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF53FD81C857DC2000727FB /* CXScaleTransition.m */; };
+		ECF53FDC1C857E7F000727FB /* CXBaseTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF53FDB1C857E7F000727FB /* CXBaseTransition.m */; };
+		ECF53FDF1C85810C000727FB /* CXScaleReturn.m in Sources */ = {isa = PBXBuildFile; fileRef = ECF53FDE1C85810C000727FB /* CXScaleReturn.m */; };
 		ECFBA0EA1C23A6B100761349 /* CXPresentTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFBA0E91C23A6B100761349 /* CXPresentTransition.m */; };
 		ECFBA0ED1C23A6C800761349 /* CXDismissTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFBA0EC1C23A6C800761349 /* CXDismissTransition.m */; };
 		ECFBA0F01C23AAF500761349 /* MuseumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ECFBA0EF1C23AAF500761349 /* MuseumDetailViewController.m */; };
@@ -301,6 +305,13 @@
 		ECD97A911C3262FD003B9514 /* UIView+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Utils.m"; sourceTree = "<group>"; };
 		ECEC6FA91C17C45E00A5251D /* CXImageShow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXImageShow.h; sourceTree = "<group>"; };
 		ECEC6FAA1C17C45E00A5251D /* CXImageShow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXImageShow.m; sourceTree = "<group>"; };
+		ECF53FD51C85358F000727FB /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		ECF53FD71C857DC2000727FB /* CXScaleTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXScaleTransition.h; sourceTree = "<group>"; };
+		ECF53FD81C857DC2000727FB /* CXScaleTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXScaleTransition.m; sourceTree = "<group>"; };
+		ECF53FDA1C857E7F000727FB /* CXBaseTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXBaseTransition.h; sourceTree = "<group>"; };
+		ECF53FDB1C857E7F000727FB /* CXBaseTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXBaseTransition.m; sourceTree = "<group>"; };
+		ECF53FDD1C85810C000727FB /* CXScaleReturn.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXScaleReturn.h; sourceTree = "<group>"; };
+		ECF53FDE1C85810C000727FB /* CXScaleReturn.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXScaleReturn.m; sourceTree = "<group>"; };
 		ECFBA0E81C23A6B100761349 /* CXPresentTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXPresentTransition.h; sourceTree = "<group>"; };
 		ECFBA0E91C23A6B100761349 /* CXPresentTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CXPresentTransition.m; sourceTree = "<group>"; };
 		ECFBA0EB1C23A6C800761349 /* CXDismissTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CXDismissTransition.h; sourceTree = "<group>"; };
@@ -314,6 +325,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECF53FD61C85358F000727FB /* CoreLocation.framework in Frameworks */,
 				5AEAD03D57A1938CD5033752 /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -331,6 +343,7 @@
 		2FEAD2BFDC163E86B6485BB3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				ECF53FD51C85358F000727FB /* CoreLocation.framework */,
 				8F55B9FC2E6AA861816118FA /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -629,6 +642,12 @@
 				EC55B0FB1C5205C700732520 /* CXMagicMoveTransition.m */,
 				EC55B0FD1C520B7300732520 /* CXMagicMoveRetrun.h */,
 				EC55B0FE1C520B7300732520 /* CXMagicMoveRetrun.m */,
+				ECF53FD71C857DC2000727FB /* CXScaleTransition.h */,
+				ECF53FD81C857DC2000727FB /* CXScaleTransition.m */,
+				ECF53FDD1C85810C000727FB /* CXScaleReturn.h */,
+				ECF53FDE1C85810C000727FB /* CXScaleReturn.m */,
+				ECF53FDA1C857E7F000727FB /* CXBaseTransition.h */,
+				ECF53FDB1C857E7F000727FB /* CXBaseTransition.m */,
 			);
 			path = CXTransitions;
 			sourceTree = "<group>";
@@ -1162,6 +1181,7 @@
 				EC7E6E771C06F1130062518A /* MuseumShowModel.m in Sources */,
 				ECD97A961C3262FD003B9514 /* UINavigationBar+HideAppear.m in Sources */,
 				EC0A94701BE350A00085BC9B /* VideoDetailController.m in Sources */,
+				ECF53FDF1C85810C000727FB /* CXScaleReturn.m in Sources */,
 				ECC07BB61BDF531E003BE70B /* ListenViewController.m in Sources */,
 				EC0A94571BE20EEF0085BC9B /* CXHttpManager.m in Sources */,
 				EC1726DB1BF30A8F00A973EB /* RACSubscriber+AFProgressCallbacks.m in Sources */,
@@ -1207,11 +1227,13 @@
 				EC82440F1C03FD7F0082219E /* CXDropMenuView.m in Sources */,
 				EC1726D81BF30A8F00A973EB /* AFHTTPRequestOperationManager+RACSupport.m in Sources */,
 				ECA852341C2AA42300320E7C /* RadioListViewController.m in Sources */,
+				ECF53FD91C857DC2000727FB /* CXScaleTransition.m in Sources */,
 				ECFBA0ED1C23A6C800761349 /* CXDismissTransition.m in Sources */,
 				ECD97A941C3262FD003B9514 /* UIImage+Common.m in Sources */,
 				EC55B0FF1C520B7300732520 /* CXMagicMoveRetrun.m in Sources */,
 				EC7E6E3A1C05B1B80062518A /* MuseumModel.m in Sources */,
 				EC17268B1BF3023200A973EB /* PoeViewController.m in Sources */,
+				ECF53FDC1C857E7F000727FB /* CXBaseTransition.m in Sources */,
 				EC9642051C0C364000D16E39 /* ShowDetailViewModel.m in Sources */,
 				EC7E6E361C05AE3C0062518A /* MuseumListViewModel.m in Sources */,
 				ECC3819B1BD8898F007A3680 /* main.m in Sources */,

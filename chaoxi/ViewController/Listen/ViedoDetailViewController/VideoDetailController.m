@@ -169,7 +169,7 @@
     
 }
 
-- (void) updateView
+- (void)updateView
 {
     [self.tableView.footer endRefreshing];
     [self.refreshControl endRefreshing];
@@ -219,9 +219,10 @@
         [modelArray addObject:newModel];
     }
     
-    [CXAudioPlayer shareInstance].index = indexPath.row;
+    // 顺序不能错. 不然数组越界
     [CXAudioPlayer shareInstance].modelArr = modelArray;
-    
+    [CXAudioPlayer shareInstance].index = indexPath.row;
+
     [self.navigationController pushViewController:playOnVC animated:YES];
 }
 

@@ -35,8 +35,6 @@
     
     self.view.backgroundColor = [UIColor blackColor];
     
-    [self.viewModel.requestCommand execute:nil];
-    
     [RACObserve(self.viewModel, dataDic) subscribeNext:^(NSDictionary *dataDic) {
        
         NSArray *arr = dataDic[@"HeWeather data service 3.0"];
@@ -46,12 +44,18 @@
             [self basicAnim];
         }
         
-        
-        
         self.tmpLabel.text = [NSString stringWithFormat:@"%@°", self.bigDic[@"now"][@"tmp"]];
         self.dateLabel.text = [NSString stringWithFormat:@"TODAY:%@", [self.bigDic[@"daily_forecast"]firstObject][@"date"]];
         self.condtxtLabel.text = self.bigDic[@"now"][@"cond"][@"txt"];
+    }];
+    
+    [[[RACObserve(self.viewModel, cityStr) filter:^BOOL(NSString *value) {
+      
+        return value.length > 0;
+    }]distinctUntilChanged] subscribeNext:^(NSString *x) {
         
+        [self.viewModel.requestCommand execute:nil];
+        self.locLabel.text = x;
     }];
     
     [self.view addSubview:self.bgImageView];
@@ -176,7 +180,7 @@
                     NSInteger maxStr = [dic[@"tmp"][@"max"] integerValue];
                     
                     UILabel *label = ({
-                        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth/8) * (i+1)+17, 110-maxStr*3 - 20, 30, 15)];
+                        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth/8) * (i+1)+13, 110-maxStr*3 - 20, 30, 15)];
                         label.font = CXFont(11);
                         label.textColor = [UIColor whiteColor];
                         label.text = [NSString stringWithFormat:@"%ld°",maxStr];
@@ -203,7 +207,7 @@
                 CAShapeLayer *line=[CAShapeLayer layer];
                 line.path=path.CGPath;
                 line.fillColor=[UIColor clearColor].CGColor;
-                line.strokeColor=[[UIColor whiteColor]CGColor];
+                line.strokeColor=[[UIColor orangeColor]CGColor];
                 [self.beiView.layer addSublayer:line];
                 
                 CABasicAnimation *animation=[CABasicAnimation animationWithKeyPath:@"strokeEnd"];
@@ -227,7 +231,7 @@
                     NSInteger min = [dic[@"tmp"][@"min"] integerValue];
                     
                     UILabel *label = ({
-                        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth/8) * (i+1)+17, 114-min*3, 30, 15)];
+                        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake((ScreenWidth/8) * (i+1)+13, 114-min*3, 30, 15)];
                         label.font = CXFont(11);
                         label.textColor = [UIColor whiteColor];
                         label.text = [NSString stringWithFormat:@"%ld°",min];
@@ -274,7 +278,7 @@
         _weatherIcon = ({
             UIImageView *imageView = [[UIImageView alloc]initWithFrame:CGRectMake(0, 0, 100, 100)];
             imageView.image = [UIImage imageNamed:@"101"];
-            imageView.center = CGPointMake(ScreenWidth/2, 230);
+            imageView.center = CGPointMake(ScreenWidth/2, 210*HeightRate);
             imageView.alpha = 0;
             imageView;
         });
@@ -286,7 +290,7 @@
 {
     if (!_tmpLabel) {
         _tmpLabel = ({
-            UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(-150, ScreenHeight/2-70, 150, 110)];
+            UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(-150, (ScreenHeight/2-110) * HeightRate, 200, 110)];
             label.text = @"8°";
             label.textColor = [UIColor whiteColor];
             label.font = [UIFont fontWithName:@"CourierNewPSMT" size:100];
@@ -332,7 +336,6 @@
     if (!_locLabel) {
         _locLabel = ({
             UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(-133, self.condtxtLabel.origin.y+30, 200, 20)];
-            label.text = @"SHANG HAI";
             label.textColor = [UIColor whiteColor];
             label.font = [UIFont fontWithName:@"CourierNewPSMT" size:16];
             label.alpha = 0;
@@ -359,7 +362,7 @@
     if (!_locImageView) {
         _locImageView = ({
             UIImageView *imageView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"dingwei"]];
-            imageView.frame = CGRectMake(-150, self.locLabel.origin.y+3, 15, 15);
+            imageView.frame = CGRectMake(-150, self.locLabel.origin.y, 15, 15);
             imageView;
         });
     }
@@ -370,7 +373,7 @@
 {
     if (!_beiView) {
         _beiView = ({
-            UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake(0, ScreenHeight-200, ScreenWidth, 200)];
+            UIImageView *view = [[UIImageView alloc]initWithFrame:CGRectMake(0, ScreenHeight-220, ScreenWidth, 200)];
             view.image = [UIImage imageNamed:@"tmpbg"];
             view.alpha = 0;
             view.backgroundColor = [UIColor clearColor];

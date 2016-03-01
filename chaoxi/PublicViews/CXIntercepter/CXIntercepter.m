@@ -13,6 +13,8 @@
 #import "NavigationViewController.h"
 #import "CXPushTransition.h"
 #import "CXPopTransition.h"
+#import "CXScaleTransition.h"
+#import "CXScaleReturn.h"
 
 #define NeedInterceptArr @[@"ArtViewController",@"FunnyViewController",@"ListenViewController",@"PoeViewController",@"ReadViewController"]
 
@@ -98,7 +100,7 @@
     
     viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"潮汐" style:UIBarButtonItemStylePlain target:viewController.navigationController action:@selector(presenting)];
     
-//    viewController.navigationController.delegate = self;
+    viewController.navigationController.delegate = self;
     viewController.navigationController.navigationBar.tintColor = CXRGBColor(32, 47, 60);
     viewController.navigationController.navigationBar.barTintColor = CXRGBColor(245, 245, 245);
     
@@ -186,39 +188,13 @@
                                                   toViewController:(UIViewController *)toVC{
     if (operation == UINavigationControllerOperationPush) {
         
-        CXPushTransition *push = [[CXPushTransition alloc]init];
-                
-        [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
-            
-            push.index = [x intValue];
-            
-            if ([x intValue]== 0) {
-                push.popVC = self.saveVC;
-            }else if ([x intValue]== 1){
-                push.popVC = self.aboutVC;
-            }else{
-                push.popVC = self.clearVC;
-            }
-        }];
+        CXScaleTransition *push = [[CXScaleTransition alloc]init];
+        
         return push;
     }
     else if (operation == UINavigationControllerOperationPop){
         
-        CXPopTransition *pop  = [[CXPopTransition alloc]init];
-//        pop.pushVC = self.baseViewController;
-        
-        [RACObserve(self, index) subscribeNext:^(NSNumber *x) {
-            
-            pop.index = [x intValue];
-            
-            if ([x intValue]== 0) {
-                pop.popVC = self.saveVC;
-            }else if ([x intValue] == 1){
-                pop.popVC = self.aboutVC;
-            }else{
-                pop.popVC = self.clearVC;
-            }
-        }];
+        CXScaleReturn *pop  = [[CXScaleReturn alloc]init];
         
         return pop;
     }

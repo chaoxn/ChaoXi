@@ -66,7 +66,8 @@
 + (RACSignal *)getWhetherData:(NSString *)cityName
 {
     NSString *path = [NSString stringWithFormat:@"https://api.heweather.com/x3/weather?city=%@&key=02a5e1fb5dd64f36ab1791188201c90f", cityName];
-    
+    path = [path stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+
     return [[[CXAPIClient sharedJsonClient] requestJsonDataWithPath:path withParams:nil withMethodType:Get] map:^id(RACTuple *JSONAndHeaders) {
         
         id resultData = JSONAndHeaders[0];

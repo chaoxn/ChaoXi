@@ -28,7 +28,7 @@ static dispatch_once_t onceToken;
         return nil;
     }
     self.responseSerializer = [AFJSONResponseSerializer serializer];
-    self.requestSerializer.timeoutInterval = 1;
+    self.requestSerializer.timeoutInterval = 10;
     self.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"application/json", @"text/plain", @"text/javascript", @"text/json", @"text/html", @"application/x-javascript", nil];
     
     [self.requestSerializer setValue:@"application/json" forHTTPHeaderField:@"Accept"];
@@ -85,7 +85,7 @@ static dispatch_once_t onceToken;
                 }
             }]
                      catch:^RACSignal *(NSError *error) {
-                         //                  [CustomHud hideHUDForView:view animated:YES];
+
                          DLog(@"\n===========response===========\n%@:\n%@", aPath, error);
                          return [self showError:error];
                      }] replayLazily];

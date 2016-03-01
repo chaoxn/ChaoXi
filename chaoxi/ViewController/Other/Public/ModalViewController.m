@@ -9,7 +9,7 @@
 #import "ModalViewController.h"
 #import "ModalView.h"
 
-#define TITLEARR @[@"Listen", @"Poem", @"Movie", @"Art", @"Funny"]
+#define TITLEARR @[@"Listen", @"Poem", @"Weather", @"Art", @"Funny"]
 
 @interface ModalViewController()
 
