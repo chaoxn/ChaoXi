@@ -26,7 +26,6 @@
 
 @implementation PoeViewController
 
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -48,23 +47,24 @@
     [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {
         
         [db executeUpdate:createPoeSQL];
+
+        FMResultSet *resultSet = [db executeQuery:@"SELECT * FROM poem"];
+        
+        NSMutableArray *tingIdarr = [NSMutableArray array];
+        while ([resultSet next]) {
+            
+            NSString *name = [resultSet stringForColumn:@"poemIndex"];
+            [tingIdarr addObject:name];
+        }
+        
+        if ([tingIdarr containsObject:self.index] || [tingIdarr containsObject:self.receiveIndex]) {
+            
+            self.saveButton.selected = YES;
+        }else{
+            
+            self.saveButton.selected = NO;
+        }
     }];
-
-    FMResultSet *resultSet = [self.db executeQuery:@"SELECT * FROM poem"];
-
-    NSMutableArray *tingIdarr = [NSMutableArray array];
-    while ([resultSet next]) {
-        NSString *name = [resultSet stringForColumn:@"poemIndex"];
-        [tingIdarr addObject:name];
-    }
-    
-    if ([tingIdarr containsObject:self.index] || [tingIdarr containsObject:self.receiveIndex]) {
-        
-        self.saveButton.selected = YES;
-    }else{
-        
-        self.saveButton.selected = NO;
-    }
 }
 
 - (void)timerFired:(NSTimer *)sender
@@ -216,9 +216,10 @@
     
     [[FMDatabaseQueue shareInstense] inDatabase:^(FMDatabase *db) {
         
+        NSString *currentIndex = self.receiveIndex.length == 0 ? self.index : self.receiveIndex;
+        
         isSuccess = [db executeUpdate:[NSString stringWithFormat:
-                                       @"delete from poem where  poemIndex= '%@'",
-                                       self.index]];
+                                       @"delete from poem where  poemIndex= '%@'",                  currentIndex]];
         
         if (!isSuccess) {
             NSLog(@"删除失败");

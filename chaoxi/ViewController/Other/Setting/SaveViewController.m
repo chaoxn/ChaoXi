@@ -79,7 +79,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    _vc.navigationController.navigationBarHidden = NO;
+    [_vc.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (void)addAnimations
@@ -159,7 +159,8 @@
         
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         
-        [button setImage:[UIImage imageNamed:@"Avatar"] forState:UIControlStateNormal];
+        [button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"scon%d",i]] forState:UIControlStateNormal];
+        
         button.alpha = 0;
         button.frame = CGRectMake(300, self.circleView.center.y, 50, 50);
         button.layer.masksToBounds = YES;

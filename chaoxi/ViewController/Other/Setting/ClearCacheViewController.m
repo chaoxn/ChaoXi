@@ -47,7 +47,7 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    _vc.navigationController.navigationBarHidden = NO;
+    [_vc.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 - (UIButton *)returnButton
