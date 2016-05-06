@@ -11,7 +11,7 @@ Seconde version developed by ReactiveCocoa now.
 
 Keep updated
 
-陆陆续续的写着这个项目, 现在完成的主要界面.
+联系项目，完成的主要界面.
 
 * 音乐<p>
 <img src="http://7xnqnj.com1.z0.glb.clouddn.com/cxappfull1.gif" width = "225" height = "" alt="chaoxi" align=center />
